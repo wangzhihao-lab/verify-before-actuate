@@ -1,0 +1,650 @@
+{
+ "acls": {
+  "A1": {
+   "action": "allow",
+   "dst": "10.0.8.0/24",
+   "src": "10.0.5.0/24"
+  },
+  "A2": {
+   "action": "allow",
+   "dst": "10.0.3.0/24",
+   "src": "10.0.8.0/24"
+  },
+  "A3": {
+   "action": "allow",
+   "dst": "10.0.4.0/24",
+   "src": "10.0.8.0/24"
+  }
+ },
+ "flows": {
+  "F1": {
+   "bw": 39.54,
+   "min_bw": 39.54,
+   "path": [
+    "Katowice",
+    "Krakow",
+    "Rzeszow",
+    "Bialystok"
+   ],
+   "priority": false,
+   "sla_ms": 28.64
+  },
+  "F10": {
+   "bw": 59.79,
+   "min_bw": 59.79,
+   "path": [
+    "Bydgoszcz",
+    "Poznan"
+   ],
+   "priority": false,
+   "sla_ms": 8.26
+  },
+  "F11": {
+   "bw": 61.37,
+   "min_bw": 61.37,
+   "path": [
+    "Katowice",
+    "Krakow"
+   ],
+   "priority": false,
+   "sla_ms": 14.22
+  },
+  "F12": {
+   "bw": 35.74,
+   "min_bw": 35.74,
+   "path": [
+    "Bialystok",
+    "Warsaw",
+    "Lodz",
+    "Wroclaw"
+   ],
+   "priority": true,
+   "sla_ms": 30.82
+  },
+  "F13": {
+   "bw": 34.48,
+   "min_bw": 34.48,
+   "path": [
+    "Katowice",
+    "Wroclaw",
+    "Poznan",
+    "Szczecin"
+   ],
+   "priority": false,
+   "sla_ms": 27.88
+  },
+  "F14": {
+   "bw": 43.02,
+   "min_bw": 43.02,
+   "path": [
+    "Krakow",
+    "Katowice",
+    "Wroclaw",
+    "Poznan"
+   ],
+   "priority": false,
+   "sla_ms": 25.63
+  },
+  "F15": {
+   "bw": 62.0,
+   "min_bw": 62.0,
+   "path": [
+    "Lodz",
+    "Wroclaw",
+    "Poznan",
+    "Szczecin"
+   ],
+   "priority": true,
+   "sla_ms": 37.95
+  },
+  "F16": {
+   "bw": 61.05,
+   "min_bw": 61.05,
+   "path": [
+    "Rzeszow",
+    "Krakow",
+    "Katowice",
+    "Wroclaw"
+   ],
+   "priority": false,
+   "sla_ms": 33.12
+  },
+  "F17": {
+   "bw": 34.79,
+   "min_bw": 34.79,
+   "path": [
+    "Katowice",
+    "Lodz"
+   ],
+   "priority": false,
+   "sla_ms": 25.24
+  },
+  "F18": {
+   "bw": 61.68,
+   "min_bw": 61.68,
+   "path": [
+    "Kolobrzeg",
+    "Bydgoszcz",
+    "Poznan"
+   ],
+   "priority": true,
+   "sla_ms": 12.69
+  },
+  "F19": {
+   "bw": 55.04,
+   "min_bw": 55.04,
+   "path": [
+    "Gdansk",
+    "Warsaw",
+    "Krakow",
+    "Katowice"
+   ],
+   "priority": true,
+   "sla_ms": 23.73
+  },
+  "F2": {
+   "bw": 37.01,
+   "min_bw": 37.01,
+   "path": [
+    "Bydgoszcz",
+    "Poznan",
+    "Wroclaw",
+    "Katowice"
+   ],
+   "priority": true,
+   "sla_ms": 31.39
+  },
+  "F20": {
+   "bw": 43.34,
+   "min_bw": 43.34,
+   "path": [
+    "Bydgoszcz",
+    "Warsaw"
+   ],
+   "priority": false,
+   "sla_ms": 6.27
+  },
+  "F21": {
+   "bw": 41.12,
+   "min_bw": 41.12,
+   "path": [
+    "Kolobrzeg",
+    "Gdansk",
+    "Bialystok",
+    "Rzeszow"
+   ],
+   "priority": false,
+   "sla_ms": 18.32
+  },
+  "F22": {
+   "bw": 46.5,
+   "min_bw": 46.5,
+   "path": [
+    "Bialystok",
+    "Warsaw",
+    "Bydgoszcz",
+    "Poznan"
+   ],
+   "priority": true,
+   "sla_ms": 17.58
+  },
+  "F23": {
+   "bw": 49.98,
+   "min_bw": 49.98,
+   "path": [
+    "Gdansk",
+    "Kolobrzeg"
+   ],
+   "priority": false,
+   "sla_ms": 11.1
+  },
+  "F24": {
+   "bw": 33.21,
+   "min_bw": 33.21,
+   "path": [
+    "Bydgoszcz",
+    "Warsaw",
+    "Krakow"
+   ],
+   "priority": false,
+   "sla_ms": 16.11
+  },
+  "F25": {
+   "bw": 50.3,
+   "min_bw": 50.3,
+   "path": [
+    "Kolobrzeg",
+    "Gdansk",
+    "Warsaw",
+    "Krakow"
+   ],
+   "priority": false,
+   "sla_ms": 22.62
+  },
+  "F26": {
+   "bw": 53.14,
+   "min_bw": 53.14,
+   "path": [
+    "Krakow",
+    "Katowice",
+    "Wroclaw",
+    "Poznan",
+    "Szczecin"
+   ],
+   "priority": true,
+   "sla_ms": 29.9
+  },
+  "F27": {
+   "bw": 50.3,
+   "min_bw": 50.3,
+   "path": [
+    "Katowice",
+    "Krakow",
+    "Rzeszow"
+   ],
+   "priority": false,
+   "sla_ms": 14.76
+  },
+  "F28": {
+   "bw": 40.49,
+   "min_bw": 40.49,
+   "path": [
+    "Kolobrzeg",
+    "Gdansk",
+    "Warsaw",
+    "Lodz"
+   ],
+   "priority": true,
+   "sla_ms": 29.76
+  },
+  "F29": {
+   "bw": 33.21,
+   "min_bw": 33.21,
+   "path": [
+    "Bialystok",
+    "Warsaw",
+    "Lodz"
+   ],
+   "priority": true,
+   "sla_ms": 20.16
+  },
+  "F3": {
+   "bw": 39.22,
+   "min_bw": 39.22,
+   "path": [
+    "Krakow",
+    "Rzeszow",
+    "Bialystok"
+   ],
+   "priority": false,
+   "sla_ms": 17.32
+  },
+  "F30": {
+   "bw": 62.63,
+   "min_bw": 62.63,
+   "path": [
+    "Bydgoszcz",
+    "Warsaw",
+    "Lodz"
+   ],
+   "priority": true,
+   "sla_ms": 18.91
+  },
+  "F31": {
+   "bw": 38.59,
+   "min_bw": 38.59,
+   "path": [
+    "Gdansk",
+    "Warsaw"
+   ],
+   "priority": true,
+   "sla_ms": 8.58
+  },
+  "F32": {
+   "bw": 61.68,
+   "min_bw": 61.68,
+   "path": [
+    "Szczecin",
+    "Poznan",
+    "Wroclaw"
+   ],
+   "priority": false,
+   "sla_ms": 18.31
+  },
+  "F33": {
+   "bw": 61.37,
+   "min_bw": 61.37,
+   "path": [
+    "Poznan",
+    "Wroclaw"
+   ],
+   "priority": true,
+   "sla_ms": 14.94
+  },
+  "F34": {
+   "bw": 56.62,
+   "min_bw": 56.62,
+   "path": [
+    "Bydgoszcz",
+    "Kolobrzeg"
+   ],
+   "priority": false,
+   "sla_ms": 8.29
+  },
+  "F35": {
+   "bw": 44.6,
+   "min_bw": 44.6,
+   "path": [
+    "Warsaw",
+    "Lodz",
+    "Wroclaw"
+   ],
+   "priority": true,
+   "sla_ms": 22.28
+  },
+  "F36": {
+   "bw": 57.26,
+   "min_bw": 57.26,
+   "path": [
+    "Rzeszow",
+    "Krakow",
+    "Warsaw"
+   ],
+   "priority": false,
+   "sla_ms": 10.94
+  },
+  "F37": {
+   "bw": 32.9,
+   "min_bw": 32.9,
+   "path": [
+    "Bialystok",
+    "Warsaw"
+   ],
+   "priority": false,
+   "sla_ms": 5.51
+  },
+  "F38": {
+   "bw": 51.56,
+   "min_bw": 51.56,
+   "path": [
+    "Bydgoszcz",
+    "Poznan",
+    "Wroclaw"
+   ],
+   "priority": false,
+   "sla_ms": 15.98
+  },
+  "F39": {
+   "bw": 49.98,
+   "min_bw": 49.98,
+   "path": [
+    "Gdansk",
+    "Warsaw",
+    "Lodz"
+   ],
+   "priority": true,
+   "sla_ms": 23.58
+  },
+  "F4": {
+   "bw": 44.28,
+   "min_bw": 44.28,
+   "path": [
+    "Bialystok",
+    "Rzeszow"
+   ],
+   "priority": false,
+   "sla_ms": 8.2
+  },
+  "F40": {
+   "bw": 55.36,
+   "min_bw": 55.36,
+   "path": [
+    "Gdansk",
+    "Kolobrzeg",
+    "Szczecin"
+   ],
+   "priority": false,
+   "sla_ms": 17.5
+  },
+  "F5": {
+   "bw": 61.68,
+   "min_bw": 61.68,
+   "path": [
+    "Gdansk",
+    "Warsaw",
+    "Bydgoszcz"
+   ],
+   "priority": false,
+   "sla_ms": 14.44
+  },
+  "F6": {
+   "bw": 50.3,
+   "min_bw": 50.3,
+   "path": [
+    "Bydgoszcz",
+    "Warsaw",
+    "Bialystok"
+   ],
+   "priority": false,
+   "sla_ms": 13.16
+  },
+  "F7": {
+   "bw": 39.86,
+   "min_bw": 39.86,
+   "path": [
+    "Katowice",
+    "Krakow",
+    "Warsaw"
+   ],
+   "priority": false,
+   "sla_ms": 20.28
+  },
+  "F8": {
+   "bw": 62.63,
+   "min_bw": 62.63,
+   "path": [
+    "Bialystok",
+    "Gdansk",
+    "Kolobrzeg",
+    "Szczecin"
+   ],
+   "priority": false,
+   "sla_ms": 24.81
+  },
+  "F9": {
+   "bw": 33.21,
+   "min_bw": 33.21,
+   "path": [
+    "Kolobrzeg",
+    "Szczecin"
+   ],
+   "priority": true,
+   "sla_ms": 8.82
+  }
+ },
+ "links": {
+  "Link_0_10": {
+   "a": "Gdansk",
+   "b": "Warsaw",
+   "cap": 622.0,
+   "lat_ms": 1.369
+  },
+  "Link_0_2": {
+   "a": "Gdansk",
+   "b": "Kolobrzeg",
+   "cap": 622.0,
+   "lat_ms": 0.813
+  },
+  "Link_0_5": {
+   "a": "Gdansk",
+   "b": "Bialystok",
+   "cap": 622.0,
+   "lat_ms": 1.604
+  },
+  "Link_1_10": {
+   "a": "Bydgoszcz",
+   "b": "Warsaw",
+   "cap": 622.0,
+   "lat_ms": 1.159
+  },
+  "Link_1_2": {
+   "a": "Bydgoszcz",
+   "b": "Kolobrzeg",
+   "cap": 622.0,
+   "lat_ms": 0.852
+  },
+  "Link_1_7": {
+   "a": "Bydgoszcz",
+   "b": "Poznan",
+   "cap": 622.0,
+   "lat_ms": 0.537
+  },
+  "Link_2_9": {
+   "a": "Kolobrzeg",
+   "b": "Szczecin",
+   "cap": 622.0,
+   "lat_ms": 0.688
+  },
+  "Link_3_11": {
+   "a": "Katowice",
+   "b": "Wroclaw",
+   "cap": 622.0,
+   "lat_ms": 0.803
+  },
+  "Link_3_4": {
+   "a": "Katowice",
+   "b": "Krakow",
+   "cap": 622.0,
+   "lat_ms": 0.393
+  },
+  "Link_3_6": {
+   "a": "Katowice",
+   "b": "Lodz",
+   "cap": 622.0,
+   "lat_ms": 0.806
+  },
+  "Link_4_10": {
+   "a": "Krakow",
+   "b": "Warsaw",
+   "cap": 622.0,
+   "lat_ms": 1.293
+  },
+  "Link_4_8": {
+   "a": "Krakow",
+   "b": "Rzeszow",
+   "cap": 622.0,
+   "lat_ms": 0.75
+  },
+  "Link_5_10": {
+   "a": "Bialystok",
+   "b": "Warsaw",
+   "cap": 622.0,
+   "lat_ms": 0.867
+  },
+  "Link_5_8": {
+   "a": "Bialystok",
+   "b": "Rzeszow",
+   "cap": 622.0,
+   "lat_ms": 1.773
+  },
+  "Link_6_10": {
+   "a": "Lodz",
+   "b": "Warsaw",
+   "cap": 622.0,
+   "lat_ms": 0.615
+  },
+  "Link_6_11": {
+   "a": "Lodz",
+   "b": "Wroclaw",
+   "cap": 622.0,
+   "lat_ms": 0.929
+  },
+  "Link_7_11": {
+   "a": "Poznan",
+   "b": "Wroclaw",
+   "cap": 622.0,
+   "lat_ms": 0.724
+  },
+  "Link_7_9": {
+   "a": "Poznan",
+   "b": "Szczecin",
+   "cap": 622.0,
+   "lat_ms": 0.951
+  }
+ },
+ "nodes": {
+  "Bialystok": {
+   "base_ms": 4.36,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Bydgoszcz": {
+   "base_ms": 4.22,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 5
+  },
+  "Gdansk": {
+   "base_ms": 6.18,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "Katowice": {
+   "base_ms": 5.08,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "Kolobrzeg": {
+   "base_ms": 5.59,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "Krakow": {
+   "base_ms": 5.75,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Lodz": {
+   "base_ms": 6.92,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Poznan": {
+   "base_ms": 2.57,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 7
+  },
+  "Rzeszow": {
+   "base_ms": 2.77,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Szczecin": {
+   "base_ms": 7.87,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "Warsaw": {
+   "base_ms": 3.09,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 6
+  },
+  "Wroclaw": {
+   "base_ms": 5.48,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  }
+ },
+ "slices": {}
+}

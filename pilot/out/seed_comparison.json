@@ -1,0 +1,192 @@
+{
+ "meta": {
+  "commit_sha": "1ad9676",
+  "git_dirty": true,
+  "source_dirty": false,
+  "started_utc": "2026-08-03T02:37:11Z",
+  "python": "3.12.12",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "corpora": [
+   "out/corpus_v2",
+   "out/corpus_s43",
+   "out/corpus_s44"
+  ]
+ },
+ "per_seed": [
+  {
+   "corpus": "out/corpus_v2",
+   "seed": 42,
+   "n_records": 500,
+   "n_usable": 499,
+   "n_feasible": 328,
+   "n_fulfilled": 312,
+   "q_conditioned": 0.3622,
+   "q_ci95": [
+    0.3108,
+    0.4169
+   ],
+   "q_counts": [
+    113,
+    312
+   ],
+   "abstained": 0,
+   "prefix_only_unsafe": 0,
+   "terminal_only_unsafe": 0,
+   "n_loss": 278,
+   "detection_by_budget": {
+    "b1": 0.4173,
+    "b2": 0.4496,
+    "b3": 1.0
+   },
+   "gen_seconds_median": 5.748
+  },
+  {
+   "corpus": "out/corpus_s43",
+   "seed": 43,
+   "n_records": 100,
+   "n_usable": 99,
+   "n_feasible": 52,
+   "n_fulfilled": 49,
+   "q_conditioned": 0.2245,
+   "q_ci95": [
+    0.1302,
+    0.3588
+   ],
+   "q_counts": [
+    11,
+    49
+   ],
+   "abstained": 0,
+   "prefix_only_unsafe": 0,
+   "terminal_only_unsafe": 0,
+   "n_loss": 55,
+   "detection_by_budget": {
+    "b1": 0.5091,
+    "b2": 0.5273,
+    "b3": 1.0
+   },
+   "gen_seconds_median": 10.161
+  },
+  {
+   "corpus": "out/corpus_s44",
+   "seed": 44,
+   "n_records": 100,
+   "n_usable": 97,
+   "n_feasible": 62,
+   "n_fulfilled": 59,
+   "q_conditioned": 0.2712,
+   "q_ci95": [
+    0.1744,
+    0.396
+   ],
+   "q_counts": [
+    16,
+    59
+   ],
+   "abstained": 0,
+   "prefix_only_unsafe": 0,
+   "terminal_only_unsafe": 0,
+   "n_loss": 51,
+   "detection_by_budget": {
+    "b1": 0.3529,
+    "b2": 0.4706,
+    "b3": 1.0
+   },
+   "gen_seconds_median": 10.565
+  }
+ ],
+ "per_seed_rep0_matched": [
+  {
+   "corpus": "out/corpus_v2",
+   "seed": 42,
+   "n_records": 100,
+   "n_usable": 99,
+   "n_feasible": 68,
+   "n_fulfilled": 66,
+   "q_conditioned": 0.303,
+   "q_ci95": [
+    0.2055,
+    0.4222
+   ],
+   "q_counts": [
+    20,
+    66
+   ],
+   "abstained": 0,
+   "prefix_only_unsafe": 0,
+   "terminal_only_unsafe": 0,
+   "n_loss": 49,
+   "detection_by_budget": {
+    "b1": 0.4082,
+    "b2": 0.4082,
+    "b3": 1.0
+   },
+   "gen_seconds_median": 8.894
+  },
+  {
+   "corpus": "out/corpus_s43",
+   "seed": 43,
+   "n_records": 100,
+   "n_usable": 99,
+   "n_feasible": 52,
+   "n_fulfilled": 49,
+   "q_conditioned": 0.2245,
+   "q_ci95": [
+    0.1302,
+    0.3588
+   ],
+   "q_counts": [
+    11,
+    49
+   ],
+   "abstained": 0,
+   "prefix_only_unsafe": 0,
+   "terminal_only_unsafe": 0,
+   "n_loss": 55,
+   "detection_by_budget": {
+    "b1": 0.5091,
+    "b2": 0.5273,
+    "b3": 1.0
+   },
+   "gen_seconds_median": 10.161
+  },
+  {
+   "corpus": "out/corpus_s44",
+   "seed": 44,
+   "n_records": 100,
+   "n_usable": 97,
+   "n_feasible": 62,
+   "n_fulfilled": 59,
+   "q_conditioned": 0.2712,
+   "q_ci95": [
+    0.1744,
+    0.396
+   ],
+   "q_counts": [
+    16,
+    59
+   ],
+   "abstained": 0,
+   "prefix_only_unsafe": 0,
+   "terminal_only_unsafe": 0,
+   "n_loss": 51,
+   "detection_by_budget": {
+    "b1": 0.3529,
+    "b2": 0.4706,
+    "b3": 1.0
+   },
+   "gen_seconds_median": 10.565
+  }
+ ],
+ "spread": {
+  "q_min": 0.2245,
+  "q_max": 0.303,
+  "q_range": 0.0785,
+  "prefix_only_total": 0,
+  "abstained_total": 0,
+  "n_seeds": 3,
+  "basis": "q spread is computed on the REPETITION-ZERO subset of every corpus, so the seeds share one design; the as-run values differ in sample size and are reported separately in per_seed"
+ }
+}

@@ -1,0 +1,921 @@
+{
+ "acls": {
+  "A1": {
+   "action": "allow",
+   "dst": "10.0.5.0/24",
+   "src": "10.0.8.0/24"
+  },
+  "A2": {
+   "action": "allow",
+   "dst": "10.0.2.0/24",
+   "src": "10.0.6.0/24"
+  },
+  "A3": {
+   "action": "allow",
+   "dst": "10.0.8.0/24",
+   "src": "10.0.4.0/24"
+  }
+ },
+ "flows": {
+  "F1": {
+   "bw": 3.96,
+   "min_bw": 3.96,
+   "path": [
+    "NewOrleans",
+    "Houston",
+    "ElPaso",
+    "LosAngeles"
+   ],
+   "priority": true,
+   "sla_ms": 35.47
+  },
+  "F10": {
+   "bw": 3.67,
+   "min_bw": 3.67,
+   "path": [
+    "WashingtonDC",
+    "Cleveland",
+    "Indianapolis",
+    "StLouis",
+    "Tulsa"
+   ],
+   "priority": true,
+   "sla_ms": 48.03
+  },
+  "F11": {
+   "bw": 5.65,
+   "min_bw": 5.65,
+   "path": [
+    "LosAngeles",
+    "SanFrancisco",
+    "SaltLakeCity"
+   ],
+   "priority": false,
+   "sla_ms": 31.1
+  },
+  "F12": {
+   "bw": 2.82,
+   "min_bw": 2.82,
+   "path": [
+    "Atlanta",
+    "Nashville",
+    "Dallas",
+    "ElPaso"
+   ],
+   "priority": true,
+   "sla_ms": 33.55
+  },
+  "F13": {
+   "bw": 1.69,
+   "min_bw": 1.69,
+   "path": [
+    "Nashville",
+    "Dallas",
+    "Denver",
+    "SaltLakeCity"
+   ],
+   "priority": true,
+   "sla_ms": 36.29
+  },
+  "F14": {
+   "bw": 4.52,
+   "min_bw": 4.52,
+   "path": [
+    "Cleveland",
+    "Indianapolis",
+    "StLouis"
+   ],
+   "priority": false,
+   "sla_ms": 29.0
+  },
+  "F15": {
+   "bw": 3.11,
+   "min_bw": 3.11,
+   "path": [
+    "Miami",
+    "NewOrleans",
+    "Houston",
+    "ElPaso",
+    "LosAngeles",
+    "SanFrancisco",
+    "Seattle"
+   ],
+   "priority": false,
+   "sla_ms": 68.66
+  },
+  "F16": {
+   "bw": 16.69,
+   "min_bw": 16.69,
+   "path": [
+    "WashingtonDC",
+    "Cleveland"
+   ],
+   "priority": false,
+   "sla_ms": 16.73
+  },
+  "F17": {
+   "bw": 2.54,
+   "min_bw": 2.54,
+   "path": [
+    "Cleveland",
+    "Indianapolis",
+    "StLouis",
+    "KansasCity",
+    "Denver"
+   ],
+   "priority": true,
+   "sla_ms": 42.59
+  },
+  "F18": {
+   "bw": 2.26,
+   "min_bw": 2.26,
+   "path": [
+    "Denver",
+    "KansasCity",
+    "Minneapolis",
+    "Chicago",
+    "Detroit"
+   ],
+   "priority": true,
+   "sla_ms": 41.46
+  },
+  "F19": {
+   "bw": 5.94,
+   "min_bw": 5.94,
+   "path": [
+    "Detroit",
+    "Cleveland",
+    "Albany",
+    "Boston"
+   ],
+   "priority": false,
+   "sla_ms": 21.47
+  },
+  "F2": {
+   "bw": 4.81,
+   "min_bw": 4.81,
+   "path": [
+    "LosAngeles",
+    "ElPaso",
+    "Dallas",
+    "Tulsa",
+    "StLouis",
+    "Chicago",
+    "Detroit"
+   ],
+   "priority": false,
+   "sla_ms": 61.02
+  },
+  "F20": {
+   "bw": 5.94,
+   "min_bw": 5.94,
+   "path": [
+    "Nashville",
+    "Atlanta",
+    "Miami"
+   ],
+   "priority": false,
+   "sla_ms": 29.26
+  },
+  "F21": {
+   "bw": 5.37,
+   "min_bw": 5.37,
+   "path": [
+    "Nashville",
+    "Dallas"
+   ],
+   "priority": false,
+   "sla_ms": 13.08
+  },
+  "F22": {
+   "bw": 2.54,
+   "min_bw": 2.54,
+   "path": [
+    "SanFrancisco",
+    "SaltLakeCity",
+    "Denver",
+    "KansasCity",
+    "Minneapolis"
+   ],
+   "priority": true,
+   "sla_ms": 45.26
+  },
+  "F23": {
+   "bw": 38.48,
+   "min_bw": 38.48,
+   "path": [
+    "Seattle",
+    "SanFrancisco"
+   ],
+   "priority": true,
+   "sla_ms": 20.73
+  },
+  "F24": {
+   "bw": 9.9,
+   "min_bw": 9.9,
+   "path": [
+    "WashingtonDC",
+    "NewYork",
+    "Boston"
+   ],
+   "priority": true,
+   "sla_ms": 20.55
+  },
+  "F25": {
+   "bw": 1.69,
+   "min_bw": 1.69,
+   "path": [
+    "KansasCity",
+    "Denver",
+    "SaltLakeCity",
+    "LasVegas"
+   ],
+   "priority": true,
+   "sla_ms": 38.36
+  },
+  "F26": {
+   "bw": 7.64,
+   "min_bw": 7.64,
+   "path": [
+    "Chicago",
+    "Indianapolis",
+    "Nashville",
+    "Charlotte"
+   ],
+   "priority": false,
+   "sla_ms": 36.48
+  },
+  "F27": {
+   "bw": 4.81,
+   "min_bw": 4.81,
+   "path": [
+    "StLouis",
+    "Indianapolis",
+    "Cleveland",
+    "WashingtonDC"
+   ],
+   "priority": false,
+   "sla_ms": 29.35
+  },
+  "F28": {
+   "bw": 10.18,
+   "min_bw": 10.18,
+   "path": [
+    "Indianapolis",
+    "Cleveland",
+    "Albany",
+    "NewYork"
+   ],
+   "priority": true,
+   "sla_ms": 27.36
+  },
+  "F29": {
+   "bw": 2.26,
+   "min_bw": 2.26,
+   "path": [
+    "NewYork",
+    "WashingtonDC",
+    "Charlotte",
+    "Nashville",
+    "Dallas",
+    "ElPaso",
+    "LasVegas"
+   ],
+   "priority": false,
+   "sla_ms": 63.51
+  },
+  "F3": {
+   "bw": 3.67,
+   "min_bw": 3.67,
+   "path": [
+    "Minneapolis",
+    "Chicago",
+    "Detroit"
+   ],
+   "priority": false,
+   "sla_ms": 17.64
+  },
+  "F30": {
+   "bw": 6.79,
+   "min_bw": 6.79,
+   "path": [
+    "Albany",
+    "Cleveland"
+   ],
+   "priority": false,
+   "sla_ms": 17.94
+  },
+  "F31": {
+   "bw": 4.81,
+   "min_bw": 4.81,
+   "path": [
+    "Detroit",
+    "Chicago",
+    "Indianapolis",
+    "Nashville",
+    "Dallas",
+    "ElPaso",
+    "LosAngeles"
+   ],
+   "priority": false,
+   "sla_ms": 58.3
+  },
+  "F32": {
+   "bw": 6.79,
+   "min_bw": 6.79,
+   "path": [
+    "Cleveland",
+    "Albany"
+   ],
+   "priority": false,
+   "sla_ms": 13.51
+  },
+  "F33": {
+   "bw": 7.07,
+   "min_bw": 7.07,
+   "path": [
+    "WashingtonDC",
+    "Charlotte",
+    "Nashville"
+   ],
+   "priority": false,
+   "sla_ms": 29.54
+  },
+  "F34": {
+   "bw": 4.81,
+   "min_bw": 4.81,
+   "path": [
+    "Seattle",
+    "SaltLakeCity",
+    "Denver"
+   ],
+   "priority": false,
+   "sla_ms": 26.03
+  },
+  "F35": {
+   "bw": 5.09,
+   "min_bw": 5.09,
+   "path": [
+    "LosAngeles",
+    "ElPaso",
+    "Dallas",
+    "Nashville",
+    "Indianapolis",
+    "Cleveland"
+   ],
+   "priority": false,
+   "sla_ms": 62.44
+  },
+  "F36": {
+   "bw": 5.09,
+   "min_bw": 5.09,
+   "path": [
+    "Indianapolis",
+    "Nashville",
+    "Dallas",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 22.54
+  },
+  "F37": {
+   "bw": 6.22,
+   "min_bw": 6.22,
+   "path": [
+    "StLouis",
+    "Indianapolis",
+    "Cleveland",
+    "Albany",
+    "NewYork"
+   ],
+   "priority": false,
+   "sla_ms": 37.01
+  },
+  "F38": {
+   "bw": 4.81,
+   "min_bw": 4.81,
+   "path": [
+    "Minneapolis",
+    "KansasCity",
+    "Denver"
+   ],
+   "priority": false,
+   "sla_ms": 29.17
+  },
+  "F39": {
+   "bw": 3.11,
+   "min_bw": 3.11,
+   "path": [
+    "Charlotte",
+    "Nashville",
+    "Dallas",
+    "Tulsa",
+    "KansasCity"
+   ],
+   "priority": false,
+   "sla_ms": 58.0
+  },
+  "F4": {
+   "bw": 5.09,
+   "min_bw": 5.09,
+   "path": [
+    "KansasCity",
+    "Tulsa",
+    "Dallas",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 27.46
+  },
+  "F40": {
+   "bw": 2.54,
+   "min_bw": 2.54,
+   "path": [
+    "Indianapolis",
+    "StLouis",
+    "KansasCity",
+    "Denver"
+   ],
+   "priority": false,
+   "sla_ms": 29.34
+  },
+  "F5": {
+   "bw": 2.82,
+   "min_bw": 2.82,
+   "path": [
+    "Miami",
+    "NewOrleans",
+    "Houston",
+    "Dallas",
+    "Tulsa"
+   ],
+   "priority": false,
+   "sla_ms": 48.2
+  },
+  "F6": {
+   "bw": 2.82,
+   "min_bw": 2.82,
+   "path": [
+    "ElPaso",
+    "Houston",
+    "NewOrleans"
+   ],
+   "priority": false,
+   "sla_ms": 23.16
+  },
+  "F7": {
+   "bw": 2.82,
+   "min_bw": 2.82,
+   "path": [
+    "KansasCity",
+    "Denver",
+    "SaltLakeCity",
+    "SanFrancisco"
+   ],
+   "priority": false,
+   "sla_ms": 46.14
+  },
+  "F8": {
+   "bw": 1.69,
+   "min_bw": 1.69,
+   "path": [
+    "SaltLakeCity",
+    "Denver",
+    "Dallas",
+    "Nashville",
+    "Indianapolis",
+    "Cleveland",
+    "Albany",
+    "Boston"
+   ],
+   "priority": false,
+   "sla_ms": 80.98
+  },
+  "F9": {
+   "bw": 2.82,
+   "min_bw": 2.82,
+   "path": [
+    "NewOrleans",
+    "Houston",
+    "Dallas",
+    "Tulsa",
+    "KansasCity"
+   ],
+   "priority": false,
+   "sla_ms": 40.18
+  }
+ },
+ "links": {
+  "L0": {
+   "a": "Seattle",
+   "b": "SanFrancisco",
+   "cap": 64.0,
+   "lat_ms": 5.465
+  },
+  "L1": {
+   "a": "Seattle",
+   "b": "SaltLakeCity",
+   "cap": 64.0,
+   "lat_ms": 5.537
+  },
+  "L10": {
+   "a": "LasVegas",
+   "b": "ElPaso",
+   "cap": 64.0,
+   "lat_ms": 4.69
+  },
+  "L14": {
+   "a": "SaltLakeCity",
+   "b": "Denver",
+   "cap": 64.0,
+   "lat_ms": 3.065
+  },
+  "L17": {
+   "a": "ElPaso",
+   "b": "Dallas",
+   "cap": 64.0,
+   "lat_ms": 4.523
+  },
+  "L18": {
+   "a": "ElPaso",
+   "b": "Houston",
+   "cap": 64.0,
+   "lat_ms": 5.367
+  },
+  "L2": {
+   "a": "LosAngeles",
+   "b": "SanFrancisco",
+   "cap": 64.0,
+   "lat_ms": 2.726
+  },
+  "L20": {
+   "a": "Dallas",
+   "b": "Houston",
+   "cap": 64.0,
+   "lat_ms": 1.752
+  },
+  "L21": {
+   "a": "Dallas",
+   "b": "Tulsa",
+   "cap": 64.0,
+   "lat_ms": 1.913
+  },
+  "L22": {
+   "a": "Dallas",
+   "b": "Denver",
+   "cap": 64.0,
+   "lat_ms": 5.252
+  },
+  "L23": {
+   "a": "Dallas",
+   "b": "Nashville",
+   "cap": 64.0,
+   "lat_ms": 4.999
+  },
+  "L26": {
+   "a": "Houston",
+   "b": "NewOrleans",
+   "cap": 64.0,
+   "lat_ms": 2.57
+  },
+  "L28": {
+   "a": "Tulsa",
+   "b": "KansasCity",
+   "cap": 64.0,
+   "lat_ms": 1.81
+  },
+  "L29": {
+   "a": "Tulsa",
+   "b": "StLouis",
+   "cap": 64.0,
+   "lat_ms": 2.821
+  },
+  "L3": {
+   "a": "LosAngeles",
+   "b": "LasVegas",
+   "cap": 64.0,
+   "lat_ms": 1.895
+  },
+  "L30": {
+   "a": "Minneapolis",
+   "b": "KansasCity",
+   "cap": 64.0,
+   "lat_ms": 3.244
+  },
+  "L31": {
+   "a": "Minneapolis",
+   "b": "Chicago",
+   "cap": 64.0,
+   "lat_ms": 2.797
+  },
+  "L34": {
+   "a": "KansasCity",
+   "b": "Denver",
+   "cap": 64.0,
+   "lat_ms": 4.356
+  },
+  "L35": {
+   "a": "KansasCity",
+   "b": "StLouis",
+   "cap": 64.0,
+   "lat_ms": 1.905
+  },
+  "L4": {
+   "a": "LosAngeles",
+   "b": "ElPaso",
+   "cap": 64.0,
+   "lat_ms": 5.724
+  },
+  "L40": {
+   "a": "Chicago",
+   "b": "Indianapolis",
+   "cap": 64.0,
+   "lat_ms": 1.466
+  },
+  "L41": {
+   "a": "Chicago",
+   "b": "Detroit",
+   "cap": 64.0,
+   "lat_ms": 2.024
+  },
+  "L42": {
+   "a": "Chicago",
+   "b": "StLouis",
+   "cap": 64.0,
+   "lat_ms": 2.078
+  },
+  "L44": {
+   "a": "Indianapolis",
+   "b": "StLouis",
+   "cap": 64.0,
+   "lat_ms": 1.836
+  },
+  "L45": {
+   "a": "Indianapolis",
+   "b": "Nashville",
+   "cap": 64.0,
+   "lat_ms": 1.971
+  },
+  "L46": {
+   "a": "Indianapolis",
+   "b": "Cleveland",
+   "cap": 64.0,
+   "lat_ms": 2.199
+  },
+  "L48": {
+   "a": "Detroit",
+   "b": "Cleveland",
+   "cap": 64.0,
+   "lat_ms": 0.746
+  },
+  "L55": {
+   "a": "Nashville",
+   "b": "Charlotte",
+   "cap": 64.0,
+   "lat_ms": 2.644
+  },
+  "L56": {
+   "a": "Nashville",
+   "b": "Atlanta",
+   "cap": 64.0,
+   "lat_ms": 1.717
+  },
+  "L59": {
+   "a": "Cleveland",
+   "b": "Albany",
+   "cap": 64.0,
+   "lat_ms": 3.319
+  },
+  "L60": {
+   "a": "Cleveland",
+   "b": "WashingtonDC",
+   "cap": 64.0,
+   "lat_ms": 2.467
+  },
+  "L61": {
+   "a": "NewYork",
+   "b": "Albany",
+   "cap": 64.0,
+   "lat_ms": 1.168
+  },
+  "L62": {
+   "a": "NewYork",
+   "b": "Boston",
+   "cap": 64.0,
+   "lat_ms": 1.492
+  },
+  "L63": {
+   "a": "NewYork",
+   "b": "WashingtonDC",
+   "cap": 64.0,
+   "lat_ms": 1.715
+  },
+  "L66": {
+   "a": "Albany",
+   "b": "Boston",
+   "cap": 64.0,
+   "lat_ms": 1.154
+  },
+  "L68": {
+   "a": "Charlotte",
+   "b": "Atlanta",
+   "cap": 64.0,
+   "lat_ms": 1.823
+  },
+  "L69": {
+   "a": "Charlotte",
+   "b": "WashingtonDC",
+   "cap": 64.0,
+   "lat_ms": 2.655
+  },
+  "L7": {
+   "a": "SanFrancisco",
+   "b": "SaltLakeCity",
+   "cap": 64.0,
+   "lat_ms": 4.813
+  },
+  "L71": {
+   "a": "NewOrleans",
+   "b": "Atlanta",
+   "cap": 64.0,
+   "lat_ms": 3.393
+  },
+  "L72": {
+   "a": "NewOrleans",
+   "b": "Miami",
+   "cap": 64.0,
+   "lat_ms": 5.28
+  },
+  "L78": {
+   "a": "Atlanta",
+   "b": "Miami",
+   "cap": 64.0,
+   "lat_ms": 4.789
+  },
+  "L9": {
+   "a": "LasVegas",
+   "b": "SaltLakeCity",
+   "cap": 64.0,
+   "lat_ms": 2.961
+  }
+ },
+ "nodes": {
+  "Albany": {
+   "base_ms": 2.94,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "Atlanta": {
+   "base_ms": 4.17,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 7
+  },
+  "Boston": {
+   "base_ms": 5.38,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "Charlotte": {
+   "base_ms": 5.48,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "Chicago": {
+   "base_ms": 2.78,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "Cleveland": {
+   "base_ms": 4.9,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "Dallas": {
+   "base_ms": 2.44,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "Denver": {
+   "base_ms": 4.86,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "Detroit": {
+   "base_ms": 2.23,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "ElPaso": {
+   "base_ms": 4.43,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "Houston": {
+   "base_ms": 2.95,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 6
+  },
+  "Indianapolis": {
+   "base_ms": 2.26,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "KansasCity": {
+   "base_ms": 4.07,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 6
+  },
+  "LasVegas": {
+   "base_ms": 2.6,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "LosAngeles": {
+   "base_ms": 4.28,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Miami": {
+   "base_ms": 5.64,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Minneapolis": {
+   "base_ms": 2.65,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "Nashville": {
+   "base_ms": 6.81,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "NewOrleans": {
+   "base_ms": 5.34,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 8
+  },
+  "NewYork": {
+   "base_ms": 6.92,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 6
+  },
+  "SaltLakeCity": {
+   "base_ms": 7.94,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 8
+  },
+  "SanFrancisco": {
+   "base_ms": 3.35,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 6
+  },
+  "Seattle": {
+   "base_ms": 5.25,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "StLouis": {
+   "base_ms": 6.98,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "Tulsa": {
+   "base_ms": 5.53,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "WashingtonDC": {
+   "base_ms": 6.56,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  }
+ },
+ "slices": {}
+}

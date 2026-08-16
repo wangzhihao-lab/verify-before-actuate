@@ -1,0 +1,46 @@
+{
+ "n_plans": 499,
+ "n_states_compared": 693,
+ "n_states_agree": 693,
+ "state_agreement": 1.0,
+ "plan_unsafe_reference": 268,
+ "plan_unsafe_independent": 268,
+ "loss_events_total": 278,
+ "loss_events_state_detectable": 268,
+ "loss_events_transition_only": 10,
+ "transition_only_examples": [
+  {
+   "cell": "polska|slice|guarded|2",
+   "detail": "path references unknown node: ['N1', 'N4', 'N7']"
+  },
+  {
+   "cell": "polska|slice|guarded|3",
+   "detail": "reroute must keep endpoints Kolobrzeg->Szczecin, got Kolobrzeg->Gdansk"
+  },
+  {
+   "cell": "nobel-us|slice|guarded|2",
+   "detail": "unknown op 'add_slice'"
+  },
+  {
+   "cell": "nobel-us|scaling|guarded|0",
+   "detail": "reroute must keep endpoints Palo-Alto->Pittsburgh, got Palo-Alto->Boulder"
+  },
+  {
+   "cell": "atlanta|slice|guarded|2",
+   "detail": "unknown op 'remove_flow_from_path'"
+  }
+ ],
+ "disagreements": [],
+ "scope": "predicate evaluation over the three modelled invariant classes; the transition function is shared, so transition semantics are not independently validated",
+ "meta": {
+  "commit_sha": "1ad9676",
+  "git_dirty": true,
+  "source_dirty": false,
+  "started_utc": "2026-08-03T02:36:12Z",
+  "python": "3.12.12",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "corpus": "out/corpus_v2"
+ }
+}

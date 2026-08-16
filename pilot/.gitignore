@@ -1,0 +1,47 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# ---------------------------------------------------------------------------
+# Experiment output. The archive is DELIBERATELY selective: only the runs the
+# paper reads are versioned, so that a reader who clones this cannot mistake a
+# superseded or exploratory run for evidence. Everything excluded below is
+# either an earlier version of a kept run, a smoke test, or a run whose
+# generator was later found to be flawed.
+#
+# Versioned (do not add to this ignore list):
+#   corpus_v2         500-cell agent corpus, seed 42, qwen2.5-7b
+#   corpus_s43/s44    seed-sensitivity corpora
+#   corpus_qwen3vl    second-model corpus
+#   temporal_v2       ordering-stress suite (SHA-seeded rerun)
+#   costbench_v2      26-topology verification cost sweep
+#   crossover_v2      tau/G ladder (warm G, 3 repeats)
+#   policies_v3       800 closed-loop policy traces
+#   *.json at out/    seed_comparison, model_comparison
+# ---------------------------------------------------------------------------
+out/smoke_*
+out/calib_*
+out/microbench_*
+out/mvp_*
+out/demo_*
+out/q_*
+# ...except this one. Its base_state.json is the input the adversarial
+# injection taxonomy is replayed from, and that replay backs the paper's only
+# claim that prefix checking strictly dominates terminal checking. The
+# negation names the directory, not files inside it: a file cannot be
+# re-included once a parent directory is excluded.
+!out/q_20260723_060529/
+# superseded by the runs kept above
+out/corpus_main/
+out/corpus_qwen_SUPERSEDED_flawed_intents/
+out/temporal_qwen/
+out/policies_v2/
+out/costbench_envelope/
+out/costbench_validate/

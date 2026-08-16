@@ -1,0 +1,2591 @@
+{
+ "n_traces": 800,
+ "policies": {
+  "no_verify": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 59,
+    "n": 100,
+    "rate": 0.59,
+    "ci95_lo": 0.492,
+    "ci95_hi": 0.6813
+   },
+   "safe_completion": {
+    "k": 35,
+    "n": 100,
+    "rate": 0.35,
+    "ci95_lo": 0.2636,
+    "ci95_hi": 0.4475
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.49,
+    "ci95_hi": 0.69,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.26,
+    "ci95_hi": 0.44,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 6,
+    "n": 100,
+    "rate": 0.06,
+    "ci95_lo": 0.0278,
+    "ci95_hi": 0.1248
+   },
+   "actuation": {
+    "k": 94,
+    "n": 100,
+    "rate": 0.94,
+    "ci95_lo": 0.8752,
+    "ci95_hi": 0.9722
+   },
+   "interception_given_unsafe": {
+    "k": 2,
+    "n": 61,
+    "rate": 0.0328,
+    "ci95_lo": 0.009,
+    "ci95_hi": 0.1119
+   },
+   "repaired_given_unsafe": {
+    "k": 0,
+    "n": 61,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0592
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 0,
+   "cost": {
+    "llm_calls": 1,
+    "gen_seconds": 10.2106,
+    "verify_seconds": 0.0,
+    "prompt_tokens": 5954.18,
+    "gen_tokens": 39.21,
+    "n_rounds": 1.0
+   },
+   "outcomes": {
+    "ACTUATE": 35,
+    "ACTUATE_UNSOUND": 59,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 5,
+    "PARSE_FAIL": 1
+   }
+  },
+  "reflect/r1": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 59,
+    "n": 100,
+    "rate": 0.59,
+    "ci95_lo": 0.492,
+    "ci95_hi": 0.6813
+   },
+   "safe_completion": {
+    "k": 35,
+    "n": 100,
+    "rate": 0.35,
+    "ci95_lo": 0.2636,
+    "ci95_hi": 0.4475
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.49,
+    "ci95_hi": 0.69,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.26,
+    "ci95_hi": 0.44,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 6,
+    "n": 100,
+    "rate": 0.06,
+    "ci95_lo": 0.0278,
+    "ci95_hi": 0.1248
+   },
+   "actuation": {
+    "k": 94,
+    "n": 100,
+    "rate": 0.94,
+    "ci95_lo": 0.8752,
+    "ci95_hi": 0.9722
+   },
+   "interception_given_unsafe": {
+    "k": 2,
+    "n": 61,
+    "rate": 0.0328,
+    "ci95_lo": 0.009,
+    "ci95_hi": 0.1119
+   },
+   "repaired_given_unsafe": {
+    "k": 0,
+    "n": 61,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0592
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 4,
+   "cost": {
+    "llm_calls": 1.99,
+    "gen_seconds": 14.4971,
+    "verify_seconds": 0.0,
+    "prompt_tokens": 12019.13,
+    "gen_tokens": 84.99,
+    "n_rounds": 1.98
+   },
+   "outcomes": {
+    "ACTUATE": 35,
+    "ACTUATE_UNSOUND": 59,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 5,
+    "PARSE_FAIL": 1
+   }
+  },
+  "reflect/r3": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 58,
+    "n": 100,
+    "rate": 0.58,
+    "ci95_lo": 0.4821,
+    "ci95_hi": 0.672
+   },
+   "safe_completion": {
+    "k": 35,
+    "n": 100,
+    "rate": 0.35,
+    "ci95_lo": 0.2636,
+    "ci95_hi": 0.4475
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.47,
+    "ci95_hi": 0.69,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.26,
+    "ci95_hi": 0.44,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 7,
+    "n": 100,
+    "rate": 0.07,
+    "ci95_lo": 0.0343,
+    "ci95_hi": 0.1375
+   },
+   "actuation": {
+    "k": 93,
+    "n": 100,
+    "rate": 0.93,
+    "ci95_lo": 0.8625,
+    "ci95_hi": 0.9657
+   },
+   "interception_given_unsafe": {
+    "k": 3,
+    "n": 61,
+    "rate": 0.0492,
+    "ci95_lo": 0.0169,
+    "ci95_hi": 0.1349
+   },
+   "repaired_given_unsafe": {
+    "k": 0,
+    "n": 61,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0592
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 6,
+   "cost": {
+    "llm_calls": 3.97,
+    "gen_seconds": 28.0513,
+    "verify_seconds": 0.0,
+    "prompt_tokens": 24152.94,
+    "gen_tokens": 177.17,
+    "n_rounds": 3.96
+   },
+   "outcomes": {
+    "ACTUATE": 35,
+    "ACTUATE_UNSOUND": 58,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 6,
+    "PARSE_FAIL": 1
+   }
+  },
+  "static_rules": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 35,
+    "n": 100,
+    "rate": 0.35,
+    "ci95_lo": 0.2636,
+    "ci95_hi": 0.4475
+   },
+   "safe_completion": {
+    "k": 35,
+    "n": 100,
+    "rate": 0.35,
+    "ci95_lo": 0.2636,
+    "ci95_hi": 0.4475
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.3,
+    "ci95_hi": 0.39,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.26,
+    "ci95_hi": 0.44,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 30,
+    "n": 100,
+    "rate": 0.3,
+    "ci95_lo": 0.2189,
+    "ci95_hi": 0.3959
+   },
+   "actuation": {
+    "k": 70,
+    "n": 100,
+    "rate": 0.7,
+    "ci95_lo": 0.6041,
+    "ci95_hi": 0.7811
+   },
+   "interception_given_unsafe": {
+    "k": 26,
+    "n": 61,
+    "rate": 0.4262,
+    "ci95_lo": 0.3102,
+    "ci95_hi": 0.551
+   },
+   "repaired_given_unsafe": {
+    "k": 0,
+    "n": 61,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0592
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 0,
+   "cost": {
+    "llm_calls": 1,
+    "gen_seconds": 5.7521,
+    "verify_seconds": 0.0,
+    "prompt_tokens": 5954.18,
+    "gen_tokens": 39.21,
+    "n_rounds": 0.99
+   },
+   "outcomes": {
+    "ACTUATE": 35,
+    "ACTUATE_UNSOUND": 35,
+    "ABORT_STATIC_REJECT": 26,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 3,
+    "PARSE_FAIL": 1
+   }
+  },
+  "verify:smt/prefix/b1": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 30,
+    "n": 100,
+    "rate": 0.3,
+    "ci95_lo": 0.2189,
+    "ci95_hi": 0.3959
+   },
+   "safe_completion": {
+    "k": 35,
+    "n": 100,
+    "rate": 0.35,
+    "ci95_lo": 0.2636,
+    "ci95_hi": 0.4475
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.27,
+    "ci95_hi": 0.33,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.26,
+    "ci95_hi": 0.44,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 35,
+    "n": 100,
+    "rate": 0.35,
+    "ci95_lo": 0.2636,
+    "ci95_hi": 0.4475
+   },
+   "actuation": {
+    "k": 65,
+    "n": 100,
+    "rate": 0.65,
+    "ci95_lo": 0.5525,
+    "ci95_hi": 0.7364
+   },
+   "interception_given_unsafe": {
+    "k": 31,
+    "n": 61,
+    "rate": 0.5082,
+    "ci95_lo": 0.386,
+    "ci95_hi": 0.6294
+   },
+   "repaired_given_unsafe": {
+    "k": 0,
+    "n": 61,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0592
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 27,
+   "cost": {
+    "llm_calls": 1.6,
+    "gen_seconds": 12.314,
+    "verify_seconds": 0.0249,
+    "prompt_tokens": 9333.35,
+    "gen_tokens": 77.22,
+    "n_rounds": 1.6
+   },
+   "outcomes": {
+    "ACTUATE": 35,
+    "ACTUATE_UNSOUND": 30,
+    "ABORT_REPAIR_BUDGET": 11,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 23,
+    "PARSE_FAIL": 1
+   }
+  },
+  "verify:smt/prefix/b3": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 0,
+    "n": 100,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.037
+   },
+   "safe_completion": {
+    "k": 47,
+    "n": 100,
+    "rate": 0.47,
+    "ci95_lo": 0.3751,
+    "ci95_hi": 0.5671
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.37,
+    "ci95_hi": 0.56,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 53,
+    "n": 100,
+    "rate": 0.53,
+    "ci95_lo": 0.4329,
+    "ci95_hi": 0.6249
+   },
+   "actuation": {
+    "k": 47,
+    "n": 100,
+    "rate": 0.47,
+    "ci95_lo": 0.3751,
+    "ci95_hi": 0.5671
+   },
+   "interception_given_unsafe": {
+    "k": 61,
+    "n": 61,
+    "rate": 1.0,
+    "ci95_lo": 0.9408,
+    "ci95_hi": 1.0
+   },
+   "repaired_given_unsafe": {
+    "k": 12,
+    "n": 61,
+    "rate": 0.1967,
+    "ci95_lo": 0.1163,
+    "ci95_hi": 0.3131
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 54,
+   "cost": {
+    "llm_calls": 2.4,
+    "gen_seconds": 20.8565,
+    "verify_seconds": 0.0376,
+    "prompt_tokens": 14191.82,
+    "gen_tokens": 125.9,
+    "n_rounds": 2.4
+   },
+   "outcomes": {
+    "ACTUATE": 47,
+    "ABORT_REPAIR_BUDGET": 37,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 14,
+    "PARSE_FAIL": 2
+   }
+  },
+  "verify:smt/prefix/b3/nowit": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 0,
+    "n": 100,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.037
+   },
+   "safe_completion": {
+    "k": 45,
+    "n": 100,
+    "rate": 0.45,
+    "ci95_lo": 0.3561,
+    "ci95_hi": 0.5476
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.36,
+    "ci95_hi": 0.54,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 55,
+    "n": 100,
+    "rate": 0.55,
+    "ci95_lo": 0.4524,
+    "ci95_hi": 0.6439
+   },
+   "actuation": {
+    "k": 45,
+    "n": 100,
+    "rate": 0.45,
+    "ci95_lo": 0.3561,
+    "ci95_hi": 0.5476
+   },
+   "interception_given_unsafe": {
+    "k": 61,
+    "n": 61,
+    "rate": 1.0,
+    "ci95_lo": 0.9408,
+    "ci95_hi": 1.0
+   },
+   "repaired_given_unsafe": {
+    "k": 10,
+    "n": 61,
+    "rate": 0.1639,
+    "ci95_lo": 0.0916,
+    "ci95_hi": 0.2761
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 41,
+   "cost": {
+    "llm_calls": 2.52,
+    "gen_seconds": 20.6789,
+    "verify_seconds": 0.0445,
+    "prompt_tokens": 15021.05,
+    "gen_tokens": 130.99,
+    "n_rounds": 2.52
+   },
+   "outcomes": {
+    "ACTUATE": 45,
+    "ABORT_REPAIR_BUDGET": 43,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 11,
+    "PARSE_FAIL": 1
+   }
+  },
+  "verify:smt/term/b3": {
+   "n": 100,
+   "modeled_unsafe_actuation": {
+    "k": 0,
+    "n": 100,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.037
+   },
+   "safe_completion": {
+    "k": 47,
+    "n": 100,
+    "rate": 0.47,
+    "ci95_lo": 0.3751,
+    "ci95_hi": 0.5671
+   },
+   "modeled_unsafe_actuation_clustered": {
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "safe_completion_clustered": {
+    "ci95_lo": 0.37,
+    "ci95_hi": 0.56,
+    "n_clusters": 5,
+    "method": "cluster bootstrap by network"
+   },
+   "abort": {
+    "k": 53,
+    "n": 100,
+    "rate": 0.53,
+    "ci95_lo": 0.4329,
+    "ci95_hi": 0.6249
+   },
+   "actuation": {
+    "k": 47,
+    "n": 100,
+    "rate": 0.47,
+    "ci95_lo": 0.3751,
+    "ci95_hi": 0.5671
+   },
+   "interception_given_unsafe": {
+    "k": 61,
+    "n": 61,
+    "rate": 1.0,
+    "ci95_lo": 0.9408,
+    "ci95_hi": 1.0
+   },
+   "repaired_given_unsafe": {
+    "k": 12,
+    "n": 61,
+    "rate": 0.1967,
+    "ci95_lo": 0.1163,
+    "ci95_hi": 0.3131
+   },
+   "false_kill_given_good": {
+    "k": 0,
+    "n": 35,
+    "rate": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0989
+   },
+   "n_round0_unsafe": 61,
+   "n_round0_good": 35,
+   "n_plan_changed": 54,
+   "cost": {
+    "llm_calls": 2.4,
+    "gen_seconds": 21.6521,
+    "verify_seconds": 0.0281,
+    "prompt_tokens": 14191.93,
+    "gen_tokens": 125.9,
+    "n_rounds": 2.4
+   },
+   "outcomes": {
+    "ACTUATE": 47,
+    "ABORT_REPAIR_BUDGET": 37,
+    "ACCEPT_UNFULFILLED_NO_ACTUATE": 14,
+    "PARSE_FAIL": 2
+   }
+  }
+ },
+ "by_group": {
+  "feasible": {
+   "no_verify": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 23,
+     "n": 60,
+     "rate": 0.3833,
+     "ci95_lo": 0.2709,
+     "ci95_hi": 0.5098
+    },
+    "safe_completion": {
+     "k": 35,
+     "n": 60,
+     "rate": 0.5833,
+     "ci95_lo": 0.4573,
+     "ci95_hi": 0.6994
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.3529,
+     "ci95_hi": 0.4318,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.5179,
+     "ci95_hi": 0.6429,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 2,
+     "n": 60,
+     "rate": 0.0333,
+     "ci95_lo": 0.0092,
+     "ci95_hi": 0.1136
+    },
+    "actuation": {
+     "k": 58,
+     "n": 60,
+     "rate": 0.9667,
+     "ci95_lo": 0.8864,
+     "ci95_hi": 0.9908
+    },
+    "interception_given_unsafe": {
+     "k": 1,
+     "n": 24,
+     "rate": 0.0417,
+     "ci95_lo": 0.0074,
+     "ci95_hi": 0.2024
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 24,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.138
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 1,
+     "gen_seconds": 11.943,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 6225.8667,
+     "gen_tokens": 42.9167,
+     "n_rounds": 1.0
+    },
+    "outcomes": {
+     "ACTUATE": 35,
+     "ACTUATE_UNSOUND": 23,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 2
+    }
+   },
+   "reflect/r1": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 23,
+     "n": 60,
+     "rate": 0.3833,
+     "ci95_lo": 0.2709,
+     "ci95_hi": 0.5098
+    },
+    "safe_completion": {
+     "k": 35,
+     "n": 60,
+     "rate": 0.5833,
+     "ci95_lo": 0.4573,
+     "ci95_hi": 0.6994
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.3529,
+     "ci95_hi": 0.4318,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.5179,
+     "ci95_hi": 0.6429,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 2,
+     "n": 60,
+     "rate": 0.0333,
+     "ci95_lo": 0.0092,
+     "ci95_hi": 0.1136
+    },
+    "actuation": {
+     "k": 58,
+     "n": 60,
+     "rate": 0.9667,
+     "ci95_lo": 0.8864,
+     "ci95_hi": 0.9908
+    },
+    "interception_given_unsafe": {
+     "k": 1,
+     "n": 24,
+     "rate": 0.0417,
+     "ci95_lo": 0.0074,
+     "ci95_hi": 0.2024
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 24,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.138
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 1,
+    "cost": {
+     "llm_calls": 2,
+     "gen_seconds": 15.1017,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 12621.2167,
+     "gen_tokens": 92.7333,
+     "n_rounds": 2.0
+    },
+    "outcomes": {
+     "ACTUATE": 35,
+     "ACTUATE_UNSOUND": 23,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 2
+    }
+   },
+   "reflect/r3": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 23,
+     "n": 60,
+     "rate": 0.3833,
+     "ci95_lo": 0.2709,
+     "ci95_hi": 0.5098
+    },
+    "safe_completion": {
+     "k": 35,
+     "n": 60,
+     "rate": 0.5833,
+     "ci95_lo": 0.4573,
+     "ci95_hi": 0.6994
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.3529,
+     "ci95_hi": 0.4318,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.5179,
+     "ci95_hi": 0.6429,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 2,
+     "n": 60,
+     "rate": 0.0333,
+     "ci95_lo": 0.0092,
+     "ci95_hi": 0.1136
+    },
+    "actuation": {
+     "k": 58,
+     "n": 60,
+     "rate": 0.9667,
+     "ci95_lo": 0.8864,
+     "ci95_hi": 0.9908
+    },
+    "interception_given_unsafe": {
+     "k": 1,
+     "n": 24,
+     "rate": 0.0417,
+     "ci95_lo": 0.0074,
+     "ci95_hi": 0.2024
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 24,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.138
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 1,
+    "cost": {
+     "llm_calls": 4,
+     "gen_seconds": 29.5283,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 25413.25,
+     "gen_tokens": 192.3667,
+     "n_rounds": 4.0
+    },
+    "outcomes": {
+     "ACTUATE": 35,
+     "ACTUATE_UNSOUND": 23,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 2
+    }
+   },
+   "static_rules": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 15,
+     "n": 60,
+     "rate": 0.25,
+     "ci95_lo": 0.1578,
+     "ci95_hi": 0.3723
+    },
+    "safe_completion": {
+     "k": 35,
+     "n": 60,
+     "rate": 0.5833,
+     "ci95_lo": 0.4573,
+     "ci95_hi": 0.6994
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.2031,
+     "ci95_hi": 0.2917,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.5179,
+     "ci95_hi": 0.6429,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 10,
+     "n": 60,
+     "rate": 0.1667,
+     "ci95_lo": 0.0931,
+     "ci95_hi": 0.2803
+    },
+    "actuation": {
+     "k": 50,
+     "n": 60,
+     "rate": 0.8333,
+     "ci95_lo": 0.7197,
+     "ci95_hi": 0.9069
+    },
+    "interception_given_unsafe": {
+     "k": 9,
+     "n": 24,
+     "rate": 0.375,
+     "ci95_lo": 0.2116,
+     "ci95_hi": 0.5729
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 24,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.138
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 1,
+     "gen_seconds": 6.1582,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 6225.8667,
+     "gen_tokens": 42.9167,
+     "n_rounds": 1.0
+    },
+    "outcomes": {
+     "ACTUATE": 35,
+     "ACTUATE_UNSOUND": 15,
+     "ABORT_STATIC_REJECT": 9,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1
+    }
+   },
+   "verify:smt/prefix/b1": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 19,
+     "n": 60,
+     "rate": 0.3167,
+     "ci95_lo": 0.2131,
+     "ci95_hi": 0.4423
+    },
+    "safe_completion": {
+     "k": 35,
+     "n": 60,
+     "rate": 0.5833,
+     "ci95_lo": 0.4573,
+     "ci95_hi": 0.6994
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.2292,
+     "ci95_hi": 0.375,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.5179,
+     "ci95_hi": 0.6429,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 6,
+     "n": 60,
+     "rate": 0.1,
+     "ci95_lo": 0.0466,
+     "ci95_hi": 0.2015
+    },
+    "actuation": {
+     "k": 54,
+     "n": 60,
+     "rate": 0.9,
+     "ci95_lo": 0.7985,
+     "ci95_hi": 0.9534
+    },
+    "interception_given_unsafe": {
+     "k": 5,
+     "n": 24,
+     "rate": 0.2083,
+     "ci95_lo": 0.0924,
+     "ci95_hi": 0.4047
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 24,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.138
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 3,
+    "cost": {
+     "llm_calls": 1.1667,
+     "gen_seconds": 7.7525,
+     "verify_seconds": 0.0163,
+     "prompt_tokens": 7104.4,
+     "gen_tokens": 52.5,
+     "n_rounds": 1.1667
+    },
+    "outcomes": {
+     "ACTUATE": 35,
+     "ACTUATE_UNSOUND": 19,
+     "ABORT_REPAIR_BUDGET": 3,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 3
+    }
+   },
+   "verify:smt/prefix/b3": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 60,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0602
+    },
+    "safe_completion": {
+     "k": 47,
+     "n": 60,
+     "rate": 0.7833,
+     "ci95_lo": 0.6638,
+     "ci95_hi": 0.8688
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.7188,
+     "ci95_hi": 0.875,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 13,
+     "n": 60,
+     "rate": 0.2167,
+     "ci95_lo": 0.1312,
+     "ci95_hi": 0.3362
+    },
+    "actuation": {
+     "k": 47,
+     "n": 60,
+     "rate": 0.7833,
+     "ci95_lo": 0.6638,
+     "ci95_hi": 0.8688
+    },
+    "interception_given_unsafe": {
+     "k": 24,
+     "n": 24,
+     "rate": 1.0,
+     "ci95_lo": 0.862,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 12,
+     "n": 24,
+     "rate": 0.5,
+     "ci95_lo": 0.3143,
+     "ci95_hi": 0.6857
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 20,
+    "cost": {
+     "llm_calls": 1.8167,
+     "gen_seconds": 15.1603,
+     "verify_seconds": 0.0277,
+     "prompt_tokens": 11587.8667,
+     "gen_tokens": 97.4333,
+     "n_rounds": 1.8167
+    },
+    "outcomes": {
+     "ACTUATE": 47,
+     "ABORT_REPAIR_BUDGET": 11,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1,
+     "PARSE_FAIL": 1
+    }
+   },
+   "verify:smt/prefix/b3/nowit": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 60,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0602
+    },
+    "safe_completion": {
+     "k": 45,
+     "n": 60,
+     "rate": 0.75,
+     "ci95_lo": 0.6277,
+     "ci95_hi": 0.8422
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.6406,
+     "ci95_hi": 0.875,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 15,
+     "n": 60,
+     "rate": 0.25,
+     "ci95_lo": 0.1578,
+     "ci95_hi": 0.3723
+    },
+    "actuation": {
+     "k": 45,
+     "n": 60,
+     "rate": 0.75,
+     "ci95_lo": 0.6277,
+     "ci95_hi": 0.8422
+    },
+    "interception_given_unsafe": {
+     "k": 24,
+     "n": 24,
+     "rate": 1.0,
+     "ci95_lo": 0.862,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 10,
+     "n": 24,
+     "rate": 0.4167,
+     "ci95_lo": 0.2447,
+     "ci95_hi": 0.6117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 21,
+    "cost": {
+     "llm_calls": 1.85,
+     "gen_seconds": 14.4867,
+     "verify_seconds": 0.0245,
+     "prompt_tokens": 11833.0167,
+     "gen_tokens": 95.0833,
+     "n_rounds": 1.85
+    },
+    "outcomes": {
+     "ACTUATE": 45,
+     "ABORT_REPAIR_BUDGET": 12,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 3
+    }
+   },
+   "verify:smt/term/b3": {
+    "n": 60,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 60,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0602
+    },
+    "safe_completion": {
+     "k": 47,
+     "n": 60,
+     "rate": 0.7833,
+     "ci95_lo": 0.6638,
+     "ci95_hi": 0.8688
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.7188,
+     "ci95_hi": 0.875,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 13,
+     "n": 60,
+     "rate": 0.2167,
+     "ci95_lo": 0.1312,
+     "ci95_hi": 0.3362
+    },
+    "actuation": {
+     "k": 47,
+     "n": 60,
+     "rate": 0.7833,
+     "ci95_lo": 0.6638,
+     "ci95_hi": 0.8688
+    },
+    "interception_given_unsafe": {
+     "k": 24,
+     "n": 24,
+     "rate": 1.0,
+     "ci95_lo": 0.862,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 12,
+     "n": 24,
+     "rate": 0.5,
+     "ci95_lo": 0.3143,
+     "ci95_hi": 0.6857
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 35,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0989
+    },
+    "n_round0_unsafe": 24,
+    "n_round0_good": 35,
+    "n_plan_changed": 20,
+    "cost": {
+     "llm_calls": 1.8167,
+     "gen_seconds": 16.4027,
+     "verify_seconds": 0.0199,
+     "prompt_tokens": 11587.8833,
+     "gen_tokens": 97.4333,
+     "n_rounds": 1.8167
+    },
+    "outcomes": {
+     "ACTUATE": 47,
+     "ABORT_REPAIR_BUDGET": 11,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1,
+     "PARSE_FAIL": 1
+    }
+   }
+  },
+  "infeasible": {
+   "no_verify": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 29,
+     "n": 32,
+     "rate": 0.9062,
+     "ci95_lo": 0.7578,
+     "ci95_hi": 0.9676
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.8333,
+     "ci95_hi": 1.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 3,
+     "n": 32,
+     "rate": 0.0938,
+     "ci95_lo": 0.0324,
+     "ci95_hi": 0.2422
+    },
+    "actuation": {
+     "k": 29,
+     "n": 32,
+     "rate": 0.9062,
+     "ci95_lo": 0.7578,
+     "ci95_hi": 0.9676
+    },
+    "interception_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 1,
+     "gen_seconds": 7.0207,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 5546.625,
+     "gen_tokens": 28.375,
+     "n_rounds": 1.0
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 29,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 2,
+     "PARSE_FAIL": 1
+    }
+   },
+   "reflect/r1": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 29,
+     "n": 32,
+     "rate": 0.9062,
+     "ci95_lo": 0.7578,
+     "ci95_hi": 0.9676
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.8333,
+     "ci95_hi": 1.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 3,
+     "n": 32,
+     "rate": 0.0938,
+     "ci95_lo": 0.0324,
+     "ci95_hi": 0.2422
+    },
+    "actuation": {
+     "k": 29,
+     "n": 32,
+     "rate": 0.9062,
+     "ci95_lo": 0.7578,
+     "ci95_hi": 0.9676
+    },
+    "interception_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 3,
+    "cost": {
+     "llm_calls": 1.9688,
+     "gen_seconds": 12.1474,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 11074.1562,
+     "gen_tokens": 63.1875,
+     "n_rounds": 1.9375
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 29,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 2,
+     "PARSE_FAIL": 1
+    }
+   },
+   "reflect/r3": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 28,
+     "n": 32,
+     "rate": 0.875,
+     "ci95_lo": 0.7193,
+     "ci95_hi": 0.9503
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.8,
+     "ci95_hi": 0.9643,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 4,
+     "n": 32,
+     "rate": 0.125,
+     "ci95_lo": 0.0497,
+     "ci95_hi": 0.2807
+    },
+    "actuation": {
+     "k": 28,
+     "n": 32,
+     "rate": 0.875,
+     "ci95_lo": 0.7193,
+     "ci95_hi": 0.9503
+    },
+    "interception_given_unsafe": {
+     "k": 1,
+     "n": 29,
+     "rate": 0.0345,
+     "ci95_lo": 0.0061,
+     "ci95_hi": 0.1718
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 5,
+    "cost": {
+     "llm_calls": 3.9062,
+     "gen_seconds": 23.173,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 22138.9375,
+     "gen_tokens": 134.75,
+     "n_rounds": 3.875
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 28,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 3,
+     "PARSE_FAIL": 1
+    }
+   },
+   "static_rules": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 20,
+     "n": 32,
+     "rate": 0.625,
+     "ci95_lo": 0.4525,
+     "ci95_hi": 0.7707
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.425,
+     "ci95_hi": 0.9,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 12,
+     "n": 32,
+     "rate": 0.375,
+     "ci95_lo": 0.2293,
+     "ci95_hi": 0.5475
+    },
+    "actuation": {
+     "k": 20,
+     "n": 32,
+     "rate": 0.625,
+     "ci95_lo": 0.4525,
+     "ci95_hi": 0.7707
+    },
+    "interception_given_unsafe": {
+     "k": 9,
+     "n": 29,
+     "rate": 0.3103,
+     "ci95_lo": 0.1728,
+     "ci95_hi": 0.4923
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 1,
+     "gen_seconds": 4.3852,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 5546.625,
+     "gen_tokens": 28.375,
+     "n_rounds": 0.9688
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 20,
+     "ABORT_STATIC_REJECT": 9,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 2,
+     "PARSE_FAIL": 1
+    }
+   },
+   "verify:smt/prefix/b1": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 11,
+     "n": 32,
+     "rate": 0.3438,
+     "ci95_lo": 0.2041,
+     "ci95_hi": 0.5169
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.1364,
+     "ci95_hi": 0.4706,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 21,
+     "n": 32,
+     "rate": 0.6562,
+     "ci95_lo": 0.4831,
+     "ci95_hi": 0.7959
+    },
+    "actuation": {
+     "k": 11,
+     "n": 32,
+     "rate": 0.3438,
+     "ci95_lo": 0.2041,
+     "ci95_hi": 0.5169
+    },
+    "interception_given_unsafe": {
+     "k": 18,
+     "n": 29,
+     "rate": 0.6207,
+     "ci95_lo": 0.44,
+     "ci95_hi": 0.7731
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 16,
+    "cost": {
+     "llm_calls": 2.0938,
+     "gen_seconds": 15.7581,
+     "verify_seconds": 0.0321,
+     "prompt_tokens": 11758.6562,
+     "gen_tokens": 97.0938,
+     "n_rounds": 2.0938
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 11,
+     "ABORT_REPAIR_BUDGET": 6,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 14,
+     "PARSE_FAIL": 1
+    }
+   },
+   "verify:smt/prefix/b3": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 32,
+     "n": 32,
+     "rate": 1.0,
+     "ci95_lo": 0.8928,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "interception_given_unsafe": {
+     "k": 29,
+     "n": 29,
+     "rate": 1.0,
+     "ci95_lo": 0.883,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 26,
+    "cost": {
+     "llm_calls": 3.1562,
+     "gen_seconds": 26.7325,
+     "verify_seconds": 0.0499,
+     "prompt_tokens": 17370.6562,
+     "gen_tokens": 152.75,
+     "n_rounds": 3.1562
+    },
+    "outcomes": {
+     "ABORT_REPAIR_BUDGET": 19,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 12,
+     "PARSE_FAIL": 1
+    }
+   },
+   "verify:smt/prefix/b3/nowit": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 32,
+     "n": 32,
+     "rate": 1.0,
+     "ci95_lo": 0.8928,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "interception_given_unsafe": {
+     "k": 29,
+     "n": 29,
+     "rate": 1.0,
+     "ci95_lo": 0.883,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 16,
+    "cost": {
+     "llm_calls": 3.4062,
+     "gen_seconds": 28.1703,
+     "verify_seconds": 0.0738,
+     "prompt_tokens": 19073.6562,
+     "gen_tokens": 168.25,
+     "n_rounds": 3.4062
+    },
+    "outcomes": {
+     "ABORT_REPAIR_BUDGET": 23,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 8,
+     "PARSE_FAIL": 1
+    }
+   },
+   "verify:smt/term/b3": {
+    "n": 32,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 5,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 32,
+     "n": 32,
+     "rate": 1.0,
+     "ci95_lo": 0.8928,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.1072
+    },
+    "interception_given_unsafe": {
+     "k": 29,
+     "n": 29,
+     "rate": 1.0,
+     "ci95_lo": 0.883,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 29,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.117
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 29,
+    "n_round0_good": 0,
+    "n_plan_changed": 26,
+    "cost": {
+     "llm_calls": 3.1562,
+     "gen_seconds": 26.6185,
+     "verify_seconds": 0.0374,
+     "prompt_tokens": 17370.9688,
+     "gen_tokens": 152.75,
+     "n_rounds": 3.1562
+    },
+    "outcomes": {
+     "ABORT_REPAIR_BUDGET": 19,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 12,
+     "PARSE_FAIL": 1
+    }
+   }
+  },
+  "unknown": {
+   "no_verify": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 7,
+     "n": 8,
+     "rate": 0.875,
+     "ci95_lo": 0.5291,
+     "ci95_hi": 0.9776
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.5,
+     "ci95_hi": 1.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 1,
+     "n": 8,
+     "rate": 0.125,
+     "ci95_lo": 0.0224,
+     "ci95_hi": 0.4709
+    },
+    "actuation": {
+     "k": 7,
+     "n": 8,
+     "rate": 0.875,
+     "ci95_lo": 0.5291,
+     "ci95_hi": 0.9776
+    },
+    "interception_given_unsafe": {
+     "k": 1,
+     "n": 8,
+     "rate": 0.125,
+     "ci95_lo": 0.0224,
+     "ci95_hi": 0.4709
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 1,
+     "gen_seconds": 9.9763,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 5546.75,
+     "gen_tokens": 54.75,
+     "n_rounds": 1.0
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 7,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1
+    }
+   },
+   "reflect/r1": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 7,
+     "n": 8,
+     "rate": 0.875,
+     "ci95_lo": 0.5291,
+     "ci95_hi": 0.9776
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.5,
+     "ci95_hi": 1.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 1,
+     "n": 8,
+     "rate": 0.125,
+     "ci95_lo": 0.0224,
+     "ci95_hi": 0.4709
+    },
+    "actuation": {
+     "k": 7,
+     "n": 8,
+     "rate": 0.875,
+     "ci95_lo": 0.5291,
+     "ci95_hi": 0.9776
+    },
+    "interception_given_unsafe": {
+     "k": 1,
+     "n": 8,
+     "rate": 0.125,
+     "ci95_lo": 0.0224,
+     "ci95_hi": 0.4709
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 2,
+     "gen_seconds": 19.362,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 11283.375,
+     "gen_tokens": 114.125,
+     "n_rounds": 2.0
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 7,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1
+    }
+   },
+   "reflect/r3": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 7,
+     "n": 8,
+     "rate": 0.875,
+     "ci95_lo": 0.5291,
+     "ci95_hi": 0.9776
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.5,
+     "ci95_hi": 1.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 1,
+     "n": 8,
+     "rate": 0.125,
+     "ci95_lo": 0.0224,
+     "ci95_hi": 0.4709
+    },
+    "actuation": {
+     "k": 7,
+     "n": 8,
+     "rate": 0.875,
+     "ci95_lo": 0.5291,
+     "ci95_hi": 0.9776
+    },
+    "interception_given_unsafe": {
+     "k": 1,
+     "n": 8,
+     "rate": 0.125,
+     "ci95_lo": 0.0224,
+     "ci95_hi": 0.4709
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 4,
+     "gen_seconds": 36.4864,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 22756.625,
+     "gen_tokens": 232.875,
+     "n_rounds": 4.0
+    },
+    "outcomes": {
+     "ACTUATE_UNSOUND": 7,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1
+    }
+   },
+   "static_rules": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "interception_given_unsafe": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 0,
+    "cost": {
+     "llm_calls": 1,
+     "gen_seconds": 8.1736,
+     "verify_seconds": 0.0,
+     "prompt_tokens": 5546.75,
+     "gen_tokens": 54.75,
+     "n_rounds": 1.0
+    },
+    "outcomes": {
+     "ABORT_STATIC_REJECT": 8
+    }
+   },
+   "verify:smt/prefix/b1": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "interception_given_unsafe": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 8,
+    "cost": {
+     "llm_calls": 2.875,
+     "gen_seconds": 32.7494,
+     "verify_seconds": 0.0612,
+     "prompt_tokens": 16349.25,
+     "gen_tokens": 183.125,
+     "n_rounds": 2.875
+    },
+    "outcomes": {
+     "ABORT_REPAIR_BUDGET": 2,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 6
+    }
+   },
+   "verify:smt/prefix/b3": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "interception_given_unsafe": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 8,
+    "cost": {
+     "llm_calls": 3.75,
+     "gen_seconds": 40.0739,
+     "verify_seconds": 0.063,
+     "prompt_tokens": 21006.125,
+     "gen_tokens": 232.0,
+     "n_rounds": 3.75
+    },
+    "outcomes": {
+     "ABORT_REPAIR_BUDGET": 7,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1
+    }
+   },
+   "verify:smt/prefix/b3/nowit": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "interception_given_unsafe": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 4,
+    "cost": {
+     "llm_calls": 4,
+     "gen_seconds": 37.155,
+     "verify_seconds": 0.0773,
+     "prompt_tokens": 22720.875,
+     "gen_tokens": 251.25,
+     "n_rounds": 4.0
+    },
+    "outcomes": {
+     "ABORT_REPAIR_BUDGET": 8
+    }
+   },
+   "verify:smt/term/b3": {
+    "n": 8,
+    "modeled_unsafe_actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "safe_completion": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "modeled_unsafe_actuation_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "safe_completion_clustered": {
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0,
+     "n_clusters": 3,
+     "method": "cluster bootstrap by network"
+    },
+    "abort": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "actuation": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "interception_given_unsafe": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95_lo": 0.6756,
+     "ci95_hi": 1.0
+    },
+    "repaired_given_unsafe": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.3244
+    },
+    "false_kill_given_good": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95_lo": 0.0,
+     "ci95_hi": 0.0
+    },
+    "n_round0_unsafe": 8,
+    "n_round0_good": 0,
+    "n_plan_changed": 8,
+    "cost": {
+     "llm_calls": 3.75,
+     "gen_seconds": 41.1568,
+     "verify_seconds": 0.0523,
+     "prompt_tokens": 21006.125,
+     "gen_tokens": 232.0,
+     "n_rounds": 3.75
+    },
+    "outcomes": {
+     "ABORT_REPAIR_BUDGET": 7,
+     "ACCEPT_UNFULFILLED_NO_ACTUATE": 1
+    }
+   }
+  }
+ },
+ "meta": {
+  "commit_sha": "1ad9676",
+  "git_dirty": true,
+  "source_dirty": false,
+  "started_utc": "2026-08-03T02:36:02Z",
+  "python": "3.12.12",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "policy_dir": "out/policies_v3",
+  "group": "feasible"
+ }
+}

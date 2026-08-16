@@ -1,0 +1,50 @@
+{
+ "VI1_flow_overload": [
+  true,
+  true,
+  true,
+  true
+ ],
+ "VI1_slice_overload": [
+  true,
+  true,
+  true,
+  true
+ ],
+ "VI2_scale_down": [
+  false,
+  true,
+  true,
+  true
+ ],
+ "VI3_acl_conflict": [
+  false,
+  false,
+  true,
+  true
+ ],
+ "VI3_ghost_entity": [
+  false,
+  false,
+  true,
+  true
+ ],
+ "VI3_disable_no_reroute": [
+  false,
+  false,
+  true,
+  true
+ ],
+ "VI4_temp_overload": [
+  false,
+  false,
+  false,
+  true
+ ],
+ "VI4_disable_before_reroute": [
+  false,
+  false,
+  false,
+  true
+ ]
+}

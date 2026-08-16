@@ -1,0 +1,14 @@
+{
+ "cells_planned": 100,
+ "cells_recorded": 100,
+ "ran_ok": 40,
+ "ran_err": 0,
+ "interrupted": false,
+ "backend_provenance": {
+  "backend": "lmstudio",
+  "model": "huihui-qwen3-vl-32b-instruct-abliterated-i1",
+  "temperature": 0.7,
+  "host": "http://127.0.0.1:1234",
+  "api": "openai chat-completions"
+ }
+}

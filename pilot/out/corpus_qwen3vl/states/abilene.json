@@ -1,0 +1,647 @@
+{
+ "acls": {
+  "A1": {
+   "action": "allow",
+   "dst": "10.0.7.0/24",
+   "src": "10.0.2.0/24"
+  },
+  "A2": {
+   "action": "allow",
+   "dst": "10.0.2.0/24",
+   "src": "10.0.4.0/24"
+  },
+  "A3": {
+   "action": "allow",
+   "dst": "10.0.4.0/24",
+   "src": "10.0.7.0/24"
+  }
+ },
+ "flows": {
+  "F1": {
+   "bw": 159.62,
+   "min_bw": 159.62,
+   "path": [
+    "SNVAng",
+    "DNVRng",
+    "KSCYng",
+    "IPLSng",
+    "CHINng",
+    "NYCMng"
+   ],
+   "priority": false,
+   "sla_ms": 81.01
+  },
+  "F10": {
+   "bw": 81.55,
+   "min_bw": 81.55,
+   "path": [
+    "KSCYng",
+    "HSTNng",
+    "LOSAng"
+   ],
+   "priority": false,
+   "sla_ms": 37.0
+  },
+  "F11": {
+   "bw": 3584.83,
+   "min_bw": 3584.83,
+   "path": [
+    "NYCMng",
+    "CHINng"
+   ],
+   "priority": false,
+   "sla_ms": 19.04
+  },
+  "F12": {
+   "bw": 257.09,
+   "min_bw": 257.09,
+   "path": [
+    "NYCMng",
+    "CHINng",
+    "IPLSng"
+   ],
+   "priority": true,
+   "sla_ms": 27.64
+  },
+  "F13": {
+   "bw": 29.77,
+   "min_bw": 29.77,
+   "path": [
+    "ATLAM5",
+    "ATLAng",
+    "HSTNng",
+    "LOSAng"
+   ],
+   "priority": false,
+   "sla_ms": 44.22
+  },
+  "F14": {
+   "bw": 27.31,
+   "min_bw": 27.31,
+   "path": [
+    "STTLng",
+    "DNVRng",
+    "KSCYng",
+    "HSTNng",
+    "ATLAng",
+    "ATLAM5"
+   ],
+   "priority": false,
+   "sla_ms": 86.78
+  },
+  "F15": {
+   "bw": 51.13,
+   "min_bw": 51.13,
+   "path": [
+    "HSTNng",
+    "KSCYng",
+    "DNVRng",
+    "STTLng"
+   ],
+   "priority": true,
+   "sla_ms": 49.45
+  },
+  "F16": {
+   "bw": 112.03,
+   "min_bw": 112.03,
+   "path": [
+    "KSCYng",
+    "IPLSng",
+    "CHINng",
+    "NYCMng"
+   ],
+   "priority": false,
+   "sla_ms": 44.35
+  },
+  "F17": {
+   "bw": 141.86,
+   "min_bw": 141.86,
+   "path": [
+    "IPLSng",
+    "KSCYng"
+   ],
+   "priority": false,
+   "sla_ms": 21.07
+  },
+  "F18": {
+   "bw": 547.86,
+   "min_bw": 547.86,
+   "path": [
+    "IPLSng",
+    "CHINng",
+    "NYCMng"
+   ],
+   "priority": true,
+   "sla_ms": 21.08
+  },
+  "F19": {
+   "bw": 294.66,
+   "min_bw": 294.66,
+   "path": [
+    "WASHng",
+    "ATLAng",
+    "IPLSng"
+   ],
+   "priority": false,
+   "sla_ms": 25.19
+  },
+  "F2": {
+   "bw": 71.18,
+   "min_bw": 71.18,
+   "path": [
+    "ATLAng",
+    "HSTNng",
+    "KSCYng"
+   ],
+   "priority": false,
+   "sla_ms": 37.15
+  },
+  "F20": {
+   "bw": 764.54,
+   "min_bw": 764.54,
+   "path": [
+    "HSTNng",
+    "ATLAng"
+   ],
+   "priority": true,
+   "sla_ms": 15.7
+  },
+  "F21": {
+   "bw": 179.9,
+   "min_bw": 179.9,
+   "path": [
+    "SNVAng",
+    "STTLng"
+   ],
+   "priority": true,
+   "sla_ms": 23.23
+  },
+  "F22": {
+   "bw": 232.39,
+   "min_bw": 232.39,
+   "path": [
+    "WASHng",
+    "ATLAng",
+    "HSTNng",
+    "KSCYng",
+    "DNVRng",
+    "STTLng"
+   ],
+   "priority": true,
+   "sla_ms": 92.56
+  },
+  "F23": {
+   "bw": 148.92,
+   "min_bw": 148.92,
+   "path": [
+    "CHINng",
+    "IPLSng",
+    "KSCYng",
+    "DNVRng",
+    "STTLng"
+   ],
+   "priority": false,
+   "sla_ms": 46.83
+  },
+  "F24": {
+   "bw": 203.99,
+   "min_bw": 203.99,
+   "path": [
+    "SNVAng",
+    "DNVRng",
+    "KSCYng",
+    "IPLSng",
+    "CHINng"
+   ],
+   "priority": true,
+   "sla_ms": 69.21
+  },
+  "F25": {
+   "bw": 224.24,
+   "min_bw": 224.24,
+   "path": [
+    "DNVRng",
+    "SNVAng",
+    "LOSAng"
+   ],
+   "priority": true,
+   "sla_ms": 32.7
+  },
+  "F26": {
+   "bw": 104.91,
+   "min_bw": 104.91,
+   "path": [
+    "IPLSng",
+    "KSCYng",
+    "DNVRng",
+    "STTLng"
+   ],
+   "priority": false,
+   "sla_ms": 53.13
+  },
+  "F27": {
+   "bw": 132.07,
+   "min_bw": 132.07,
+   "path": [
+    "KSCYng",
+    "HSTNng",
+    "ATLAng",
+    "WASHng"
+   ],
+   "priority": false,
+   "sla_ms": 54.16
+  },
+  "F28": {
+   "bw": 202.03,
+   "min_bw": 202.03,
+   "path": [
+    "NYCMng",
+    "CHINng",
+    "IPLSng",
+    "KSCYng"
+   ],
+   "priority": false,
+   "sla_ms": 36.22
+  },
+  "F29": {
+   "bw": 348.9,
+   "min_bw": 348.9,
+   "path": [
+    "LOSAng",
+    "HSTNng",
+    "ATLAng",
+    "IPLSng"
+   ],
+   "priority": true,
+   "sla_ms": 45.23
+  },
+  "F3": {
+   "bw": 224.15,
+   "min_bw": 224.15,
+   "path": [
+    "DNVRng",
+    "KSCYng",
+    "HSTNng"
+   ],
+   "priority": true,
+   "sla_ms": 35.51
+  },
+  "F30": {
+   "bw": 218.88,
+   "min_bw": 218.88,
+   "path": [
+    "STTLng",
+    "DNVRng"
+   ],
+   "priority": false,
+   "sla_ms": 24.18
+  },
+  "F31": {
+   "bw": 470.7,
+   "min_bw": 470.7,
+   "path": [
+    "WASHng",
+    "ATLAng",
+    "HSTNng",
+    "KSCYng",
+    "DNVRng"
+   ],
+   "priority": false,
+   "sla_ms": 68.28
+  },
+  "F32": {
+   "bw": 98.46,
+   "min_bw": 98.46,
+   "path": [
+    "ATLAng",
+    "HSTNng",
+    "KSCYng",
+    "DNVRng"
+   ],
+   "priority": false,
+   "sla_ms": 43.11
+  },
+  "F33": {
+   "bw": 1068.7,
+   "min_bw": 1068.7,
+   "path": [
+    "STTLng",
+    "SNVAng",
+    "LOSAng"
+   ],
+   "priority": false,
+   "sla_ms": 26.93
+  },
+  "F34": {
+   "bw": 766.13,
+   "min_bw": 766.13,
+   "path": [
+    "STTLng",
+    "SNVAng"
+   ],
+   "priority": false,
+   "sla_ms": 19.66
+  },
+  "F35": {
+   "bw": 39.18,
+   "min_bw": 39.18,
+   "path": [
+    "LOSAng",
+    "HSTNng",
+    "ATLAng",
+    "ATLAM5"
+   ],
+   "priority": true,
+   "sla_ms": 49.28
+  },
+  "F36": {
+   "bw": 33.4,
+   "min_bw": 33.4,
+   "path": [
+    "ATLAM5",
+    "ATLAng"
+   ],
+   "priority": false,
+   "sla_ms": 14.88
+  },
+  "F37": {
+   "bw": 91.66,
+   "min_bw": 91.66,
+   "path": [
+    "ATLAM5",
+    "ATLAng",
+    "IPLSng",
+    "CHINng"
+   ],
+   "priority": true,
+   "sla_ms": 35.45
+  },
+  "F38": {
+   "bw": 1303.61,
+   "min_bw": 1303.61,
+   "path": [
+    "LOSAng",
+    "HSTNng",
+    "ATLAng"
+   ],
+   "priority": false,
+   "sla_ms": 44.57
+  },
+  "F39": {
+   "bw": 81.05,
+   "min_bw": 81.05,
+   "path": [
+    "LOSAng",
+    "HSTNng",
+    "KSCYng"
+   ],
+   "priority": false,
+   "sla_ms": 35.55
+  },
+  "F4": {
+   "bw": 1643.06,
+   "min_bw": 1643.06,
+   "path": [
+    "ATLAng",
+    "HSTNng"
+   ],
+   "priority": true,
+   "sla_ms": 21.06
+  },
+  "F40": {
+   "bw": 200.44,
+   "min_bw": 200.44,
+   "path": [
+    "HSTNng",
+    "ATLAng",
+    "WASHng",
+    "NYCMng"
+   ],
+   "priority": false,
+   "sla_ms": 43.28
+  },
+  "F5": {
+   "bw": 784.76,
+   "min_bw": 784.76,
+   "path": [
+    "WASHng",
+    "ATLAng",
+    "HSTNng"
+   ],
+   "priority": false,
+   "sla_ms": 33.6
+  },
+  "F6": {
+   "bw": 699.87,
+   "min_bw": 699.87,
+   "path": [
+    "CHINng",
+    "NYCMng"
+   ],
+   "priority": false,
+   "sla_ms": 15.15
+  },
+  "F7": {
+   "bw": 796.72,
+   "min_bw": 796.72,
+   "path": [
+    "IPLSng",
+    "CHINng"
+   ],
+   "priority": false,
+   "sla_ms": 10.43
+  },
+  "F8": {
+   "bw": 81.17,
+   "min_bw": 81.17,
+   "path": [
+    "CHINng",
+    "IPLSng",
+    "ATLAng",
+    "ATLAM5"
+   ],
+   "priority": true,
+   "sla_ms": 29.87
+  },
+  "F9": {
+   "bw": 301.55,
+   "min_bw": 301.55,
+   "path": [
+    "DNVRng",
+    "KSCYng",
+    "HSTNng",
+    "ATLAng",
+    "WASHng"
+   ],
+   "priority": true,
+   "sla_ms": 70.63
+  }
+ },
+ "links": {
+  "ATLAM5_ATLAng": {
+   "a": "ATLAng",
+   "b": "ATLAM5",
+   "cap": 9920.0,
+   "lat_ms": 0.662
+  },
+  "ATLAng_HSTNng": {
+   "a": "HSTNng",
+   "b": "ATLAng",
+   "cap": 9920.0,
+   "lat_ms": 5.396
+  },
+  "ATLAng_IPLSng": {
+   "a": "IPLSng",
+   "b": "ATLAng",
+   "cap": 2480.0,
+   "lat_ms": 2.95
+  },
+  "ATLAng_WASHng": {
+   "a": "WASHng",
+   "b": "ATLAng",
+   "cap": 9920.0,
+   "lat_ms": 4.496
+  },
+  "CHINng_IPLSng": {
+   "a": "IPLSng",
+   "b": "CHINng",
+   "cap": 9920.0,
+   "lat_ms": 1.295
+  },
+  "CHINng_NYCMng": {
+   "a": "NYCMng",
+   "b": "CHINng",
+   "cap": 9920.0,
+   "lat_ms": 5.724
+  },
+  "DNVRng_KSCYng": {
+   "a": "KSCYng",
+   "b": "DNVRng",
+   "cap": 9920.0,
+   "lat_ms": 3.72
+  },
+  "DNVRng_SNVAng": {
+   "a": "SNVAng",
+   "b": "DNVRng",
+   "cap": 9920.0,
+   "lat_ms": 7.57
+  },
+  "DNVRng_STTLng": {
+   "a": "STTLng",
+   "b": "DNVRng",
+   "cap": 9920.0,
+   "lat_ms": 7.855
+  },
+  "HSTNng_KSCYng": {
+   "a": "KSCYng",
+   "b": "HSTNng",
+   "cap": 9920.0,
+   "lat_ms": 5.134
+  },
+  "HSTNng_LOSAng": {
+   "a": "LOSAng",
+   "b": "HSTNng",
+   "cap": 9920.0,
+   "lat_ms": 10.965
+  },
+  "IPLSng_KSCYng": {
+   "a": "KSCYng",
+   "b": "IPLSng",
+   "cap": 9920.0,
+   "lat_ms": 4.506
+  },
+  "LOSAng_SNVAng": {
+   "a": "SNVAng",
+   "b": "LOSAng",
+   "cap": 9920.0,
+   "lat_ms": 2.518
+  },
+  "NYCMng_WASHng": {
+   "a": "WASHng",
+   "b": "NYCMng",
+   "cap": 9920.0,
+   "lat_ms": 1.675
+  },
+  "SNVAng_STTLng": {
+   "a": "STTLng",
+   "b": "SNVAng",
+   "cap": 9920.0,
+   "lat_ms": 5.68
+  }
+ },
+ "nodes": {
+  "ATLAM5": {
+   "base_ms": 6.45,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "ATLAng": {
+   "base_ms": 2.84,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "CHINng": {
+   "base_ms": 6.44,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 4
+  },
+  "DNVRng": {
+   "base_ms": 5.54,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "HSTNng": {
+   "base_ms": 2.56,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "IPLSng": {
+   "base_ms": 5.61,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 5
+  },
+  "KSCYng": {
+   "base_ms": 6.3,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "LOSAng": {
+   "base_ms": 3.32,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "NYCMng": {
+   "base_ms": 6.86,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "SNVAng": {
+   "base_ms": 6.19,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "STTLng": {
+   "base_ms": 2.93,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "WASHng": {
+   "base_ms": 2.56,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 6
+  }
+ },
+ "slices": {}
+}

@@ -1,0 +1,100 @@
+\section{Additional Artifact Details}
+\label{app:artifacts}
+
+\subsection{Corpus accounting}
+
+The plan corpus is the full cross product of ten topologies, five intent
+classes, two prompt variants (invariants stated or withheld) and five
+repetitions: \(10\times5\times2\times5=500\) cells, one agent call each.
+Generation uses \texttt{qwen2.5:7b-instruct-q8\_0} at temperature $0.7$ with
+a 16{,}384-token context. The sampling seed of a cell is derived from the
+cell's own identity rather than from execution order, so the corpus is
+reproducible and independent of scheduling. Each record stores the prompt
+hash and length, the raw response, the seed, prompt and generation token
+counts, the parsed plan, per-class ground-truth violation labels under both
+temporal scopes and all three budgets, the intent-fulfillment verdict, and
+the a-priori feasibility label the generator recorded. Certified feasibility
+is a separate offline verdict, stored beside the corpus and joined at read
+time rather than written back into it: the corpus records what was asked and
+what came back, and a corpus that changes under reanalysis is not evidence.
+
+\subsection{Cost sweep accounting}
+
+The sweep covers 26 topologies $\times$ 2 backends $\times$ 2 temporal
+scopes $\times$ 3 budgets $=312$ cells. Each cell times six clean plans and
+six violating plans, five repetitions each, under three measurement
+conditions---clean full traversal, violating with early termination, and
+violating with early termination disabled---for \(28{,}080\) timed
+verifications in 3{,}045\,s. Reported values are the mean across plans of
+each plan's per-repetition median.
+
+Three conditions are separated because they answer different questions. A
+plan that is rejected at its first violated predicate is cheap to check, and
+timing only such plans would credit a profile for detecting early, which is
+a detection property rather than a cost. Timing only clean plans has the
+opposite bias for this encoder: its configuration-integrity fragment
+instantiates constraints only where a conflict concretely exists, so depth
+three costs exactly what depth two costs on a clean plan. Assumption
+monotonicity is therefore asserted on the third condition, the deterministic
+worst-case envelope, which is the only series measuring the same work at
+every budget. It would be convenient to settle the deepest step by counting
+emitted disjuncts instead of by timing---the integrity layer instantiates a
+constraint only where a conflict concretely exists, and on a clean state
+emits none---but the envelope is the maximum over clean and violating plans,
+and on a violating state that layer does emit; depth three additionally runs
+a structural pass over the whole plan that shallower depths skip.
+Monotonicity is reported as an assumption held to the measurement, not one
+the encoding closes.
+Stability is judged per cell by the dispersion of repeated timings rather
+than by machine load, which on a workstation is dominated by unrelated
+processes; one cell of 312 exceeded the threshold and is named in the frozen
+table.
+
+\subsection{Closed-loop sweep accounting}
+
+One hundred intents---five topologies, five intent classes, two prompt
+variants, two repetitions---are each run under eight policies, giving 800
+traces. Every policy draws its round-zero plan with the same seed, so all
+eight begin from an identical plan; this was verified to hold in all 100
+cells. Each trace stores every round's prompt, plan, verifier verdict,
+counterexample, verification time and agent latency, and---on actuation---the
+pre- and post-state hashes together with the violations found by rechecking
+the state that was actually realized.
+
+Paired tests use the intent as the unit. Reporting each policy's 100 traces
+as independent observations would treat eight views of the same intent as
+eight samples; the exact McNemar tests in Table~II of the paper instead
+count the intents on which two policies disagree.
+
+\subsection{Selection protocol}
+
+The profile space searched is the cross product of two temporal scopes and
+three budgets on the SMT backend: six profiles. The twin backend is not a
+candidate, because the agent corpus yields no per-topology detection estimate
+for it; the reported selection result is therefore over coverage depth and
+temporal scope, not over the backend dimension. For each of ten held-out
+topologies and each of the thirteen risk prices in the sweep, primitives are
+pooled over the other nine topologies, the profile minimizing
+\(J=R\,V+\E[T]\) is chosen, and that profile is scored with the held-out
+topology's own \(q\), \(p\), \(\tau\) and \(G\): 130 selections in total.
+The reference is a plug-in oracle---the profile minimizing the same closed
+form under the held-out topology's own primitives---not a closed-loop
+optimum. All four primitives are estimated on one population, certified-%
+feasible intents whose plan fulfills them, so that they can be combined. The
+corpus is rescored offline at every profile, so the experiment adds no agent
+calls. Detection is recomputed by running the verifiers over the stored plans
+rather than read from stored labels, so numerator and denominator come from
+the same code path.
+
+\subsection{Frozen result table}
+
+The headline quantities of Section~V of the paper are collected in a
+generated table that records, for each entry, its value, integer counts,
+interval method, the exact denominator it is defined over, and the result
+file it was read from. Conditional rates in this evaluation differ mainly in
+their denominator---repair success over all unsafe first plans against unsafe
+first plans on feasible intents, for instance---and the table exists so that
+two such quantities cannot be interchanged. It is generated from the archived
+results rather than transcribed, and it carries an entry recording how many
+of its own source files were produced at a revision whose working tree was
+not clean.

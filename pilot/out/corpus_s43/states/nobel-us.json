@@ -1,0 +1,681 @@
+{
+ "acls": {
+  "A1": {
+   "action": "allow",
+   "dst": "10.0.4.0/24",
+   "src": "10.0.6.0/24"
+  },
+  "A2": {
+   "action": "allow",
+   "dst": "10.0.6.0/24",
+   "src": "10.0.8.0/24"
+  },
+  "A3": {
+   "action": "allow",
+   "dst": "10.0.4.0/24",
+   "src": "10.0.5.0/24"
+  }
+ },
+ "flows": {
+  "F1": {
+   "bw": 24.34,
+   "min_bw": 24.34,
+   "path": [
+    "Boulder",
+    "Houston",
+    "Washington"
+   ],
+   "priority": false,
+   "sla_ms": 44.42
+  },
+  "F10": {
+   "bw": 24.34,
+   "min_bw": 24.34,
+   "path": [
+    "Palo-Alto",
+    "Salt-Lake-City"
+   ],
+   "priority": true,
+   "sla_ms": 27.52
+  },
+  "F11": {
+   "bw": 28.76,
+   "min_bw": 28.76,
+   "path": [
+    "Boulder",
+    "Lincoln",
+    "Urbana-Champaign",
+    "Pittsburgh"
+   ],
+   "priority": true,
+   "sla_ms": 25.37
+  },
+  "F12": {
+   "bw": 50.89,
+   "min_bw": 50.89,
+   "path": [
+    "Atlanta",
+    "Houston",
+    "Boulder",
+    "Salt-Lake-City"
+   ],
+   "priority": false,
+   "sla_ms": 47.12
+  },
+  "F13": {
+   "bw": 53.1,
+   "min_bw": 53.1,
+   "path": [
+    "San-Diego",
+    "Palo-Alto",
+    "Salt-Lake-City",
+    "Ann-Arbor"
+   ],
+   "priority": false,
+   "sla_ms": 56.6
+  },
+  "F14": {
+   "bw": 159.31,
+   "min_bw": 159.31,
+   "path": [
+    "Atlanta",
+    "Pittsburgh"
+   ],
+   "priority": false,
+   "sla_ms": 10.77
+  },
+  "F15": {
+   "bw": 42.04,
+   "min_bw": 42.04,
+   "path": [
+    "Lincoln",
+    "Boulder",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 33.62
+  },
+  "F16": {
+   "bw": 358.46,
+   "min_bw": 358.46,
+   "path": [
+    "Ithaca",
+    "Pittsburgh"
+   ],
+   "priority": true,
+   "sla_ms": 7.55
+  },
+  "F17": {
+   "bw": 22.12,
+   "min_bw": 22.12,
+   "path": [
+    "San-Diego",
+    "Houston",
+    "Boulder",
+    "Lincoln"
+   ],
+   "priority": false,
+   "sla_ms": 61.8
+  },
+  "F18": {
+   "bw": 48.68,
+   "min_bw": 48.68,
+   "path": [
+    "Atlanta",
+    "Pittsburgh",
+    "Urbana-Champaign",
+    "Lincoln"
+   ],
+   "priority": true,
+   "sla_ms": 26.79
+  },
+  "F19": {
+   "bw": 33.19,
+   "min_bw": 33.19,
+   "path": [
+    "Urbana-Champaign",
+    "Lincoln",
+    "Boulder",
+    "Salt-Lake-City"
+   ],
+   "priority": true,
+   "sla_ms": 43.9
+  },
+  "F2": {
+   "bw": 70.8,
+   "min_bw": 70.8,
+   "path": [
+    "Palo-Alto",
+    "San-Diego",
+    "Houston",
+    "Atlanta"
+   ],
+   "priority": true,
+   "sla_ms": 48.3
+  },
+  "F20": {
+   "bw": 97.36,
+   "min_bw": 97.36,
+   "path": [
+    "Urbana-Champaign",
+    "Pittsburgh"
+   ],
+   "priority": true,
+   "sla_ms": 12.0
+  },
+  "F21": {
+   "bw": 30.97,
+   "min_bw": 30.97,
+   "path": [
+    "Ann-Arbor",
+    "Salt-Lake-City",
+    "Palo-Alto",
+    "Seattle"
+   ],
+   "priority": true,
+   "sla_ms": 76.93
+  },
+  "F22": {
+   "bw": 15.48,
+   "min_bw": 15.48,
+   "path": [
+    "Boulder",
+    "Lincoln",
+    "Urbana-Champaign",
+    "Seattle"
+   ],
+   "priority": true,
+   "sla_ms": 47.49
+  },
+  "F23": {
+   "bw": 86.29,
+   "min_bw": 86.29,
+   "path": [
+    "Washington",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 33.17
+  },
+  "F24": {
+   "bw": 57.53,
+   "min_bw": 57.53,
+   "path": [
+    "Atlanta",
+    "Pittsburgh",
+    "Urbana-Champaign",
+    "Seattle"
+   ],
+   "priority": false,
+   "sla_ms": 47.81
+  },
+  "F25": {
+   "bw": 104.0,
+   "min_bw": 104.0,
+   "path": [
+    "Pittsburgh",
+    "Atlanta",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 29.22
+  },
+  "F26": {
+   "bw": 35.4,
+   "min_bw": 35.4,
+   "path": [
+    "Pittsburgh",
+    "Urbana-Champaign",
+    "Seattle"
+   ],
+   "priority": false,
+   "sla_ms": 39.75
+  },
+  "F27": {
+   "bw": 112.85,
+   "min_bw": 112.85,
+   "path": [
+    "Urbana-Champaign",
+    "Lincoln",
+    "Boulder",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 50.54
+  },
+  "F28": {
+   "bw": 39.82,
+   "min_bw": 39.82,
+   "path": [
+    "Princeton",
+    "Washington",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 43.84
+  },
+  "F29": {
+   "bw": 261.1,
+   "min_bw": 261.1,
+   "path": [
+    "Princeton",
+    "Pittsburgh"
+   ],
+   "priority": false,
+   "sla_ms": 8.34
+  },
+  "F3": {
+   "bw": 44.25,
+   "min_bw": 44.25,
+   "path": [
+    "Boulder",
+    "Houston"
+   ],
+   "priority": false,
+   "sla_ms": 31.26
+  },
+  "F30": {
+   "bw": 35.4,
+   "min_bw": 35.4,
+   "path": [
+    "San-Diego",
+    "Seattle"
+   ],
+   "priority": false,
+   "sla_ms": 24.43
+  },
+  "F31": {
+   "bw": 13.27,
+   "min_bw": 13.27,
+   "path": [
+    "Boulder",
+    "Lincoln"
+   ],
+   "priority": true,
+   "sla_ms": 17.72
+  },
+  "F32": {
+   "bw": 13.27,
+   "min_bw": 13.27,
+   "path": [
+    "Lincoln",
+    "Urbana-Champaign",
+    "Seattle"
+   ],
+   "priority": false,
+   "sla_ms": 48.9
+  },
+  "F33": {
+   "bw": 37.61,
+   "min_bw": 37.61,
+   "path": [
+    "Boulder",
+    "Houston",
+    "Washington",
+    "Ithaca"
+   ],
+   "priority": false,
+   "sla_ms": 46.44
+  },
+  "F34": {
+   "bw": 190.29,
+   "min_bw": 190.29,
+   "path": [
+    "Atlanta",
+    "Houston"
+   ],
+   "priority": true,
+   "sla_ms": 26.86
+  },
+  "F35": {
+   "bw": 185.87,
+   "min_bw": 185.87,
+   "path": [
+    "Princeton",
+    "Washington",
+    "Ithaca"
+   ],
+   "priority": false,
+   "sla_ms": 24.47
+  },
+  "F36": {
+   "bw": 19.91,
+   "min_bw": 19.91,
+   "path": [
+    "Palo-Alto",
+    "Salt-Lake-City",
+    "Boulder"
+   ],
+   "priority": false,
+   "sla_ms": 29.99
+  },
+  "F37": {
+   "bw": 121.7,
+   "min_bw": 121.7,
+   "path": [
+    "Ann-Arbor",
+    "Ithaca"
+   ],
+   "priority": false,
+   "sla_ms": 21.56
+  },
+  "F38": {
+   "bw": 46.46,
+   "min_bw": 46.46,
+   "path": [
+    "Ithaca",
+    "Pittsburgh",
+    "Urbana-Champaign",
+    "Seattle"
+   ],
+   "priority": false,
+   "sla_ms": 48.29
+  },
+  "F39": {
+   "bw": 11.06,
+   "min_bw": 11.06,
+   "path": [
+    "Lincoln",
+    "Urbana-Champaign",
+    "Pittsburgh",
+    "Princeton"
+   ],
+   "priority": true,
+   "sla_ms": 27.1
+  },
+  "F4": {
+   "bw": 104.0,
+   "min_bw": 104.0,
+   "path": [
+    "San-Diego",
+    "Houston",
+    "Atlanta"
+   ],
+   "priority": true,
+   "sla_ms": 43.21
+  },
+  "F40": {
+   "bw": 57.53,
+   "min_bw": 57.53,
+   "path": [
+    "Palo-Alto",
+    "San-Diego"
+   ],
+   "priority": false,
+   "sla_ms": 13.15
+  },
+  "F5": {
+   "bw": 44.25,
+   "min_bw": 44.25,
+   "path": [
+    "Houston",
+    "Boulder",
+    "Salt-Lake-City"
+   ],
+   "priority": true,
+   "sla_ms": 33.55
+  },
+  "F6": {
+   "bw": 28.76,
+   "min_bw": 28.76,
+   "path": [
+    "Washington",
+    "Houston",
+    "San-Diego",
+    "Seattle"
+   ],
+   "priority": false,
+   "sla_ms": 78.17
+  },
+  "F7": {
+   "bw": 44.25,
+   "min_bw": 44.25,
+   "path": [
+    "Palo-Alto",
+    "Seattle",
+    "Urbana-Champaign"
+   ],
+   "priority": false,
+   "sla_ms": 55.69
+  },
+  "F8": {
+   "bw": 81.87,
+   "min_bw": 81.87,
+   "path": [
+    "San-Diego",
+    "Houston",
+    "Washington",
+    "Ithaca"
+   ],
+   "priority": false,
+   "sla_ms": 74.1
+  },
+  "F9": {
+   "bw": 24.34,
+   "min_bw": 24.34,
+   "path": [
+    "Washington",
+    "Houston",
+    "Boulder",
+    "Lincoln"
+   ],
+   "priority": false,
+   "sla_ms": 54.64
+  }
+ },
+ "links": {
+  "L1": {
+   "a": "Palo-Alto",
+   "b": "San-Diego",
+   "cap": 800.0,
+   "lat_ms": 3.52
+  },
+  "L10": {
+   "a": "Washington",
+   "b": "Ithaca",
+   "cap": 800.0,
+   "lat_ms": 2.102
+  },
+  "L11": {
+   "a": "Washington",
+   "b": "Houston",
+   "cap": 800.0,
+   "lat_ms": 9.758
+  },
+  "L12": {
+   "a": "Atlanta",
+   "b": "Pittsburgh",
+   "cap": 800.0,
+   "lat_ms": 4.318
+  },
+  "L13": {
+   "a": "Atlanta",
+   "b": "Houston",
+   "cap": 800.0,
+   "lat_ms": 5.657
+  },
+  "L14": {
+   "a": "Urbana-Champaign",
+   "b": "Lincoln",
+   "cap": 800.0,
+   "lat_ms": 3.519
+  },
+  "L15": {
+   "a": "Urbana-Champaign",
+   "b": "Pittsburgh",
+   "cap": 800.0,
+   "lat_ms": 3.637
+  },
+  "L16": {
+   "a": "Urbana-Champaign",
+   "b": "Seattle",
+   "cap": 800.0,
+   "lat_ms": 14.164
+  },
+  "L17": {
+   "a": "Ann-Arbor",
+   "b": "Princeton",
+   "cap": 800.0,
+   "lat_ms": 3.933
+  },
+  "L18": {
+   "a": "Ann-Arbor",
+   "b": "Ithaca",
+   "cap": 800.0,
+   "lat_ms": 2.936
+  },
+  "L19": {
+   "a": "Ann-Arbor",
+   "b": "Salt-Lake-City",
+   "cap": 800.0,
+   "lat_ms": 11.738
+  },
+  "L2": {
+   "a": "Palo-Alto",
+   "b": "Salt-Lake-City",
+   "cap": 800.0,
+   "lat_ms": 4.876
+  },
+  "L20": {
+   "a": "Princeton",
+   "b": "Pittsburgh",
+   "cap": 800.0,
+   "lat_ms": 2.203
+  },
+  "L21": {
+   "a": "Ithaca",
+   "b": "Pittsburgh",
+   "cap": 800.0,
+   "lat_ms": 1.765
+  },
+  "L3": {
+   "a": "Palo-Alto",
+   "b": "Seattle",
+   "cap": 800.0,
+   "lat_ms": 5.605
+  },
+  "L4": {
+   "a": "San-Diego",
+   "b": "Houston",
+   "cap": 800.0,
+   "lat_ms": 10.54
+  },
+  "L5": {
+   "a": "San-Diego",
+   "b": "Seattle",
+   "cap": 800.0,
+   "lat_ms": 8.572
+  },
+  "L6": {
+   "a": "Boulder",
+   "b": "Lincoln",
+   "cap": 800.0,
+   "lat_ms": 3.717
+  },
+  "L7": {
+   "a": "Boulder",
+   "b": "Houston",
+   "cap": 800.0,
+   "lat_ms": 7.411
+  },
+  "L8": {
+   "a": "Boulder",
+   "b": "Salt-Lake-City",
+   "cap": 800.0,
+   "lat_ms": 2.722
+  },
+  "L9": {
+   "a": "Washington",
+   "b": "Princeton",
+   "cap": 800.0,
+   "lat_ms": 1.47
+  }
+ },
+ "nodes": {
+  "Ann-Arbor": {
+   "base_ms": 6.92,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Atlanta": {
+   "base_ms": 5.75,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Boulder": {
+   "base_ms": 5.59,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "Houston": {
+   "base_ms": 5.48,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Ithaca": {
+   "base_ms": 7.87,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "Lincoln": {
+   "base_ms": 2.57,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 7
+  },
+  "Palo-Alto": {
+   "base_ms": 6.18,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "Pittsburgh": {
+   "base_ms": 3.09,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 6
+  },
+  "Princeton": {
+   "base_ms": 2.77,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Salt-Lake-City": {
+   "base_ms": 7.03,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "San-Diego": {
+   "base_ms": 4.22,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 5
+  },
+  "Seattle": {
+   "base_ms": 7.33,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "Urbana-Champaign": {
+   "base_ms": 4.36,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Washington": {
+   "base_ms": 5.08,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  }
+ },
+ "slices": {}
+}

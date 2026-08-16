@@ -1,0 +1,844 @@
+{
+ "acls": {
+  "A1": {
+   "action": "allow",
+   "dst": "10.0.1.0/24",
+   "src": "10.0.7.0/24"
+  },
+  "A2": {
+   "action": "allow",
+   "dst": "10.0.2.0/24",
+   "src": "10.0.7.0/24"
+  },
+  "A3": {
+   "action": "allow",
+   "dst": "10.0.7.0/24",
+   "src": "10.0.2.0/24"
+  }
+ },
+ "flows": {
+  "F1": {
+   "bw": 227.79,
+   "min_bw": 227.79,
+   "path": [
+    "pt1.pt",
+    "uk1.uk",
+    "ny1.ny",
+    "at1.at",
+    "hu1.hu"
+   ],
+   "priority": false,
+   "sla_ms": 121.0
+  },
+  "F10": {
+   "bw": 98.39,
+   "min_bw": 98.39,
+   "path": [
+    "hu1.hu",
+    "at1.at",
+    "de1.de",
+    "nl1.nl"
+   ],
+   "priority": false,
+   "sla_ms": 16.18
+  },
+  "F11": {
+   "bw": 405.11,
+   "min_bw": 405.11,
+   "path": [
+    "ny1.ny",
+    "uk1.uk",
+    "fr1.fr",
+    "es1.es"
+   ],
+   "priority": false,
+   "sla_ms": 68.53
+  },
+  "F12": {
+   "bw": 10956.49,
+   "min_bw": 10956.49,
+   "path": [
+    "at1.at",
+    "si1.si"
+   ],
+   "priority": false,
+   "sla_ms": 8.67
+  },
+  "F13": {
+   "bw": 815.35,
+   "min_bw": 815.35,
+   "path": [
+    "be1.be",
+    "fr1.fr",
+    "ch1.ch",
+    "it1.it"
+   ],
+   "priority": false,
+   "sla_ms": 28.68
+  },
+  "F14": {
+   "bw": 2.3,
+   "min_bw": 2.3,
+   "path": [
+    "il1.il",
+    "it1.it",
+    "de1.de",
+    "ie1.ie"
+   ],
+   "priority": false,
+   "sla_ms": 64.85
+  },
+  "F15": {
+   "bw": 581.66,
+   "min_bw": 581.66,
+   "path": [
+    "fr1.fr",
+    "de1.de",
+    "cz1.cz"
+   ],
+   "priority": true,
+   "sla_ms": 21.2
+  },
+  "F16": {
+   "bw": 62.26,
+   "min_bw": 62.26,
+   "path": [
+    "si1.si",
+    "at1.at",
+    "de1.de",
+    "cz1.cz"
+   ],
+   "priority": true,
+   "sla_ms": 25.73
+  },
+  "F17": {
+   "bw": 1532.3,
+   "min_bw": 1532.3,
+   "path": [
+    "fr1.fr",
+    "uk1.uk"
+   ],
+   "priority": true,
+   "sla_ms": 6.43
+  },
+  "F18": {
+   "bw": 1811.34,
+   "min_bw": 1811.34,
+   "path": [
+    "ch1.ch",
+    "at1.at",
+    "de1.de",
+    "cz1.cz"
+   ],
+   "priority": true,
+   "sla_ms": 26.98
+  },
+  "F19": {
+   "bw": 176.54,
+   "min_bw": 176.54,
+   "path": [
+    "ie1.ie",
+    "de1.de",
+    "at1.at",
+    "hu1.hu"
+   ],
+   "priority": false,
+   "sla_ms": 30.21
+  },
+  "F2": {
+   "bw": 7873.69,
+   "min_bw": 7873.69,
+   "path": [
+    "ny1.ny",
+    "uk1.uk",
+    "fr1.fr"
+   ],
+   "priority": false,
+   "sla_ms": 58.68
+  },
+  "F20": {
+   "bw": 2608.5,
+   "min_bw": 2608.5,
+   "path": [
+    "be1.be",
+    "fr1.fr",
+    "de1.de",
+    "cz1.cz",
+    "pl1.pl"
+   ],
+   "priority": false,
+   "sla_ms": 36.57
+  },
+  "F21": {
+   "bw": 32.02,
+   "min_bw": 32.02,
+   "path": [
+    "sk1.sk",
+    "cz1.cz",
+    "de1.de",
+    "it1.it"
+   ],
+   "priority": true,
+   "sla_ms": 34.03
+  },
+  "F22": {
+   "bw": 16.65,
+   "min_bw": 16.65,
+   "path": [
+    "ie1.ie",
+    "de1.de",
+    "at1.at",
+    "si1.si"
+   ],
+   "priority": false,
+   "sla_ms": 33.32
+  },
+  "F23": {
+   "bw": 7.43,
+   "min_bw": 7.43,
+   "path": [
+    "it1.it",
+    "ch1.ch",
+    "fr1.fr",
+    "lu1.lu"
+   ],
+   "priority": false,
+   "sla_ms": 18.82
+  },
+  "F24": {
+   "bw": 109.41,
+   "min_bw": 109.41,
+   "path": [
+    "nl1.nl",
+    "de1.de",
+    "ie1.ie"
+   ],
+   "priority": true,
+   "sla_ms": 23.78
+  },
+  "F25": {
+   "bw": 179.36,
+   "min_bw": 179.36,
+   "path": [
+    "nl1.nl",
+    "de1.de",
+    "gr1.gr"
+   ],
+   "priority": false,
+   "sla_ms": 25.36
+  },
+  "F26": {
+   "bw": 49.71,
+   "min_bw": 49.71,
+   "path": [
+    "il1.il",
+    "nl1.nl",
+    "uk1.uk",
+    "ny1.ny"
+   ],
+   "priority": false,
+   "sla_ms": 99.04
+  },
+  "F27": {
+   "bw": 69.95,
+   "min_bw": 69.95,
+   "path": [
+    "ch1.ch",
+    "at1.at",
+    "de1.de",
+    "ie1.ie"
+   ],
+   "priority": false,
+   "sla_ms": 33.75
+  },
+  "F28": {
+   "bw": 1.53,
+   "min_bw": 1.53,
+   "path": [
+    "sk1.sk",
+    "cz1.cz",
+    "de1.de",
+    "fr1.fr",
+    "lu1.lu"
+   ],
+   "priority": false,
+   "sla_ms": 41.57
+  },
+  "F29": {
+   "bw": 3929.67,
+   "min_bw": 3929.67,
+   "path": [
+    "de1.de",
+    "at1.at",
+    "si1.si"
+   ],
+   "priority": false,
+   "sla_ms": 16.86
+  },
+  "F3": {
+   "bw": 474.8,
+   "min_bw": 474.8,
+   "path": [
+    "ie1.ie",
+    "de1.de",
+    "fr1.fr"
+   ],
+   "priority": false,
+   "sla_ms": 26.12
+  },
+  "F30": {
+   "bw": 113.25,
+   "min_bw": 113.25,
+   "path": [
+    "it1.it",
+    "ch1.ch",
+    "at1.at",
+    "hu1.hu"
+   ],
+   "priority": true,
+   "sla_ms": 22.86
+  },
+  "F31": {
+   "bw": 29.72,
+   "min_bw": 29.72,
+   "path": [
+    "pt1.pt",
+    "es1.es",
+    "fr1.fr",
+    "ch1.ch"
+   ],
+   "priority": true,
+   "sla_ms": 32.34
+  },
+  "F32": {
+   "bw": 775.63,
+   "min_bw": 775.63,
+   "path": [
+    "ie1.ie",
+    "uk1.uk",
+    "pt1.pt"
+   ],
+   "priority": false,
+   "sla_ms": 38.76
+  },
+  "F33": {
+   "bw": 55.85,
+   "min_bw": 55.85,
+   "path": [
+    "hu1.hu",
+    "sk1.sk",
+    "cz1.cz",
+    "pl1.pl"
+   ],
+   "priority": false,
+   "sla_ms": 26.1
+  },
+  "F34": {
+   "bw": 27.67,
+   "min_bw": 27.67,
+   "path": [
+    "fr1.fr",
+    "lu1.lu"
+   ],
+   "priority": true,
+   "sla_ms": 7.99
+  },
+  "F35": {
+   "bw": 131.45,
+   "min_bw": 131.45,
+   "path": [
+    "lu1.lu",
+    "fr1.fr",
+    "ch1.ch",
+    "at1.at",
+    "hu1.hu"
+   ],
+   "priority": false,
+   "sla_ms": 26.23
+  },
+  "F36": {
+   "bw": 73.02,
+   "min_bw": 73.02,
+   "path": [
+    "hr1.hr",
+    "si1.si"
+   ],
+   "priority": true,
+   "sla_ms": 14.65
+  },
+  "F37": {
+   "bw": 341.56,
+   "min_bw": 341.56,
+   "path": [
+    "pl1.pl",
+    "cz1.cz",
+    "de1.de",
+    "at1.at",
+    "si1.si"
+   ],
+   "priority": false,
+   "sla_ms": 27.07
+  },
+  "F38": {
+   "bw": 40.48,
+   "min_bw": 40.48,
+   "path": [
+    "si1.si",
+    "at1.at",
+    "hu1.hu",
+    "sk1.sk"
+   ],
+   "priority": false,
+   "sla_ms": 23.93
+  },
+  "F39": {
+   "bw": 8.96,
+   "min_bw": 8.96,
+   "path": [
+    "lu1.lu",
+    "fr1.fr",
+    "de1.de",
+    "ie1.ie"
+   ],
+   "priority": true,
+   "sla_ms": 36.47
+  },
+  "F4": {
+   "bw": 310.3,
+   "min_bw": 310.3,
+   "path": [
+    "hr1.hr",
+    "hu1.hu",
+    "at1.at",
+    "ny1.ny",
+    "uk1.uk"
+   ],
+   "priority": true,
+   "sla_ms": 119.18
+  },
+  "F40": {
+   "bw": 173.47,
+   "min_bw": 173.47,
+   "path": [
+    "es1.es",
+    "fr1.fr",
+    "de1.de",
+    "cz1.cz",
+    "sk1.sk"
+   ],
+   "priority": true,
+   "sla_ms": 38.95
+  },
+  "F5": {
+   "bw": 18204.45,
+   "min_bw": 18204.45,
+   "path": [
+    "ch1.ch",
+    "fr1.fr",
+    "es1.es"
+   ],
+   "priority": false,
+   "sla_ms": 21.0
+  },
+  "F6": {
+   "bw": 593.44,
+   "min_bw": 593.44,
+   "path": [
+    "fr1.fr",
+    "ch1.ch",
+    "it1.it"
+   ],
+   "priority": false,
+   "sla_ms": 14.98
+  },
+  "F7": {
+   "bw": 25.62,
+   "min_bw": 25.62,
+   "path": [
+    "pt1.pt",
+    "es1.es",
+    "fr1.fr",
+    "de1.de",
+    "cz1.cz"
+   ],
+   "priority": false,
+   "sla_ms": 41.03
+  },
+  "F8": {
+   "bw": 22125.41,
+   "min_bw": 22125.41,
+   "path": [
+    "be1.be",
+    "fr1.fr",
+    "de1.de",
+    "se1.se"
+   ],
+   "priority": false,
+   "sla_ms": 26.8
+  },
+  "F9": {
+   "bw": 1321.16,
+   "min_bw": 1321.16,
+   "path": [
+    "ny1.ny",
+    "uk1.uk",
+    "se1.se"
+   ],
+   "priority": false,
+   "sla_ms": 73.05
+  }
+ },
+ "links": {
+  "at1.at_ch1.ch": {
+   "a": "at1.at",
+   "b": "ch1.ch",
+   "cap": 40000.0,
+   "lat_ms": 4.019
+  },
+  "at1.at_de1.de": {
+   "a": "at1.at",
+   "b": "de1.de",
+   "cap": 40000.0,
+   "lat_ms": 2.987
+  },
+  "at1.at_hu1.hu": {
+   "a": "at1.at",
+   "b": "hu1.hu",
+   "cap": 40000.0,
+   "lat_ms": 1.089
+  },
+  "at1.at_ny1.ny": {
+   "a": "at1.at",
+   "b": "ny1.ny",
+   "cap": 40000.0,
+   "lat_ms": 33.977
+  },
+  "at1.at_si1.si": {
+   "a": "at1.at",
+   "b": "si1.si",
+   "cap": 40000.0,
+   "lat_ms": 1.387
+  },
+  "be1.be_fr1.fr": {
+   "a": "be1.be",
+   "b": "fr1.fr",
+   "cap": 40000.0,
+   "lat_ms": 1.319
+  },
+  "be1.be_lu1.lu": {
+   "a": "be1.be",
+   "b": "lu1.lu",
+   "cap": 40000.0,
+   "lat_ms": 0.934
+  },
+  "be1.be_nl1.nl": {
+   "a": "be1.be",
+   "b": "nl1.nl",
+   "cap": 40000.0,
+   "lat_ms": 0.846
+  },
+  "ch1.ch_fr1.fr": {
+   "a": "ch1.ch",
+   "b": "fr1.fr",
+   "cap": 40000.0,
+   "lat_ms": 2.048
+  },
+  "ch1.ch_it1.it": {
+   "a": "ch1.ch",
+   "b": "it1.it",
+   "cap": 40000.0,
+   "lat_ms": 1.251
+  },
+  "cz1.cz_de1.de": {
+   "a": "cz1.cz",
+   "b": "de1.de",
+   "cap": 40000.0,
+   "lat_ms": 2.053
+  },
+  "cz1.cz_pl1.pl": {
+   "a": "cz1.cz",
+   "b": "pl1.pl",
+   "cap": 40000.0,
+   "lat_ms": 1.544
+  },
+  "cz1.cz_sk1.sk": {
+   "a": "cz1.cz",
+   "b": "sk1.sk",
+   "cap": 40000.0,
+   "lat_ms": 1.45
+  },
+  "de1.de_fr1.fr": {
+   "a": "de1.de",
+   "b": "fr1.fr",
+   "cap": 40000.0,
+   "lat_ms": 2.391
+  },
+  "de1.de_gr1.gr": {
+   "a": "de1.de",
+   "b": "gr1.gr",
+   "cap": 40000.0,
+   "lat_ms": 8.964
+  },
+  "de1.de_ie1.ie": {
+   "a": "de1.de",
+   "b": "ie1.ie",
+   "cap": 40000.0,
+   "lat_ms": 5.438
+  },
+  "de1.de_it1.it": {
+   "a": "de1.de",
+   "b": "it1.it",
+   "cap": 40000.0,
+   "lat_ms": 2.591
+  },
+  "de1.de_nl1.nl": {
+   "a": "de1.de",
+   "b": "nl1.nl",
+   "cap": 40000.0,
+   "lat_ms": 1.792
+  },
+  "de1.de_se1.se": {
+   "a": "de1.de",
+   "b": "se1.se",
+   "cap": 40000.0,
+   "lat_ms": 5.916
+  },
+  "es1.es_fr1.fr": {
+   "a": "es1.es",
+   "b": "fr1.fr",
+   "cap": 40000.0,
+   "lat_ms": 5.264
+  },
+  "es1.es_it1.it": {
+   "a": "es1.es",
+   "b": "it1.it",
+   "cap": 40000.0,
+   "lat_ms": 5.941
+  },
+  "es1.es_pt1.pt": {
+   "a": "es1.es",
+   "b": "pt1.pt",
+   "cap": 40000.0,
+   "lat_ms": 2.515
+  },
+  "fr1.fr_lu1.lu": {
+   "a": "fr1.fr",
+   "b": "lu1.lu",
+   "cap": 40000.0,
+   "lat_ms": 1.434
+  },
+  "fr1.fr_uk1.uk": {
+   "a": "fr1.fr",
+   "b": "uk1.uk",
+   "cap": 40000.0,
+   "lat_ms": 1.718
+  },
+  "gr1.gr_it1.it": {
+   "a": "gr1.gr",
+   "b": "it1.it",
+   "cap": 40000.0,
+   "lat_ms": 7.262
+  },
+  "hr1.hr_hu1.hu": {
+   "a": "hr1.hr",
+   "b": "hu1.hu",
+   "cap": 40000.0,
+   "lat_ms": 1.519
+  },
+  "hr1.hr_si1.si": {
+   "a": "hr1.hr",
+   "b": "si1.si",
+   "cap": 40000.0,
+   "lat_ms": 0.578
+  },
+  "hu1.hu_sk1.sk": {
+   "a": "hu1.hu",
+   "b": "sk1.sk",
+   "cap": 40000.0,
+   "lat_ms": 0.819
+  },
+  "ie1.ie_uk1.uk": {
+   "a": "ie1.ie",
+   "b": "uk1.uk",
+   "cap": 40000.0,
+   "lat_ms": 2.314
+  },
+  "il1.il_it1.it": {
+   "a": "il1.il",
+   "b": "it1.it",
+   "cap": 40000.0,
+   "lat_ms": 13.278
+  },
+  "il1.il_nl1.nl": {
+   "a": "il1.il",
+   "b": "nl1.nl",
+   "cap": 40000.0,
+   "lat_ms": 16.464
+  },
+  "nl1.nl_uk1.uk": {
+   "a": "nl1.nl",
+   "b": "uk1.uk",
+   "cap": 40000.0,
+   "lat_ms": 1.795
+  },
+  "ny1.ny_uk1.uk": {
+   "a": "ny1.ny",
+   "b": "uk1.uk",
+   "cap": 40000.0,
+   "lat_ms": 27.846
+  },
+  "pl1.pl_se1.se": {
+   "a": "pl1.pl",
+   "b": "se1.se",
+   "cap": 40000.0,
+   "lat_ms": 3.885
+  },
+  "pt1.pt_uk1.uk": {
+   "a": "pt1.pt",
+   "b": "uk1.uk",
+   "cap": 40000.0,
+   "lat_ms": 7.933
+  },
+  "se1.se_uk1.uk": {
+   "a": "se1.se",
+   "b": "uk1.uk",
+   "cap": 40000.0,
+   "lat_ms": 7.124
+  }
+ },
+ "nodes": {
+  "at1.at": {
+   "base_ms": 5.25,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "be1.be": {
+   "base_ms": 4.28,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "ch1.ch": {
+   "base_ms": 3.35,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 6
+  },
+  "cz1.cz": {
+   "base_ms": 2.6,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "de1.de": {
+   "base_ms": 7.94,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 8
+  },
+  "es1.es": {
+   "base_ms": 4.43,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "fr1.fr": {
+   "base_ms": 2.44,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "gr1.gr": {
+   "base_ms": 2.95,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 6
+  },
+  "hr1.hr": {
+   "base_ms": 5.53,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "hu1.hu": {
+   "base_ms": 2.65,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "ie1.ie": {
+   "base_ms": 4.07,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 6
+  },
+  "il1.il": {
+   "base_ms": 4.86,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "it1.it": {
+   "base_ms": 2.78,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "lu1.lu": {
+   "base_ms": 2.26,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "nl1.nl": {
+   "base_ms": 2.23,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "ny1.ny": {
+   "base_ms": 6.98,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "pl1.pl": {
+   "base_ms": 6.81,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "pt1.pt": {
+   "base_ms": 4.9,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "se1.se": {
+   "base_ms": 6.92,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 6
+  },
+  "si1.si": {
+   "base_ms": 2.94,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "sk1.sk": {
+   "base_ms": 5.48,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "uk1.uk": {
+   "base_ms": 5.34,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 8
+  }
+ },
+ "slices": {}
+}

@@ -1,0 +1,207 @@
+{
+ "meta": {
+  "commit_sha": "1ad9676",
+  "git_dirty": true,
+  "source_dirty": false,
+  "started_utc": "2026-08-03T02:38:36Z",
+  "python": "3.12.12",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "corpus": "out/corpus_v2",
+  "order": "interleaved",
+  "e": "prefix",
+  "points": 21
+ },
+ "n_predicates_reference": 126,
+ "class_equivalent_fracs": {
+  "I1": 0.21428571428571427,
+  "I1_I2": 0.6507936507936508,
+  "all": 1.0
+ },
+ "n_predicate_instances_per_topology": {
+  "abilene": 126,
+  "atlanta": 134,
+  "france": 171,
+  "geant": 152,
+  "janos-us": 163,
+  "nobel-germany": 142,
+  "nobel-us": 129,
+  "norway": 173,
+  "polska": 129,
+  "ta1": 170
+ },
+ "n_timing_plans": 60,
+ "n_timing_topologies": 10,
+ "rows": [
+  {
+   "frac": 0.0476,
+   "p_detect": 0.044248,
+   "n_detected": 5,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 1.078
+  },
+  {
+   "frac": 0.0952,
+   "p_detect": 0.061947,
+   "n_detected": 7,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 1.8535
+  },
+  {
+   "frac": 0.1429,
+   "p_detect": 0.088496,
+   "n_detected": 10,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 2.4998
+  },
+  {
+   "frac": 0.1905,
+   "p_detect": 0.274336,
+   "n_detected": 31,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 3.2886
+  },
+  {
+   "frac": 0.2381,
+   "p_detect": 0.309735,
+   "n_detected": 35,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 3.7245
+  },
+  {
+   "frac": 0.2857,
+   "p_detect": 0.415929,
+   "n_detected": 47,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 4.2622
+  },
+  {
+   "frac": 0.3333,
+   "p_detect": 0.424779,
+   "n_detected": 48,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 4.6812
+  },
+  {
+   "frac": 0.381,
+   "p_detect": 0.460177,
+   "n_detected": 52,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 5.4076
+  },
+  {
+   "frac": 0.4286,
+   "p_detect": 0.460177,
+   "n_detected": 52,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 6.0702
+  },
+  {
+   "frac": 0.4762,
+   "p_detect": 0.460177,
+   "n_detected": 52,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 6.5674
+  },
+  {
+   "frac": 0.5238,
+   "p_detect": 0.460177,
+   "n_detected": 52,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 6.8612
+  },
+  {
+   "frac": 0.5714,
+   "p_detect": 0.522124,
+   "n_detected": 59,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 7.5951
+  },
+  {
+   "frac": 0.619,
+   "p_detect": 0.610619,
+   "n_detected": 69,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 8.8577
+  },
+  {
+   "frac": 0.6667,
+   "p_detect": 0.707965,
+   "n_detected": 80,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 8.718
+  },
+  {
+   "frac": 0.7143,
+   "p_detect": 0.761062,
+   "n_detected": 86,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 9.4655
+  },
+  {
+   "frac": 0.7619,
+   "p_detect": 0.769912,
+   "n_detected": 87,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 9.858
+  },
+  {
+   "frac": 0.8095,
+   "p_detect": 0.80531,
+   "n_detected": 91,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 10.7668
+  },
+  {
+   "frac": 0.8571,
+   "p_detect": 0.946903,
+   "n_detected": 107,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 10.8717
+  },
+  {
+   "frac": 0.9048,
+   "p_detect": 0.955752,
+   "n_detected": 108,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 11.3419
+  },
+  {
+   "frac": 0.9524,
+   "p_detect": 0.973451,
+   "n_detected": 110,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 11.8743
+  },
+  {
+   "frac": 1.0,
+   "p_detect": 1.0,
+   "n_detected": 113,
+   "n_loss": 113,
+   "false_reject": 0.0,
+   "tau_mean_ms": 12.1006
+  }
+ ],
+ "note": "p is scored against the common full-coverage loss event over FEASIBLE, FULFILLING plans -- the same conditioning as q and the selector. Within one verification the budget is an absolute count of predicate evaluations fixed from the base state; the SWEEP AXIS below is a fraction of each topology's own base count, so one row pools different absolute budgets across topologies."
+}

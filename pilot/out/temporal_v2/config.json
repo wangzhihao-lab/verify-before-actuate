@@ -1,0 +1,51 @@
+{
+ "commit_sha": "2595bd0",
+ "git_dirty": true,
+ "started_utc": "2026-08-01T04:07:31Z",
+ "python": "3.12.12",
+ "platform": "macOS-26.5.1-arm64-arm-64bit",
+ "machine": "arm64",
+ "processor": "arm",
+ "suite": "temporal",
+ "config": {
+  "backend": "ollama",
+  "model": "qwen2.5:7b-instruct-q8_0",
+  "host": "http://127.0.0.1:11434",
+  "timeout": 900,
+  "networks": [
+   "abilene",
+   "polska",
+   "nobel-us",
+   "atlanta",
+   "nobel-germany",
+   "geant",
+   "ta1",
+   "france",
+   "janos-us",
+   "norway"
+  ],
+  "kinds": [
+   "acl_replace",
+   "bandwidth_move",
+   "drain_node",
+   "scale_after_move"
+  ],
+  "reps": 3,
+  "seed": 42,
+  "max_flows": 40,
+  "out": "out/temporal_v2"
+ },
+ "backend_provenance": {
+  "backend": "ollama",
+  "model": "qwen2.5:7b-instruct-q8_0",
+  "temperature": 0.7,
+  "num_ctx": 16384,
+  "host": "http://127.0.0.1:11434",
+  "parameter_size": "7.6B",
+  "quantization_level": "Q8_0",
+  "family": "qwen2",
+  "digest": "2d9500c948416525a044cc51a47a1ef93deb045aebf2f61e8d6b3ac3a3cf2290",
+  "modified_at": "2026-06-11T07:09:28.588974537-07:00",
+  "size_bytes": 8098538978
+ }
+}

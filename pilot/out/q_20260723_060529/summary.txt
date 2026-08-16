@@ -1,0 +1,6 @@
+n_intents=40 model=sonnet seed=42
+parse_fail=30/40
+q (violated / parsed) = 0/10 = 0.00
+by kind: {"bandwidth": [0, 2], "maintenance": [0, 2], "slice": [0, 2], "acl": [0, 2], "scaling": [0, 2]}
+class totals: {"I1": 0, "I2": 0, "I3": 0}
+mean G = 14.3s

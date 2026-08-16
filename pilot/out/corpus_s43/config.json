@@ -1,0 +1,48 @@
+{
+ "commit_sha": "2595bd0",
+ "git_dirty": true,
+ "started_utc": "2026-07-31T11:12:11Z",
+ "python": "3.12.12",
+ "platform": "macOS-26.5.1-arm64-arm-64bit",
+ "machine": "arm64",
+ "processor": "arm",
+ "config": {
+  "networks": [
+   "abilene",
+   "polska",
+   "nobel-us",
+   "atlanta",
+   "nobel-germany",
+   "geant",
+   "ta1",
+   "france",
+   "janos-us",
+   "norway"
+  ],
+  "kinds": [
+   "bandwidth",
+   "maintenance",
+   "slice",
+   "acl",
+   "scaling"
+  ],
+  "guards": [
+   true,
+   false
+  ],
+  "reps": 1,
+  "agent": {
+   "backend": "ollama",
+   "model": "qwen2.5:7b-instruct-q8_0",
+   "temperature": 0.7,
+   "num_ctx": 16384,
+   "timeout": 300,
+   "host": "http://127.0.0.1:11434"
+  },
+  "max_flows": 40,
+  "target_util": 0.65,
+  "seed": 43,
+  "workers": 1
+ },
+ "n_cells_planned": 100
+}

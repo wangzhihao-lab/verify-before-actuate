@@ -1,0 +1,233 @@
+{
+ "meta": {
+  "commit_sha": "1ad9676",
+  "git_dirty": true,
+  "source_dirty": false,
+  "started_utc": "2026-08-03T02:30:38Z",
+  "python": "3.12.12",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "corpus": "out/corpus_qwen3vl"
+ },
+ "n_records": 100,
+ "n_distinct_intents": 100,
+ "verdict_by_cell": {
+  "abilene|bandwidth|guarded|0": "infeasible",
+  "abilene|bandwidth|bare|0": "infeasible",
+  "abilene|maintenance|guarded|0": "infeasible",
+  "abilene|maintenance|bare|0": "infeasible",
+  "abilene|slice|guarded|0": "feasible",
+  "abilene|slice|bare|0": "feasible",
+  "abilene|acl|guarded|0": "feasible",
+  "abilene|acl|bare|0": "feasible",
+  "abilene|scaling|guarded|0": "feasible",
+  "abilene|scaling|bare|0": "feasible",
+  "polska|bandwidth|guarded|0": "feasible",
+  "polska|bandwidth|bare|0": "feasible",
+  "polska|maintenance|guarded|0": "infeasible",
+  "polska|maintenance|bare|0": "infeasible",
+  "polska|slice|guarded|0": "infeasible",
+  "polska|slice|bare|0": "infeasible",
+  "polska|acl|guarded|0": "feasible",
+  "polska|acl|bare|0": "feasible",
+  "polska|scaling|guarded|0": "feasible",
+  "polska|scaling|bare|0": "feasible",
+  "nobel-us|bandwidth|guarded|0": "feasible",
+  "nobel-us|bandwidth|bare|0": "feasible",
+  "nobel-us|maintenance|guarded|0": "infeasible",
+  "nobel-us|maintenance|bare|0": "infeasible",
+  "nobel-us|slice|guarded|0": "unknown",
+  "nobel-us|slice|bare|0": "unknown",
+  "nobel-us|acl|guarded|0": "feasible",
+  "nobel-us|acl|bare|0": "feasible",
+  "nobel-us|scaling|guarded|0": "feasible",
+  "nobel-us|scaling|bare|0": "feasible",
+  "atlanta|bandwidth|guarded|0": "infeasible",
+  "atlanta|bandwidth|bare|0": "infeasible",
+  "atlanta|maintenance|guarded|0": "infeasible",
+  "atlanta|maintenance|bare|0": "infeasible",
+  "atlanta|slice|guarded|0": "feasible",
+  "atlanta|slice|bare|0": "feasible",
+  "atlanta|acl|guarded|0": "feasible",
+  "atlanta|acl|bare|0": "feasible",
+  "atlanta|scaling|guarded|0": "feasible",
+  "atlanta|scaling|bare|0": "feasible",
+  "nobel-germany|bandwidth|guarded|0": "feasible",
+  "nobel-germany|bandwidth|bare|0": "feasible",
+  "nobel-germany|maintenance|guarded|0": "infeasible",
+  "nobel-germany|maintenance|bare|0": "infeasible",
+  "nobel-germany|slice|guarded|0": "feasible",
+  "nobel-germany|slice|bare|0": "feasible",
+  "nobel-germany|acl|guarded|0": "feasible",
+  "nobel-germany|acl|bare|0": "feasible",
+  "nobel-germany|scaling|guarded|0": "infeasible",
+  "nobel-germany|scaling|bare|0": "infeasible",
+  "geant|bandwidth|guarded|0": "feasible",
+  "geant|bandwidth|bare|0": "feasible",
+  "geant|maintenance|guarded|0": "feasible",
+  "geant|maintenance|bare|0": "feasible",
+  "geant|slice|guarded|0": "unknown",
+  "geant|slice|bare|0": "unknown",
+  "geant|acl|guarded|0": "feasible",
+  "geant|acl|bare|0": "feasible",
+  "geant|scaling|guarded|0": "feasible",
+  "geant|scaling|bare|0": "feasible",
+  "ta1|bandwidth|guarded|0": "feasible",
+  "ta1|bandwidth|bare|0": "feasible",
+  "ta1|maintenance|guarded|0": "feasible",
+  "ta1|maintenance|bare|0": "feasible",
+  "ta1|slice|guarded|0": "feasible",
+  "ta1|slice|bare|0": "feasible",
+  "ta1|acl|guarded|0": "feasible",
+  "ta1|acl|bare|0": "feasible",
+  "ta1|scaling|guarded|0": "feasible",
+  "ta1|scaling|bare|0": "feasible",
+  "france|bandwidth|guarded|0": "feasible",
+  "france|bandwidth|bare|0": "feasible",
+  "france|maintenance|guarded|0": "infeasible",
+  "france|maintenance|bare|0": "infeasible",
+  "france|slice|guarded|0": "feasible",
+  "france|slice|bare|0": "feasible",
+  "france|acl|guarded|0": "feasible",
+  "france|acl|bare|0": "feasible",
+  "france|scaling|guarded|0": "feasible",
+  "france|scaling|bare|0": "feasible",
+  "janos-us|bandwidth|guarded|0": "feasible",
+  "janos-us|bandwidth|bare|0": "feasible",
+  "janos-us|maintenance|guarded|0": "unknown",
+  "janos-us|maintenance|bare|0": "unknown",
+  "janos-us|slice|guarded|0": "unknown",
+  "janos-us|slice|bare|0": "unknown",
+  "janos-us|acl|guarded|0": "feasible",
+  "janos-us|acl|bare|0": "feasible",
+  "janos-us|scaling|guarded|0": "infeasible",
+  "janos-us|scaling|bare|0": "infeasible",
+  "norway|bandwidth|guarded|0": "feasible",
+  "norway|bandwidth|bare|0": "feasible",
+  "norway|maintenance|guarded|0": "feasible",
+  "norway|maintenance|bare|0": "feasible",
+  "norway|slice|guarded|0": "feasible",
+  "norway|slice|bare|0": "feasible",
+  "norway|acl|guarded|0": "feasible",
+  "norway|acl|bare|0": "feasible",
+  "norway|scaling|guarded|0": "infeasible",
+  "norway|scaling|bare|0": "infeasible"
+ },
+ "counts": {
+  "infeasible": 24,
+  "feasible": 68,
+  "unknown": 8
+ },
+ "counts_by_kind": {
+  "acl": {
+   "feasible": 20
+  },
+  "bandwidth": {
+   "infeasible": 4,
+   "feasible": 16
+  },
+  "maintenance": {
+   "infeasible": 12,
+   "feasible": 6,
+   "unknown": 2
+  },
+  "scaling": {
+   "feasible": 14,
+   "infeasible": 6
+  },
+  "slice": {
+   "feasible": 12,
+   "infeasible": 2,
+   "unknown": 6
+  }
+ },
+ "n_disagreeing_with_prior_label": 14,
+ "disagreements": [
+  {
+   "cell_id": "abilene|bandwidth|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 11043 exceeds the widest bottleneck 9920 between IPLSng and CHINng"
+  },
+  {
+   "cell_id": "abilene|bandwidth|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 11043 exceeds the widest bottleneck 9920 between IPLSng and CHINng"
+  },
+  {
+   "cell_id": "polska|slice|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "reservation 632 exceeds capacity 622 of link Link_7_9"
+  },
+  {
+   "cell_id": "polska|slice|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "reservation 632 exceeds capacity 622 of link Link_7_9"
+  },
+  {
+   "cell_id": "nobel-us|slice|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "nobel-us|slice|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "atlanta|bandwidth|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 5222 exceeds the widest bottleneck 5000 between N6 and N10"
+  },
+  {
+   "cell_id": "atlanta|bandwidth|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 5222 exceeds the widest bottleneck 5000 between N6 and N10"
+  },
+  {
+   "cell_id": "geant|slice|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "geant|slice|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "janos-us|maintenance|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "janos-us|maintenance|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "janos-us|slice|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "janos-us|slice|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  }
+ ],
+ "note": "a FEASIBLE verdict carries a witness plan that fulfils the intent and satisfies every modelled invariant at every prefix; INFEASIBLE means a necessary condition fails; UNKNOWN means neither, and must not be pooled with either"
+}

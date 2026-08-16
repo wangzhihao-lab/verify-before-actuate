@@ -1,0 +1,744 @@
+{
+ "acls": {
+  "A1": {
+   "action": "allow",
+   "dst": "10.0.3.0/24",
+   "src": "10.0.8.0/24"
+  },
+  "A2": {
+   "action": "allow",
+   "dst": "10.0.6.0/24",
+   "src": "10.0.7.0/24"
+  },
+  "A3": {
+   "action": "allow",
+   "dst": "10.0.2.0/24",
+   "src": "10.0.8.0/24"
+  }
+ },
+ "flows": {
+  "F1": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Bremen",
+    "Hannover",
+    "Dortmund"
+   ],
+   "priority": true,
+   "sla_ms": 26.56
+  },
+  "F10": {
+   "bw": 115.55,
+   "min_bw": 115.55,
+   "path": [
+    "Duesseldorf",
+    "Koeln",
+    "Frankfurt"
+   ],
+   "priority": false,
+   "sla_ms": 19.92
+  },
+  "F11": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Bremen",
+    "Hannover",
+    "Dortmund",
+    "Koeln"
+   ],
+   "priority": false,
+   "sla_ms": 31.41
+  },
+  "F12": {
+   "bw": 57.77,
+   "min_bw": 57.77,
+   "path": [
+    "Koeln",
+    "Frankfurt",
+    "Leipzig"
+   ],
+   "priority": false,
+   "sla_ms": 18.11
+  },
+  "F13": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Mannheim",
+    "Frankfurt",
+    "Nuernberg"
+   ],
+   "priority": true,
+   "sla_ms": 15.59
+  },
+  "F14": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Hannover",
+    "Frankfurt",
+    "Mannheim"
+   ],
+   "priority": false,
+   "sla_ms": 19.77
+  },
+  "F15": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Berlin",
+    "Hannover",
+    "Dortmund",
+    "Essen",
+    "Duesseldorf"
+   ],
+   "priority": true,
+   "sla_ms": 25.23
+  },
+  "F16": {
+   "bw": 77.03,
+   "min_bw": 77.03,
+   "path": [
+    "Berlin",
+    "Hannover"
+   ],
+   "priority": false,
+   "sla_ms": 13.97
+  },
+  "F17": {
+   "bw": 57.77,
+   "min_bw": 57.77,
+   "path": [
+    "Bremen",
+    "Hamburg"
+   ],
+   "priority": false,
+   "sla_ms": 9.9
+  },
+  "F18": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Essen",
+    "Dortmund",
+    "Hannover",
+    "Hamburg"
+   ],
+   "priority": true,
+   "sla_ms": 25.39
+  },
+  "F19": {
+   "bw": 77.03,
+   "min_bw": 77.03,
+   "path": [
+    "Dortmund",
+    "Essen"
+   ],
+   "priority": false,
+   "sla_ms": 10.34
+  },
+  "F2": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Duesseldorf",
+    "Essen",
+    "Dortmund",
+    "Hannover",
+    "Hamburg"
+   ],
+   "priority": false,
+   "sla_ms": 24.99
+  },
+  "F20": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Duesseldorf",
+    "Koeln",
+    "Frankfurt",
+    "Mannheim"
+   ],
+   "priority": true,
+   "sla_ms": 25.23
+  },
+  "F21": {
+   "bw": 96.29,
+   "min_bw": 96.29,
+   "path": [
+    "Duesseldorf",
+    "Essen"
+   ],
+   "priority": false,
+   "sla_ms": 7.5
+  },
+  "F22": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Essen",
+    "Dortmund",
+    "Hannover",
+    "Frankfurt",
+    "Nuernberg",
+    "Muenchen"
+   ],
+   "priority": false,
+   "sla_ms": 56.12
+  },
+  "F23": {
+   "bw": 96.29,
+   "min_bw": 96.29,
+   "path": [
+    "Hamburg",
+    "Hannover"
+   ],
+   "priority": true,
+   "sla_ms": 12.65
+  },
+  "F24": {
+   "bw": 57.77,
+   "min_bw": 57.77,
+   "path": [
+    "Muenchen",
+    "Ulm"
+   ],
+   "priority": false,
+   "sla_ms": 13.66
+  },
+  "F25": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Duesseldorf",
+    "Koeln",
+    "Frankfurt",
+    "Nuernberg",
+    "Muenchen",
+    "Ulm"
+   ],
+   "priority": false,
+   "sla_ms": 42.82
+  },
+  "F26": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Essen",
+    "Dortmund",
+    "Hannover",
+    "Frankfurt",
+    "Mannheim"
+   ],
+   "priority": false,
+   "sla_ms": 42.94
+  },
+  "F27": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Duesseldorf",
+    "Koeln",
+    "Frankfurt",
+    "Nuernberg",
+    "Stuttgart"
+   ],
+   "priority": true,
+   "sla_ms": 33.8
+  },
+  "F28": {
+   "bw": 57.77,
+   "min_bw": 57.77,
+   "path": [
+    "Hannover",
+    "Dortmund",
+    "Koeln"
+   ],
+   "priority": false,
+   "sla_ms": 31.36
+  },
+  "F29": {
+   "bw": 57.77,
+   "min_bw": 57.77,
+   "path": [
+    "Berlin",
+    "Leipzig",
+    "Nuernberg",
+    "Stuttgart"
+   ],
+   "priority": true,
+   "sla_ms": 24.28
+  },
+  "F3": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Berlin",
+    "Hannover",
+    "Dortmund"
+   ],
+   "priority": false,
+   "sla_ms": 18.77
+  },
+  "F30": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Koeln",
+    "Frankfurt",
+    "Mannheim"
+   ],
+   "priority": false,
+   "sla_ms": 18.83
+  },
+  "F31": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Frankfurt",
+    "Mannheim",
+    "Karlsruhe"
+   ],
+   "priority": true,
+   "sla_ms": 11.06
+  },
+  "F32": {
+   "bw": 57.77,
+   "min_bw": 57.77,
+   "path": [
+    "Hannover",
+    "Frankfurt",
+    "Nuernberg",
+    "Stuttgart"
+   ],
+   "priority": false,
+   "sla_ms": 35.41
+  },
+  "F33": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Essen",
+    "Dortmund",
+    "Hannover",
+    "Frankfurt",
+    "Nuernberg",
+    "Muenchen",
+    "Ulm"
+   ],
+   "priority": false,
+   "sla_ms": 54.5
+  },
+  "F34": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Koeln",
+    "Frankfurt",
+    "Nuernberg",
+    "Stuttgart"
+   ],
+   "priority": true,
+   "sla_ms": 40.52
+  },
+  "F35": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Berlin",
+    "Hamburg",
+    "Bremen"
+   ],
+   "priority": false,
+   "sla_ms": 16.52
+  },
+  "F36": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Karlsruhe",
+    "Stuttgart",
+    "Nuernberg",
+    "Muenchen"
+   ],
+   "priority": false,
+   "sla_ms": 36.46
+  },
+  "F37": {
+   "bw": 115.55,
+   "min_bw": 115.55,
+   "path": [
+    "Frankfurt",
+    "Hannover",
+    "Hamburg"
+   ],
+   "priority": true,
+   "sla_ms": 21.98
+  },
+  "F38": {
+   "bw": 77.03,
+   "min_bw": 77.03,
+   "path": [
+    "Hamburg",
+    "Berlin",
+    "Leipzig"
+   ],
+   "priority": true,
+   "sla_ms": 13.87
+  },
+  "F39": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Dortmund",
+    "Hannover",
+    "Frankfurt",
+    "Nuernberg"
+   ],
+   "priority": true,
+   "sla_ms": 30.26
+  },
+  "F4": {
+   "bw": 38.51,
+   "min_bw": 38.51,
+   "path": [
+    "Berlin",
+    "Leipzig",
+    "Nuernberg",
+    "Muenchen"
+   ],
+   "priority": false,
+   "sla_ms": 31.17
+  },
+  "F40": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Bremen",
+    "Hannover",
+    "Frankfurt",
+    "Mannheim"
+   ],
+   "priority": false,
+   "sla_ms": 24.66
+  },
+  "F5": {
+   "bw": 57.77,
+   "min_bw": 57.77,
+   "path": [
+    "Dortmund",
+    "Hannover",
+    "Leipzig"
+   ],
+   "priority": true,
+   "sla_ms": 23.83
+  },
+  "F6": {
+   "bw": 77.03,
+   "min_bw": 77.03,
+   "path": [
+    "Stuttgart",
+    "Ulm"
+   ],
+   "priority": false,
+   "sla_ms": 12.21
+  },
+  "F7": {
+   "bw": 134.81,
+   "min_bw": 134.81,
+   "path": [
+    "Frankfurt",
+    "Hannover"
+   ],
+   "priority": false,
+   "sla_ms": 16.92
+  },
+  "F8": {
+   "bw": 19.25,
+   "min_bw": 19.25,
+   "path": [
+    "Karlsruhe",
+    "Mannheim"
+   ],
+   "priority": true,
+   "sla_ms": 7.2
+  },
+  "F9": {
+   "bw": 77.03,
+   "min_bw": 77.03,
+   "path": [
+    "Essen",
+    "Dortmund",
+    "Hannover",
+    "Frankfurt"
+   ],
+   "priority": false,
+   "sla_ms": 26.89
+  }
+ },
+ "links": {
+  "L1": {
+   "a": "Berlin",
+   "b": "Hamburg",
+   "cap": 800.0,
+   "lat_ms": 1.273
+  },
+  "L10": {
+   "a": "Dortmund",
+   "b": "Norden",
+   "cap": 800.0,
+   "lat_ms": 1.166
+  },
+  "L11": {
+   "a": "Duesseldorf",
+   "b": "Essen",
+   "cap": 800.0,
+   "lat_ms": 0.144
+  },
+  "L12": {
+   "a": "Duesseldorf",
+   "b": "Koeln",
+   "cap": 800.0,
+   "lat_ms": 0.185
+  },
+  "L13": {
+   "a": "Frankfurt",
+   "b": "Hannover",
+   "cap": 800.0,
+   "lat_ms": 1.312
+  },
+  "L14": {
+   "a": "Frankfurt",
+   "b": "Koeln",
+   "cap": 800.0,
+   "lat_ms": 0.727
+  },
+  "L15": {
+   "a": "Frankfurt",
+   "b": "Leipzig",
+   "cap": 800.0,
+   "lat_ms": 1.469
+  },
+  "L16": {
+   "a": "Frankfurt",
+   "b": "Mannheim",
+   "cap": 800.0,
+   "lat_ms": 0.366
+  },
+  "L17": {
+   "a": "Frankfurt",
+   "b": "Nuernberg",
+   "cap": 800.0,
+   "lat_ms": 0.949
+  },
+  "L18": {
+   "a": "Hamburg",
+   "b": "Hannover",
+   "cap": 800.0,
+   "lat_ms": 0.652
+  },
+  "L19": {
+   "a": "Hannover",
+   "b": "Leipzig",
+   "cap": 800.0,
+   "lat_ms": 1.061
+  },
+  "L2": {
+   "a": "Berlin",
+   "b": "Hannover",
+   "cap": 800.0,
+   "lat_ms": 1.249
+  },
+  "L20": {
+   "a": "Karlsruhe",
+   "b": "Mannheim",
+   "cap": 800.0,
+   "lat_ms": 0.268
+  },
+  "L21": {
+   "a": "Karlsruhe",
+   "b": "Stuttgart",
+   "cap": 800.0,
+   "lat_ms": 0.303
+  },
+  "L22": {
+   "a": "Leipzig",
+   "b": "Nuernberg",
+   "cap": 800.0,
+   "lat_ms": 1.147
+  },
+  "L23": {
+   "a": "Muenchen",
+   "b": "Nuernberg",
+   "cap": 800.0,
+   "lat_ms": 0.743
+  },
+  "L24": {
+   "a": "Muenchen",
+   "b": "Ulm",
+   "cap": 800.0,
+   "lat_ms": 0.594
+  },
+  "L25": {
+   "a": "Nuernberg",
+   "b": "Stuttgart",
+   "cap": 800.0,
+   "lat_ms": 0.818
+  },
+  "L26": {
+   "a": "Stuttgart",
+   "b": "Ulm",
+   "cap": 800.0,
+   "lat_ms": 0.369
+  },
+  "L3": {
+   "a": "Berlin",
+   "b": "Leipzig",
+   "cap": 800.0,
+   "lat_ms": 0.757
+  },
+  "L4": {
+   "a": "Bremen",
+   "b": "Hamburg",
+   "cap": 800.0,
+   "lat_ms": 0.499
+  },
+  "L5": {
+   "a": "Bremen",
+   "b": "Hannover",
+   "cap": 800.0,
+   "lat_ms": 0.51
+  },
+  "L6": {
+   "a": "Bremen",
+   "b": "Norden",
+   "cap": 800.0,
+   "lat_ms": 0.602
+  },
+  "L7": {
+   "a": "Dortmund",
+   "b": "Essen",
+   "cap": 800.0,
+   "lat_ms": 0.171
+  },
+  "L8": {
+   "a": "Dortmund",
+   "b": "Hannover",
+   "cap": 800.0,
+   "lat_ms": 0.933
+  },
+  "L9": {
+   "a": "Dortmund",
+   "b": "Koeln",
+   "cap": 800.0,
+   "lat_ms": 0.367
+  }
+ },
+ "nodes": {
+  "Berlin": {
+   "base_ms": 5.61,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 5
+  },
+  "Bremen": {
+   "base_ms": 2.56,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Dortmund": {
+   "base_ms": 6.84,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Duesseldorf": {
+   "base_ms": 2.75,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 7
+  },
+  "Essen": {
+   "base_ms": 7.08,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 4
+  },
+  "Frankfurt": {
+   "base_ms": 2.84,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 5
+  },
+  "Hamburg": {
+   "base_ms": 6.44,
+   "enabled": true,
+   "replicas": 3,
+   "vnf_slots": 4
+  },
+  "Hannover": {
+   "base_ms": 6.45,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Karlsruhe": {
+   "base_ms": 2.93,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 6
+  },
+  "Koeln": {
+   "base_ms": 5.31,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 7
+  },
+  "Leipzig": {
+   "base_ms": 5.46,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Mannheim": {
+   "base_ms": 2.56,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 6
+  },
+  "Muenchen": {
+   "base_ms": 6.3,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "Norden": {
+   "base_ms": 5.54,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 8
+  },
+  "Nuernberg": {
+   "base_ms": 6.86,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  },
+  "Stuttgart": {
+   "base_ms": 6.19,
+   "enabled": true,
+   "replicas": 1,
+   "vnf_slots": 4
+  },
+  "Ulm": {
+   "base_ms": 3.32,
+   "enabled": true,
+   "replicas": 2,
+   "vnf_slots": 8
+  }
+ },
+ "slices": {}
+}

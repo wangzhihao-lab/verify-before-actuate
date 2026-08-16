@@ -1,0 +1,257 @@
+{
+ "meta": {
+  "commit_sha": "1ad9676",
+  "git_dirty": true,
+  "source_dirty": false,
+  "started_utc": "2026-08-03T02:30:35Z",
+  "python": "3.12.12",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "corpus": "out/corpus_s43"
+ },
+ "n_records": 100,
+ "n_distinct_intents": 100,
+ "verdict_by_cell": {
+  "abilene|bandwidth|guarded|0": "infeasible",
+  "abilene|bandwidth|bare|0": "infeasible",
+  "abilene|maintenance|guarded|0": "infeasible",
+  "abilene|maintenance|bare|0": "infeasible",
+  "abilene|slice|guarded|0": "feasible",
+  "abilene|slice|bare|0": "feasible",
+  "abilene|acl|guarded|0": "feasible",
+  "abilene|acl|bare|0": "feasible",
+  "abilene|scaling|guarded|0": "infeasible",
+  "abilene|scaling|bare|0": "infeasible",
+  "polska|bandwidth|guarded|0": "feasible",
+  "polska|bandwidth|bare|0": "feasible",
+  "polska|maintenance|guarded|0": "infeasible",
+  "polska|maintenance|bare|0": "infeasible",
+  "polska|slice|guarded|0": "feasible",
+  "polska|slice|bare|0": "feasible",
+  "polska|acl|guarded|0": "feasible",
+  "polska|acl|bare|0": "feasible",
+  "polska|scaling|guarded|0": "infeasible",
+  "polska|scaling|bare|0": "infeasible",
+  "nobel-us|bandwidth|guarded|0": "feasible",
+  "nobel-us|bandwidth|bare|0": "feasible",
+  "nobel-us|maintenance|guarded|0": "infeasible",
+  "nobel-us|maintenance|bare|0": "infeasible",
+  "nobel-us|slice|guarded|0": "unknown",
+  "nobel-us|slice|bare|0": "unknown",
+  "nobel-us|acl|guarded|0": "feasible",
+  "nobel-us|acl|bare|0": "feasible",
+  "nobel-us|scaling|guarded|0": "infeasible",
+  "nobel-us|scaling|bare|0": "infeasible",
+  "atlanta|bandwidth|guarded|0": "feasible",
+  "atlanta|bandwidth|bare|0": "feasible",
+  "atlanta|maintenance|guarded|0": "infeasible",
+  "atlanta|maintenance|bare|0": "infeasible",
+  "atlanta|slice|guarded|0": "feasible",
+  "atlanta|slice|bare|0": "feasible",
+  "atlanta|acl|guarded|0": "feasible",
+  "atlanta|acl|bare|0": "feasible",
+  "atlanta|scaling|guarded|0": "infeasible",
+  "atlanta|scaling|bare|0": "infeasible",
+  "nobel-germany|bandwidth|guarded|0": "infeasible",
+  "nobel-germany|bandwidth|bare|0": "infeasible",
+  "nobel-germany|maintenance|guarded|0": "infeasible",
+  "nobel-germany|maintenance|bare|0": "infeasible",
+  "nobel-germany|slice|guarded|0": "unknown",
+  "nobel-germany|slice|bare|0": "unknown",
+  "nobel-germany|acl|guarded|0": "feasible",
+  "nobel-germany|acl|bare|0": "feasible",
+  "nobel-germany|scaling|guarded|0": "infeasible",
+  "nobel-germany|scaling|bare|0": "infeasible",
+  "geant|bandwidth|guarded|0": "infeasible",
+  "geant|bandwidth|bare|0": "infeasible",
+  "geant|maintenance|guarded|0": "infeasible",
+  "geant|maintenance|bare|0": "infeasible",
+  "geant|slice|guarded|0": "feasible",
+  "geant|slice|bare|0": "feasible",
+  "geant|acl|guarded|0": "feasible",
+  "geant|acl|bare|0": "feasible",
+  "geant|scaling|guarded|0": "feasible",
+  "geant|scaling|bare|0": "feasible",
+  "ta1|bandwidth|guarded|0": "feasible",
+  "ta1|bandwidth|bare|0": "feasible",
+  "ta1|maintenance|guarded|0": "infeasible",
+  "ta1|maintenance|bare|0": "infeasible",
+  "ta1|slice|guarded|0": "infeasible",
+  "ta1|slice|bare|0": "infeasible",
+  "ta1|acl|guarded|0": "feasible",
+  "ta1|acl|bare|0": "feasible",
+  "ta1|scaling|guarded|0": "infeasible",
+  "ta1|scaling|bare|0": "infeasible",
+  "france|bandwidth|guarded|0": "feasible",
+  "france|bandwidth|bare|0": "feasible",
+  "france|maintenance|guarded|0": "infeasible",
+  "france|maintenance|bare|0": "infeasible",
+  "france|slice|guarded|0": "infeasible",
+  "france|slice|bare|0": "infeasible",
+  "france|acl|guarded|0": "feasible",
+  "france|acl|bare|0": "feasible",
+  "france|scaling|guarded|0": "feasible",
+  "france|scaling|bare|0": "feasible",
+  "janos-us|bandwidth|guarded|0": "feasible",
+  "janos-us|bandwidth|bare|0": "feasible",
+  "janos-us|maintenance|guarded|0": "unknown",
+  "janos-us|maintenance|bare|0": "unknown",
+  "janos-us|slice|guarded|0": "feasible",
+  "janos-us|slice|bare|0": "feasible",
+  "janos-us|acl|guarded|0": "feasible",
+  "janos-us|acl|bare|0": "feasible",
+  "janos-us|scaling|guarded|0": "feasible",
+  "janos-us|scaling|bare|0": "feasible",
+  "norway|bandwidth|guarded|0": "unknown",
+  "norway|bandwidth|bare|0": "unknown",
+  "norway|maintenance|guarded|0": "infeasible",
+  "norway|maintenance|bare|0": "infeasible",
+  "norway|slice|guarded|0": "feasible",
+  "norway|slice|bare|0": "feasible",
+  "norway|acl|guarded|0": "feasible",
+  "norway|acl|bare|0": "feasible",
+  "norway|scaling|guarded|0": "feasible",
+  "norway|scaling|bare|0": "feasible"
+ },
+ "counts": {
+  "infeasible": 40,
+  "feasible": 52,
+  "unknown": 8
+ },
+ "counts_by_kind": {
+  "acl": {
+   "feasible": 20
+  },
+  "bandwidth": {
+   "infeasible": 6,
+   "feasible": 12,
+   "unknown": 2
+  },
+  "maintenance": {
+   "infeasible": 18,
+   "unknown": 2
+  },
+  "scaling": {
+   "infeasible": 12,
+   "feasible": 8
+  },
+  "slice": {
+   "feasible": 12,
+   "unknown": 4,
+   "infeasible": 4
+  }
+ },
+ "n_disagreeing_with_prior_label": 18,
+ "disagreements": [
+  {
+   "cell_id": "abilene|bandwidth|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 13592 exceeds the widest bottleneck 9920 between KSCYng and SNVAng"
+  },
+  {
+   "cell_id": "abilene|bandwidth|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 13592 exceeds the widest bottleneck 9920 between KSCYng and SNVAng"
+  },
+  {
+   "cell_id": "nobel-us|slice|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "nobel-us|slice|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "nobel-germany|bandwidth|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 817 exceeds the widest bottleneck 800 between Berlin and Koeln"
+  },
+  {
+   "cell_id": "nobel-germany|bandwidth|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 817 exceeds the widest bottleneck 800 between Berlin and Koeln"
+  },
+  {
+   "cell_id": "nobel-germany|slice|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "nobel-germany|slice|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "geant|bandwidth|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 43045 exceeds the widest bottleneck 40000 between il1.il and lu1.lu"
+  },
+  {
+   "cell_id": "geant|bandwidth|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "target 43045 exceeds the widest bottleneck 40000 between il1.il and lu1.lu"
+  },
+  {
+   "cell_id": "ta1|slice|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "reservation 1.31159e+07 exceeds capacity 1.1088e+07 of link L16_N3_N15"
+  },
+  {
+   "cell_id": "ta1|slice|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "reservation 1.31159e+07 exceeds capacity 1.1088e+07 of link L16_N3_N15"
+  },
+  {
+   "cell_id": "france|slice|guarded|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "reservation 2753 exceeds capacity 2500 of link LinkN03_N10"
+  },
+  {
+   "cell_id": "france|slice|bare|0",
+   "prior": true,
+   "verdict": "infeasible",
+   "reason": "reservation 2753 exceeds capacity 2500 of link LinkN03_N10"
+  },
+  {
+   "cell_id": "janos-us|maintenance|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "janos-us|maintenance|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "norway|bandwidth|guarded|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  },
+  {
+   "cell_id": "norway|bandwidth|bare|0",
+   "prior": true,
+   "verdict": "unknown",
+   "reason": "no necessary condition failed and the witness search found no prefix-safe fulfilling plan"
+  }
+ ],
+ "note": "a FEASIBLE verdict carries a witness plan that fulfils the intent and satisfies every modelled invariant at every prefix; INFEASIBLE means a necessary condition fails; UNKNOWN means neither, and must not be pooled with either"
+}

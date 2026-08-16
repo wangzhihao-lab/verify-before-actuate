@@ -1,0 +1,121 @@
+{
+ "commit_sha": "2595bd0",
+ "git_dirty": true,
+ "started_utc": "2026-07-29T09:58:45Z",
+ "python": "3.12.12",
+ "platform": "macOS-26.5.1-arm64-arm-64bit",
+ "machine": "arm64",
+ "processor": "arm",
+ "config": {
+  "networks": [
+   "abilene",
+   "polska",
+   "nobel-us",
+   "geant",
+   "norway"
+  ],
+  "kinds": [
+   "bandwidth",
+   "maintenance",
+   "slice",
+   "acl",
+   "scaling"
+  ],
+  "guards": [
+   false,
+   true
+  ],
+  "reps": 2,
+  "agent": {
+   "backend": "ollama",
+   "model": "qwen2.5:7b-instruct-q8_0",
+   "temperature": 0.7,
+   "num_ctx": 16384,
+   "timeout": 300,
+   "host": "http://127.0.0.1:11434"
+  },
+  "max_flows": 40,
+  "target_util": 0.65,
+  "seed": 42,
+  "workers": 4
+ },
+ "policies": [
+  {
+   "name": "no_verify",
+   "e": "prefix",
+   "mode": "smt",
+   "b": 3,
+   "max_rounds": 3,
+   "witness": true
+  },
+  {
+   "name": "static_rules",
+   "e": "prefix",
+   "mode": "smt",
+   "b": 3,
+   "max_rounds": 3,
+   "witness": true
+  },
+  {
+   "name": "reflect",
+   "e": "prefix",
+   "mode": "smt",
+   "b": 3,
+   "max_rounds": 1,
+   "witness": true
+  },
+  {
+   "name": "reflect",
+   "e": "prefix",
+   "mode": "smt",
+   "b": 3,
+   "max_rounds": 3,
+   "witness": true
+  },
+  {
+   "name": "verify",
+   "e": "prefix",
+   "mode": "smt",
+   "b": 3,
+   "max_rounds": 3,
+   "witness": true
+  },
+  {
+   "name": "verify",
+   "e": "term",
+   "mode": "smt",
+   "b": 3,
+   "max_rounds": 3,
+   "witness": true
+  },
+  {
+   "name": "verify",
+   "e": "prefix",
+   "mode": "smt",
+   "b": 1,
+   "max_rounds": 3,
+   "witness": true
+  },
+  {
+   "name": "verify",
+   "e": "prefix",
+   "mode": "smt",
+   "b": 3,
+   "max_rounds": 3,
+   "witness": false
+  }
+ ],
+ "n_cells": 100,
+ "backend_provenance": {
+  "backend": "ollama",
+  "model": "qwen2.5:7b-instruct-q8_0",
+  "temperature": 0.7,
+  "num_ctx": 16384,
+  "host": "http://127.0.0.1:11434",
+  "parameter_size": "7.6B",
+  "quantization_level": "Q8_0",
+  "family": "qwen2",
+  "digest": null,
+  "modified_at": "2026-06-11T07:09:28.588974537-07:00"
+ }
+}

@@ -1,0 +1,15 @@
+# Build products
+*.aux
+*.log
+*.out
+*.toc
+supplement.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# SNDlib is fetched, never committed (see fetch_sndlib.py)
+data/
+pilot/data/

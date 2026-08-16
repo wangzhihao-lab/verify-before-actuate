@@ -1,0 +1,11 @@
+{
+ "seed": 42,
+ "n_intents": 40,
+ "model": "sonnet",
+ "n_nodes": 12,
+ "n_chords": 6,
+ "n_flows": 15,
+ "timeout_s": 180,
+ "python": "3.12.12",
+ "platform": "macOS-26.5.1-arm64-arm-64bit"
+}

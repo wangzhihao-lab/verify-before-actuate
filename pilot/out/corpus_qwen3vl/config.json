@@ -1,0 +1,48 @@
+{
+ "commit_sha": "2595bd0",
+ "git_dirty": true,
+ "started_utc": "2026-07-29T13:27:46Z",
+ "python": "3.12.12",
+ "platform": "macOS-26.5.1-arm64-arm-64bit",
+ "machine": "arm64",
+ "processor": "arm",
+ "config": {
+  "networks": [
+   "abilene",
+   "polska",
+   "nobel-us",
+   "atlanta",
+   "nobel-germany",
+   "geant",
+   "ta1",
+   "france",
+   "janos-us",
+   "norway"
+  ],
+  "kinds": [
+   "bandwidth",
+   "maintenance",
+   "slice",
+   "acl",
+   "scaling"
+  ],
+  "guards": [
+   true,
+   false
+  ],
+  "reps": 1,
+  "agent": {
+   "backend": "lmstudio",
+   "model": "huihui-qwen3-vl-32b-instruct-abliterated-i1",
+   "temperature": 0.7,
+   "num_ctx": 16384,
+   "timeout": 900,
+   "host": "http://127.0.0.1:1234"
+  },
+  "max_flows": 40,
+  "target_util": 0.65,
+  "seed": 42,
+  "workers": 1
+ },
+ "n_cells_planned": 100
+}
