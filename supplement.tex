@@ -16,6 +16,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
 
@@ -47,13 +48,17 @@ will be populated before submission.}}
 \maketitle
 
 \begin{abstract}
-This supplement carries the boundary-complete proofs behind the sketches in
-Section III of the paper, together with the accounting details of every
-experiment in Section V.  Section~\ref{sec:restate} restates the definitions
-and results the proofs refer to, so that this document can be read without
-the paper open; equation and theorem numbers here are LOCAL, and the
-correspondence to the paper's numbering is given in
-Table~\ref{tab:numbering}.
+This supplement carries what the paper's thirteen pages could not hold: the
+boundary-complete proofs behind the sketches in Section III, the accounting
+details of every experiment in Section V, and five tables reporting in full
+what the paper states only in aggregate---the adversarial injection
+taxonomy, the complete detection--cost curve, the fold-by-fold selection
+grid, ordering outcomes by intent class, and the frozen result table.
+Nothing here revises a claim in the paper; each section supplies the detail
+behind one.  Section~\ref{sec:restate} restates the definitions and results
+the proofs refer to, so this document can be read without the paper open;
+equation and theorem numbers here are LOCAL, and the correspondence to the
+paper's numbering is given in Table~\ref{tab:numbering}.
 \end{abstract}
 
 \section{Restated Definitions and Results}
@@ -196,5 +201,6 @@ Active endpoints      & \eqref{eq:qroots}              & (33)\\
 
 \input{PROOFS}
 \input{PROTOCOL}
+\input{supp_tables}
 
 \end{document}
