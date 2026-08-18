@@ -104,7 +104,7 @@ def tau_scaling(costbench_json: Path, out_base: Path,
     nets = sorted(by_net, key=lambda n: by_net[n]["n_nodes"])
     xs = np.array([by_net[n]["n_nodes"] for n in nets], dtype=float)
 
-    fig, ax = _new_fig(height_mm=62.0)
+    fig, ax = _new_fig(height_mm=56.0)
     colors = pubfig.get_palette("default")
     markers = ["o", "s", "^", "D", "v", "*"]
 
@@ -137,7 +137,7 @@ def tau_scaling(costbench_json: Path, out_base: Path,
               borderaxespad=0.3, labelspacing=0.25)
     ax.grid(True, which="major", linewidth=0.3, alpha=0.35)
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=62)
+    _save(fig, out_base, width="single", height_mm=56)
     plt.close(fig)
     return {"n_networks": len(nets),
             "node_range": [float(xs.min()), float(xs.max())],
@@ -160,7 +160,7 @@ def selection_vs_risk(selection_json: Path, out_base: Path) -> Dict[str, Any]:
     rows = data["summary"]
     R = np.array([r["R"] for r in rows], dtype=float)
 
-    fig, ax = _new_fig(height_mm=62.0)
+    fig, ax = _new_fig(height_mm=56.0)
     plots = [
         ("J_always_shallowest", "Fixed shallow ($b{=}1$)", "--", "^"),
         ("J_always_deepest", "Fixed deep ($b{=}3$)", "--", "s"),
@@ -202,7 +202,7 @@ def selection_vs_risk(selection_json: Path, out_base: Path) -> Dict[str, Any]:
         prev = cur
 
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=62)
+    _save(fig, out_base, width="single", height_mm=56)
     plt.close(fig)
     return {"n_R": len(rows),
             "profiles": sorted({p for r in rows
@@ -301,7 +301,7 @@ def cost_ratio_scaling(crossover_json: Path, out_base: Path) -> Dict[str, Any]:
     pub = [r for r in rows if r["class"] == "published"]
     stress = [r for r in rows if r["class"] == "stress"]
 
-    fig, ax = _new_fig(height_mm=62.0)
+    fig, ax = _new_fig(height_mm=56.0)
     colors = pubfig.get_palette("default")
     for group, label, marker, colour in (
             (pub, "Published instances", "o", colors[0]),
@@ -325,7 +325,7 @@ def cost_ratio_scaling(crossover_json: Path, out_base: Path) -> Dict[str, Any]:
               borderaxespad=0.3)
     ax.grid(True, which="major", linewidth=0.3, alpha=0.35)
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=62)
+    _save(fig, out_base, width="single", height_mm=56)
     plt.close(fig)
     return {"n_published": len(pub), "n_stress": len(stress),
             "ratio_range": [min(r["ratio_smt"] for r in rows),

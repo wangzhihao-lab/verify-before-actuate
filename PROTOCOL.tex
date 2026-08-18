@@ -86,6 +86,70 @@ calls. Detection is recomputed by running the verifiers over the stored plans
 rather than read from stored labels, so numerator and denominator come from
 the same code path.
 
+\subsection{What each archive stores}
+
+The corpus stores, per cell, the prompt hash and length, the raw response,
+the seed, prompt and generation token counts, the parsed plan, per-class
+ground-truth violation labels under both temporal scopes and all three
+budgets, and the intent-fulfillment verdict.  The cost sweep stores per-plan
+timing distributions; the policy sweep stores each round's verdict, plan
+length and outcome.  Generation seeds are derived by SHA-256 from the cell
+identity and the master seed, so they do not depend on interpreter or
+scheduling state.  The agent is pinned by tag, parameter count, quantization
+level and sampling parameters; the weight digest is recorded only for runs
+made after we began capturing it, which excludes the main corpus.
+
+Derived artifacts were produced across several clean revisions rather than
+one, since each fix to the analysis code warranted a rerun; every file
+records the revision that produced it, and the frozen table carries an entry
+counting how many of its own sources came from a revision whose working tree
+was not clean, and a second counting sources that carry no provenance at all.
+
+\subsection{External validity, in full}
+\label{supp:validity}
+
+Section~VI-F of the paper states the outcome of three robustness checks; this is each of them in full.
+
+\textbf{A second implementation of the checker.} The gate decides with the
+Z3 encoding and the evaluation scores with the reference predicate checker.
+Those were built together, so a report of zero unsafe actuation partly
+reflects shared lineage. We re-derived the three invariant classes from their
+definitions in a separate implementation consuming only serialized state,
+with a graph representation and a different traversal order, and compared the
+two on every state every corpus plan passes through: 693 states, no
+disagreement. The comparison covers predicate evaluation only: both sides
+reach those states through the same transition function, and 10 of the 278
+loss events arise from an operation that function refuses, where no state
+changes and no state-based checker of any independence could see them.
+
+\textbf{A second agent.} The corpus was regenerated on the repetition-zero
+subset with
+\texttt{huihui-qwen3-vl-32b-\allowbreak instruct-\allowbreak abliterated-i1},
+a larger model of a later generation, on identical intents and seeds; we name
+the checkpoint in full because it is an uncensored derivative and refusal
+behavior is one of the quantities compared. Each model's conditioned
+violation rate sits on its own denominator---$20/66=0.303$ and
+$12/65=0.185$---so no test applies to their difference. The paired comparison
+over the 63 intents both fulfilled is 17 unsafe against 12, all five
+discordant pairs favoring the larger model, exact two-sided $p=0.0625$:
+consistent in direction, unresolved at this sample size. We conclude that the
+violation rate is model-dependent enough to report as a range, not that one
+model is safer. Two findings do not move: neither agent ever declined to
+act---$0/99$ and $0/100$, including on intents admitting no safe fulfilling
+plan---and neither produced a terminal-safe, prefix-unsafe plan. Only the
+corpus was reproduced here.
+
+\textbf{A second and third draw of the instance.} One master seed fixes the
+synthesized attributes of every topology, which demands are sampled, and
+which objects each intent targets. On the common repetition-zero design the
+three seeds give conditioned violation rates of $0.303$, $0.225$ and
+$0.271$; each corpus is certified independently, so a seed changes not only
+which plans the agent produces but which requests are answerable at all. The
+intervals overlap and the spread is narrower than the model-to-model
+difference, but the estimate moves enough that the rate should be read as a
+range. Abstention and terminal/prefix disagreement remain zero at every seed,
+over 695 pooled plans.
+
 \subsection{Frozen result table}
 
 The headline quantities of Section~V of the paper are collected in a
