@@ -13,6 +13,11 @@ matters legally and editorially:
     block. Only the frozen table travels.
   * pilot/REPORT.md is a superseded exploratory report describing a plan
     (Mininet main experiment) that was never run.
+  * artifact/*.tex is the supplement's source. The supplement is submitted
+    with the manuscript and published by the journal, so a second copy here
+    would be a fork waiting to happen. What remains is what the paper's
+    reproducibility subsection actually points at: data and the code that
+    reproduces it.
 
 Source of truth is `git ls-files`, so anything gitignored -- .venv,
 __pycache__, build products -- is excluded by construction rather than by a
@@ -25,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import fnmatch
+import hashlib
 import logging
 import shutil
 import subprocess
@@ -42,6 +48,15 @@ EXCLUDE_PREFIXES: Dict[str, str] = {
     "pilot/data/": "SNDlib dataset -- not redistributed, see fetch_sndlib.py",
     "pilot/REPORT.md": "superseded exploratory report",
     "CLAUDE.md": "agent instructions for the paper repo",
+    # The supplement is submitted with the manuscript and published by the
+    # journal; a second copy of its LaTeX here would be a fork waiting to
+    # happen. This repository is data and reproduction code, which is also
+    # exactly what the paper points at.
+    "artifact/PROOFS.tex": "supplement source; ships with the manuscript",
+    "artifact/PROTOCOL.tex": "supplement source; ships with the manuscript",
+    "artifact/supplement.tex": "supplement source; ships with the manuscript",
+    "artifact/supp_tables.tex": "generated supplement tables; regenerate with "
+                                "pilot/run_supplement_tables.py",
     # The paper repo's root ignore rules are about the paper repo (refs/*.pdf,
     # build products); the export writes its own. Excluded explicitly so the
     # generated file is chosen, not merely last to be written.
@@ -143,7 +158,7 @@ def sync(repo: Path, dest: Path, dry_run: bool = False) -> Dict[str, int]:
         logger.info("  excluded %3d  (%s)", len(paths), reason)
 
     if dry_run:
-        return {"published": len(publish),
+        return {"published": len(publish), "pruned": 0,
                 "excluded": sum(len(v) for v in skip.values())}
 
     dest.mkdir(parents=True, exist_ok=True)
@@ -157,8 +172,36 @@ def sync(repo: Path, dest: Path, dry_run: bool = False) -> Dict[str, int]:
         shutil.copy2(src, target)
 
     (dest / ".gitignore").write_text(ARTIFACT_GITIGNORE)
-    logger.info("wrote %s", dest / ".gitignore")
-    return {"published": len(publish),
+
+    # Prune. Copying alone leaves files that USED to be published sitting in
+    # the destination forever; a rule that stops publishing something has to
+    # actually unpublish it.
+    keep = {destination(f) for f in publish} | {".gitignore", "MANIFEST.sha256"}
+    removed = 0
+    for path in sorted(dest.rglob("*"), reverse=True):
+        if ".git" in path.parts or path.is_dir():
+            continue
+        if str(path.relative_to(dest)) not in keep:
+            path.unlink(); removed += 1
+    for path in sorted(dest.rglob("*"), reverse=True):
+        if ".git" not in path.parts and path.is_dir() and not any(path.iterdir()):
+            path.rmdir()
+    if removed:
+        logger.info("pruned %d file(s) no longer published", removed)
+
+    # 2. Self-check manifest: a reader can verify a clone is byte-identical to
+    #    what produced the paper's numbers with `shasum -c MANIFEST.sha256`.
+    lines = []
+    for rel in sorted(destination(f) for f in publish):
+        fp = dest / rel
+        if not fp.exists():
+            continue
+        h = hashlib.sha256(fp.read_bytes()).hexdigest()
+        lines.append(f"{h}  {rel}")
+    (dest / "MANIFEST.sha256").write_text("\n".join(lines) + "\n")
+    logger.info("wrote MANIFEST.sha256 (%d files)", len(lines))
+
+    return {"published": len(publish), "pruned": removed,
             "excluded": sum(len(v) for v in skip.values())}
 
 
@@ -176,7 +219,8 @@ def main(argv: List[str] | None = None) -> int:
     except subprocess.CalledProcessError as exc:
         logger.error("git ls-files failed: %s", exc)
         return 1
-    print(f"\npublished {stats['published']}, excluded {stats['excluded']}")
+    print(f"\npublished {stats['published']}, "
+          f"pruned {stats.get('pruned', 0)}, excluded {stats['excluded']}")
     return 0
 
 
