@@ -104,7 +104,8 @@ def table_injections(base_state: Path) -> str:
 \subsection{{Adversarial injection taxonomy}}
 \label{{supp:injections}}
 
-Section V-C of the paper reports that no generated plan, on the natural
+The paper's detection and temporal-scope results (\S VI-C) report that no
+generated plan, on the natural
 corpus or the ordering-stress suite, was terminal-safe and prefix-unsafe.
 That is a statement about the agent's error distribution, not about the
 mechanism. Table~\ref{{tab:supp-inject}} exhibits the mechanism directly: two
@@ -198,7 +199,8 @@ def table_loto(selection: Path) -> str:
 \subsection{{Leave-one-topology-out selection, fold by fold}}
 \label{{supp:loto}}
 
-Table~III of the paper pools the ten folds at each risk price. This is the
+The paper's selection table (Table~III) pools the ten folds at each risk
+price. This is the
 underlying grid, so that the single disagreement with the plug-in oracle can
 be located rather than taken on trust: it is one fold at $R=10$, one step
 below the price at which the rule switches depth.

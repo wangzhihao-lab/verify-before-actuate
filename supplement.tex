@@ -9,6 +9,10 @@
 % any proof runs.  Restating rather than \input-ing the paper keeps the two
 % documents independently compilable.
 %
+% Cross-document references cannot use \ref and so are hardcoded.  They rot
+% silently when the paper is restructured -- they already did once.  Anchor
+% every one on the section NAME as well as its number.
+%
 % Build:  pdflatex supplement && pdflatex supplement
 \documentclass[journal]{IEEEtran}
 
@@ -40,17 +44,28 @@
 \title{Supplement to \emph{Verify Before Actuate}:\\
 Boundary-Complete Proofs and Protocol Details}
 
-\author{Anonymous Authors%
-\thanks{Supplement to an anonymous preliminary draft.  The author block
-will be populated before submission.}}
+\author{
+  Zhihao~Wang,
+  Min~Ren,
+  Xia~Liang,
+  Gaoyong~Li,
+  Ding~Ding,
+  and~Mauro~Conti
+  \thanks{Z. Wang, X. Liang, and G. Li are with the School of Management
+  Science and Engineering, and M. Ren with the School of Statistics and
+  Mathematics, Shandong University of Finance and Economics, Jinan 250014,
+  China.  D. Ding is with Intuit.  M. Conti is with the Department of
+  Mathematics, University of Padua, Padua 35122, Italy.  Corresponding
+  author: Zhihao Wang (wangzhihao@sdufe.edu.cn).}}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 This supplement carries what the paper's thirteen pages could not hold: the
-boundary-complete proofs behind the sketches in Section III, the accounting
-details of every experiment in Section V, and five tables reporting in full
+boundary-complete proofs behind the sketches in its analysis section, the
+accounting details of every experiment in its evaluation, the three
+external-validity checks in full, and five tables reporting in full
 what the paper states only in aggregate---the adversarial injection
 taxonomy, the complete detection--cost curve, the fold-by-fold selection
 grid, ordering outcomes by intent class, and the frozen result table.
@@ -113,7 +128,7 @@ Define
  R:=\frac{C_v}{C_t}.
 \label{eq:constants}
 \end{equation}
-Section V-C of the paper reports that the detection half of
+The paper's coverage-cost results (\S VI-C) report that the detection half of
 \eqref{eq:exp-linear} does \emph{not} fit the measured curves; it is the
 analytical example that yields the closed forms below, not a fitted law.
 
