@@ -64,6 +64,20 @@ def breakable(s: str) -> str:
             .replace(r"\_", r"\_\allowbreak "))
 
 
+def abbrev(name: str, n: int = 9) -> str:
+    """Shorten a topology name without collapsing two of them together.
+
+    A flat truncation turned nobel-germany and nobel-us into the same
+    column header, which is worse than a long header.
+    """
+    if len(name) <= n:
+        return name
+    head, _, tail = name.partition("-")
+    if tail:
+        return f"{head[:6]}-{tail[:max(2, n - 7)]}"
+    return name[:n]
+
+
 def trunc(s: Any, n: int) -> str:
     """Truncate THEN escape, never the other way round.
 
@@ -112,11 +126,11 @@ mechanism. Table~\ref{{tab:supp-inject}} exhibits the mechanism directly: two
 of eight hand-constructed violations are transient by construction, and both
 are invisible to terminal checking at every budget.
 
-\begin{{table}}[h]
+\begin{{table}}[t]
 \centering
 \caption{{Detection of eight adversarial injections. $L_1$--$L_3$ are terminal
 checking at increasing coverage; $L_4$ is all-prefix checking at full
-coverage. The two bold rows are caught \emph{{only}} by $L_4$ --- they are
+coverage. The two bold rows are caught only by $L_4$: they are
 terminal-safe and prefix-unsafe. Recomputed from the archived base state.}}
 \label{{tab:supp-inject}}
 \footnotesize
@@ -145,13 +159,13 @@ def table_pcurve(pcurve: Path) -> str:
 \subsection{{The full detection--cost curve}}
 \label{{supp:pcurve}}
 
-The paper quotes only the endpoints of this curve --- detection rising from
-$0.044$ to $0.973$ below full coverage --- because the intermediate points
+The paper quotes only the endpoints of this curve, detection rising from
+$0.044$ to $0.973$ below full coverage, because the intermediate points
 did not fit. They are the evidence behind the negative result on the
 exponential family: detection is a coarse step function, not a smooth
 saturating curve, and it does not bend over before full coverage.
 
-\begin{{table}}[h]
+\begin{{table}}[t]
 \centering
 \caption{{Detection and verification time against coverage budget, indexed by
 the fraction of each topology's own predicate-instance count. Detection is
@@ -177,11 +191,28 @@ def table_loto(selection: Path) -> str:
     Rs = sorted({r["R"] for r in d["rows"]})
     grid: Dict[tuple, dict] = {(r["held_out"], r["R"]): r for r in d["rows"]}
 
-    header = " & ".join(esc(n)[:6] for n in nets)
+    # Transposed: one row per topology, one column per risk price.  The
+    # other way round needed eleven wide columns, which only fitted as a
+    # page-spanning float -- and that float had no prose to sit beside, so
+    # LaTeX banished it and Table V to a float-only page.
+    def rlabel(R: float) -> str:
+        """Match the paper's selection table exactly, and never collide.
+
+        Rounding log10 turned 100 and 300 into the same $10^{2}$ header.
+        """
+        if R < 100:
+            return f"${R:g}$"
+        exp = len(f"{int(R)}") - 1
+        mant = int(R) // 10 ** exp
+        return (f"$10^{{{exp}}}$" if mant == 1
+                else rf"$ {mant}{{\times}}10^{{{exp}}}$".replace(" ", ""))
+
+    header = " & ".join(rlabel(R) for R in Rs)
+    assert len({rlabel(R) for R in Rs}) == len(Rs), "risk-price headers collide"
     rows, n_miss = [], 0
-    for R in Rs:
+    for n in nets:
         cells = []
-        for n in nets:
+        for R in Rs:
             r = grid.get((n, R))
             if not r:
                 cells.append("--")
@@ -193,35 +224,37 @@ def table_loto(selection: Path) -> str:
                 n_miss += 1
             else:
                 cells.append(sel)
-        rows.append(f"${R:g}$ & " + " & ".join(cells) + r" \\")
+        rows.append(f"{esc(abbrev(n))} & " + " & ".join(cells) + r" \\")
     body = "\n".join(rows)
     return rf"""
 \subsection{{Leave-one-topology-out selection, fold by fold}}
 \label{{supp:loto}}
 
-The paper's selection table (Table~III) pools the ten folds at each risk
+The paper's selection table (Table~IV of the paper) pools the ten folds at each risk
 price. This is the
 underlying grid, so that the single disagreement with the plug-in oracle can
 be located rather than taken on trust: it is one fold at $R=10$, one step
 below the price at which the rule switches depth.
 
-\begin{{table*}}[h]
+\begin{{table}}[t]
 \centering
-\caption{{Profile selected for each held-out topology at each risk price.
-T$b$/P$b$ denote terminal/all-prefix scope at budget $b$. Underlined: the
-selection differs from the plug-in oracle under that topology's own measured
-primitives ({n_miss} of {len(d['rows'])} folds).}}
+\caption{{Profile selected for each held-out topology at each risk price
+$R$. T$b$/P$b$ denote terminal/all-prefix scope at budget $b$. Underlined:
+the selection differs from the plug-in oracle under that topology's own
+measured primitives ({n_miss} of {len(d['rows'])} folds).}}
 \label{{tab:supp-loto}}
-\footnotesize
-\setlength{{\tabcolsep}}{{4pt}}
-\begin{{tabular}}{{r{'c' * len(nets)}}}
+\scriptsize
+\setlength{{\tabcolsep}}{{2.4pt}}
+\begin{{tabular}}{{l{'c' * len(Rs)}}}
 \toprule
-$R$ & {header}\\
+& \multicolumn{{{len(Rs)}}}{{c}}{{Risk price $R$}}\\
+\cmidrule(l){{2-{len(Rs) + 1}}}
+Held-out & {header}\\
 \midrule
 {body}
 \bottomrule
 \end{{tabular}}
-\end{{table*}}
+\end{{table}}
 """
 
 
@@ -250,7 +283,7 @@ orders correctly: the dominant failure is \emph{{omission}}, which stays
 visible in the final state, and every misordered plan is unsafe terminally
 as well.
 
-\begin{{table}}[h]
+\begin{{table}}[t]
 \centering
 \caption{{How generated plans treated the ordered operation pair each
 stress-suite instance requires. ``Ambiguous'' means the witness repeats an
@@ -306,7 +339,7 @@ generated from the archived results at a clean source revision.
 \begin{{center}}
 \scriptsize
 \setlength{{\tabcolsep}}{{4pt}}
-\begin{{longtable}}{{@{{}}p{{0.29\textwidth}}rrp{{0.40\textwidth}}@{{}}}}
+\begin{{longtable}}{{@{{}}p{{0.29\textwidth}}rrp{{0.39\textwidth}}@{{}}}}
 \toprule
 Entry & Value & $k/n$ & Denominator\\
 \midrule

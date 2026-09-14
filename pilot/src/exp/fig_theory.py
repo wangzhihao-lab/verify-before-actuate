@@ -16,7 +16,7 @@ from typing import Any, Dict, Tuple
 
 import numpy as np
 
-from .figures import TOL, _new_fig, _save
+from .figures import FIG_FONT_PT, TOL, _new_fig, _save
 
 logger = logging.getLogger(__name__)
 
@@ -122,15 +122,38 @@ def active_interval(out_base: Path,
     worst = _check_closed_form(fp, (R_below, R_mid, R_high))
 
     q = np.linspace(0.001, 0.999, 2000)
-    fig, ax = _new_fig(height_mm=50.0)
+    fig, ax = _new_fig(height_mm=48.0)
+    fs = FIG_FONT_PT
 
     c_high, c_mid, c_low = TOL[0], TOL[1], TOL[5]
 
-    # R below the participation floor: identically zero.
-    ax.plot(q, np.zeros_like(q), color=c_low, linewidth=1.2, zorder=3)
+    # The paper's title object gets a visual body, not just boundary lines:
+    # a light fill under the moderate curve over exactly (q-, q+).
+    q_lo, q_hi = q_interval(R_mid, fp)
+    b_mid = b_star_unbounded(q, R_mid, fp)
+    inside = (q > q_lo) & (q < q_hi)
+    ax.fill_between(q[inside], 0.0, b_mid[inside], color=c_mid, alpha=0.10,
+                    linewidth=0, zorder=1)
+    ax.annotate(r"active interval $(q_-,\,q_+)$",
+                xy=((q_lo + q_hi) / 2, 0.95), fontsize=fs, color=c_mid,
+                ha="center", va="center", alpha=0.9)
+
+    # Clipping made literal: the region above b_max is physically
+    # unavailable, so it is dimmed rather than implied by one dotted line.
+    top = 5.25
+    ax.fill_between([0.0, 1.0], fp.b_max, top, color="0.5", alpha=0.07,
+                    linewidth=0, zorder=0)
+    # Anchored at the left spine: centered text at 8 pt ran past it.
+    ax.annotate(r"unavailable: clipped at $b_{\max}$", xy=(0.015, top - 0.12),
+                fontsize=fs, color="0.45", ha="left", va="top")
+
+    # R below the participation floor: identically zero.  Drawn wider than
+    # the other two because all three curves sit on y=0 outside their own
+    # active intervals; at 1.2 the higher-zorder green and indigo hid this
+    # one entirely at both ends of the axis.
+    ax.plot(q, np.zeros_like(q), color=c_low, linewidth=2.0, zorder=3)
 
     # Moderate R: interior unimodal optimum, never clipped.
-    b_mid = b_star_unbounded(q, R_mid, fp)
     ax.plot(q, b_mid, color=c_mid, linewidth=1.2, zorder=4)
 
     # High R: clipped at b_max, unbounded optimum continued dashed.
@@ -143,45 +166,44 @@ def active_interval(out_base: Path,
 
     ax.axhline(fp.b_max, color="0.5", linewidth=0.6, linestyle=":", zorder=2)
     ax.annotate(r"$b_{\max}$", xy=(0.985, fp.b_max), xytext=(0, 2),
-                textcoords="offset points", fontsize=6, color="0.35",
+                textcoords="offset points", fontsize=fs, color="0.35",
                 ha="right", va="bottom")
 
     # Name the endpoints of the moderate curve's active interval.  q- sits
     # against the left spine, so its label goes to the right of the line.
-    q_lo, q_hi = q_interval(R_mid, fp)
     for qq, name, ha in ((q_lo, r"$q_-$", "left"), (q_hi, r"$q_+$", "center")):
-        ax.vlines(qq, 0.0, 1.05, color=c_mid, linewidth=0.6,
-                  linestyle=":", alpha=0.9, zorder=2)
+        ax.vlines(qq, 0.0, 1.05, color=c_mid, linewidth=0.9,
+                  linestyle=":", alpha=0.95, zorder=2)
         ax.annotate(name, xy=(qq, 1.05), xytext=(2 if ha == "left" else 0, 2),
-                    textcoords="offset points", fontsize=6, color=c_mid,
+                    textcoords="offset points", fontsize=fs, color=c_mid,
                     ha=ha, va="bottom")
 
     peak_mid = float(b_mid.max())
     peak_high = float(b_high.max())
-    ax.annotate(rf"$R={R_high:g}$ (clipped)", xy=(0.60, fp.b_max),
-                xytext=(0, 3), textcoords="offset points", fontsize=6,
+    ax.annotate(rf"$R={R_high:g}$ (clipped)", xy=(0.62, fp.b_max),
+                xytext=(0, 3), textcoords="offset points", fontsize=fs,
                 color=c_high, ha="center", va="bottom")
-    ax.annotate(rf"$b^\star_\infty$", color=c_high, fontsize=6, alpha=0.8,
+    ax.annotate(rf"$b^\star_\infty$", color=c_high, fontsize=fs, alpha=0.8,
                 xy=(float(q[np.argmax(b_high)]), peak_high),
                 xytext=(0, 2), textcoords="offset points", ha="center",
                 va="bottom")
     ax.annotate(rf"$R={R_mid:g}$", xy=(float(q[np.argmax(b_mid)]), peak_mid),
-                xytext=(2, 3), textcoords="offset points", fontsize=6,
+                xytext=(2, 3), textcoords="offset points", fontsize=fs,
                 color=c_mid, ha="left", va="bottom")
-    # Hugs the flat-zero rose line, inside the green dome where nothing
-    # else is drawn; the right half of the panel is crossed by both the
-    # green descent and the q+ dropline.
+    # The label belongs to the flat-zero rose line.  Below the line there is
+    # no room -- the text ran into the line above and off the axis below -- so
+    # it sits just over it, inside the pale fill and well under the dome.
     ax.annotate(rf"$R={R_below:g}<F_{{\min}}$: never verify",
-                xy=(0.33, 0.10), xytext=(0, 3), textcoords="offset points",
-                fontsize=6, color=c_low, ha="center", va="bottom")
+                xy=(0.335, 0.10), fontsize=fs, color=c_low,
+                ha="center", va="bottom")
 
     ax.set_xlim(0.0, 1.0)
-    ax.set_ylim(-0.12, max(peak_high, fp.b_max) * 1.16)
+    ax.set_ylim(-0.18, top)
     ax.set_xlabel(r"Conditioned plan error rate $q$")
     ax.set_ylabel(r"Optimal budget $b^\star$")
     ax.grid(True, linewidth=0.3, alpha=0.35)
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=50)
+    _save(fig, out_base, width="single", height_mm=48)
 
     import matplotlib.pyplot as plt
     plt.close(fig)

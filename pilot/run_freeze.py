@@ -293,7 +293,7 @@ def build(corpus_dir: Path, costbench: Path,
             denominator="mean held-out regret against the plug-in oracle, as "
                         "a percentage of the oracle objective",
             method="LOTO", source=src,
-            note="nonzero only at R=20, the b1->b3 switch price"))
+            note="nonzero only at R=10, one step below the b1->b3 switch price of R=20"))
         entries.append(_entry(
             "loto_profile_space", 6,
             denominator="profiles the selector searches: 2 temporal scopes x "

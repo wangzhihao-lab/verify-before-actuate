@@ -39,17 +39,18 @@ MM_PER_IN = 25.4
 TOL = ["#332288", "#117733", "#44AA99", "#88CCEE",
        "#DDCC77", "#CC6677", "#AA4499", "#882255"]
 
-# IEEE body text is 10 pt; figure text must stay legible at column width
-# without overpowering the panel.
+# IEEE captions are 8 pt, so no figure text renders below 8 pt at final
+# size: a label must not be smaller than the prose that explains it.
+FIG_FONT_PT = 8
 RC = {
     "font.family": "serif",
     "font.serif": ["Times New Roman", "Nimbus Roman", "DejaVu Serif"],
-    "font.size": 7,
-    "axes.labelsize": 7,
-    "axes.titlesize": 7,
-    "xtick.labelsize": 6,
-    "ytick.labelsize": 6,
-    "legend.fontsize": 6,
+    "font.size": FIG_FONT_PT,
+    "axes.labelsize": FIG_FONT_PT,
+    "axes.titlesize": FIG_FONT_PT,
+    "xtick.labelsize": FIG_FONT_PT,
+    "ytick.labelsize": FIG_FONT_PT,
+    "legend.fontsize": FIG_FONT_PT,
     "axes.linewidth": 0.6,
     "xtick.major.width": 0.6,
     "ytick.major.width": 0.6,
@@ -104,8 +105,10 @@ def tau_scaling(costbench_json: Path, out_base: Path,
     nets = sorted(by_net, key=lambda n: by_net[n]["n_nodes"])
     xs = np.array([by_net[n]["n_nodes"] for n in nets], dtype=float)
 
-    fig, ax = _new_fig(height_mm=56.0)
-    colors = pubfig.get_palette("default")
+    fig, ax = _new_fig(height_mm=48.0)
+    # Tol pairs by hue family, which matches what these series are: one
+    # backend at two depths.  SMT takes the blue-purple pair, twin the green.
+    colors = (TOL[0], TOL[6], TOL[1], TOL[2])
     markers = ["o", "s", "^", "D", "v", "*"]
 
     exponents: Dict[str, float] = {}
@@ -127,17 +130,22 @@ def tau_scaling(costbench_json: Path, out_base: Path,
         exponents[f"{mode}/b{b}"] = float(slope)
         ax.plot(np.exp(grid), np.exp(intercept + slope * grid), "-",
                 color=c, linewidth=0.9, alpha=0.8,
-                label=rf"{label}  ($\propto N^{{{slope:.2f}}}$)")
+                label=rf"{label} $(\propto N^{{{slope:.2f}}})$")
 
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xlabel("Network size (nodes)")
     ax.set_ylabel(r"Verification time $\tau$ (ms)")
-    ax.legend(frameon=False, loc="upper left", handlelength=1.6,
+    # Lower right is the one empty corner: small networks fill the lower
+    # left and the twin's deep profile climbs through the upper left.  The
+    # floor is lowered below the smallest measurement so the 8 pt legend
+    # sits under every point at N > 30.
+    ax.set_ylim(0.9, 2.0e4)
+    ax.legend(frameon=False, loc="lower right", handlelength=1.6,
               borderaxespad=0.3, labelspacing=0.25)
     ax.grid(True, which="major", linewidth=0.3, alpha=0.35)
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=56)
+    _save(fig, out_base, width="single", height_mm=48)
     plt.close(fig)
     return {"n_networks": len(nets),
             "node_range": [float(xs.min()), float(xs.max())],
@@ -160,7 +168,7 @@ def selection_vs_risk(selection_json: Path, out_base: Path) -> Dict[str, Any]:
     rows = data["summary"]
     R = np.array([r["R"] for r in rows], dtype=float)
 
-    fig, ax = _new_fig(height_mm=56.0)
+    fig, ax = _new_fig(height_mm=46.0)
     plots = [
         ("J_always_shallowest", "Fixed shallow ($b{=}1$)", "--", "^"),
         ("J_always_deepest", "Fixed deep ($b{=}3$)", "--", "s"),
@@ -172,7 +180,9 @@ def selection_vs_risk(selection_json: Path, out_base: Path) -> Dict[str, Any]:
         # reading.
         ("J_oracle", "Plug-in oracle", ":", None),
     ]
-    colors = pubfig.get_palette("default")
+    # Warm pair for the two fixed baselines, indigo for the selection rule
+    # under test, green for the reference it is scored against.
+    colors = (TOL[5], TOL[7], TOL[0], TOL[1])
     for i, (key, label, ls, mk) in enumerate(plots):
         ys = np.array([r[key] for r in rows], dtype=float)
         ax.plot(R, ys, ls, marker=mk, markersize=3.2, linewidth=1.2,
@@ -195,14 +205,23 @@ def selection_vs_risk(selection_json: Path, out_base: Path) -> Dict[str, Any]:
         if prev is not None and cur != prev:
             ax.axvline(r["R"], color="0.5", linewidth=0.6, linestyle="-.",
                        alpha=0.8)
-            ax.annotate(f"switch to {cur}", xy=(r["R"], ax.get_ylim()[0]),
-                        xytext=(3, 4), textcoords="offset points",
-                        fontsize=5, color="0.35", rotation=90,
-                        va="bottom", ha="left")
+            # Hung from the top of the axes, not the bottom: the bottom is
+            # where the three flat curves sit, and the label crossed them.
+            # Named as the paper names the profiles, not by the runner's
+            # internal key.
+            # To the right of the line: at 8 pt the label on the left ran
+            # into the legend.
+            ax.annotate(r"switch: $b{=}1\to b{=}3$", xy=(r["R"], 0.98),
+                        xycoords=("data", "axes fraction"),
+                        xytext=(4, 0), textcoords="offset points",
+                        fontsize=FIG_FONT_PT, color="0.30", rotation=90,
+                        va="top", ha="left", zorder=5,
+                        bbox=dict(boxstyle="square,pad=0.12", fc="white",
+                                  ec="none", alpha=0.85))
         prev = cur
 
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=56)
+    _save(fig, out_base, width="single", height_mm=46)
     plt.close(fig)
     return {"n_R": len(rows),
             "profiles": sorted({p for r in rows
@@ -231,7 +250,7 @@ def safety_utility_pareto(policy_json: Path, out_base: Path) -> Dict[str, Any]:
     scope = ("feasible intents"
              if data.get("by_group", {}).get("feasible") else "all intents")
 
-    fig, ax = _new_fig(height_mm=50.0)
+    fig, ax = _new_fig(height_mm=44.0)
     colors = TOL
 
     # Several policies land on exactly the same point -- that coincidence is
@@ -282,7 +301,7 @@ def safety_utility_pareto(policy_json: Path, out_base: Path) -> Dict[str, Any]:
                 arrowprops={"arrowstyle": "->", "color": "0.55",
                             "linewidth": 0.6})
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=50)
+    _save(fig, out_base, width="single", height_mm=44)
     plt.close(fig)
     return {"n_policies": len(pols)}
 
@@ -301,8 +320,8 @@ def cost_ratio_scaling(crossover_json: Path, out_base: Path) -> Dict[str, Any]:
     pub = [r for r in rows if r["class"] == "published"]
     stress = [r for r in rows if r["class"] == "stress"]
 
-    fig, ax = _new_fig(height_mm=56.0)
-    colors = pubfig.get_palette("default")
+    fig, ax = _new_fig(height_mm=44.0)
+    colors = TOL
     for group, label, marker, colour in (
             (pub, "Published instances", "o", colors[0]),
             (stress, "Synthetic stress rungs", "^", colors[3])):
@@ -325,7 +344,7 @@ def cost_ratio_scaling(crossover_json: Path, out_base: Path) -> Dict[str, Any]:
               borderaxespad=0.3)
     ax.grid(True, which="major", linewidth=0.3, alpha=0.35)
     fig.tight_layout(pad=0.3)
-    _save(fig, out_base, width="single", height_mm=56)
+    _save(fig, out_base, width="single", height_mm=44)
     plt.close(fig)
     return {"n_published": len(pub), "n_stress": len(stress),
             "ratio_range": [min(r["ratio_smt"] for r in rows),

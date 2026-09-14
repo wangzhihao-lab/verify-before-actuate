@@ -293,7 +293,7 @@ different quantities that differ only in what they divide by.
 - **denominator**: mean held-out regret against the plug-in oracle, as a percentage of the oracle objective
 - **method**: LOTO
 - **source**: `out/corpus_v2/selection.json`
-- **note**: nonzero only at R=20, the b1->b3 switch price
+- **note**: nonzero only at R=10, one step below the b1->b3 switch price of R=20
 
 ## `loto_profile_space`
 - **value**: 6
